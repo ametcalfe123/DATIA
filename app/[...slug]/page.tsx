@@ -1,6 +1,8 @@
 import Image from "next/image"
+import Link from "next/link"
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
+import TeamDirectory from "../team-directory"
 
 const site = "https://www.datia.io"
 const image = (path: string) => `${site}/images/${path}`
@@ -50,12 +52,12 @@ const services = [
 ]
 
 const team = [
-  { name: "Jim Callan", role: "Founder/CEO", image: "jim-callan-new.jpg", email: "jcallan@datia.io", phone: "404.353.5276" },
-  { name: "Steve Bevilacqua", role: "Vice President of Sales", image: "steve-bevilacqua.jpg", email: "sbevilacqua@datia.io", phone: "561.523.3820" },
-  { name: "Rachel Davis", role: "Vice President of Sales", image: "rachel-davis.jpg", email: "rdavis@datia.io", phone: "678.521.7584" },
-  { name: "Kurt Dyrli", role: "Editorial Director", image: "kurt-dyrli.jpg", email: "kdyrli@datia.io", phone: "860.916.5818" },
-  { name: "Dana Jackson", role: "Fractional Head of Research", image: "dana-jackson.jpg", email: "djackson@datia.io" },
-  { name: "Amy Metcalfe", role: "Senior Director, Marketing & Operations", image: "amy-metcalfe.jpg", email: "ametcalfe@datia.io", phone: "732.236.4215" },
+  { name: "Jim Callan", role: "Founder/CEO", image: "jim-callan-new.jpg", email: "jcallan@datia.io", phone: "404.353.5276", bio: "Jim Callan is the Founder and CEO of DATIA, bringing over 20 years of experience in B2B marketing and data intelligence. He has a proven track record of building successful marketing technology companies and helping organizations leverage data-driven insights to accelerate growth. Jim's vision for DATIA centers on providing marketing and sales leaders with the intelligence they need to make informed decisions and drive measurable results." },
+  { name: "Steve Bevilacqua", role: "Vice President of Sales", image: "steve-bevilacqua.jpg", email: "sbevilacqua@datia.io", phone: "561.523.3820", bio: "Steve Bevilacqua serves as Vice President of Sales at DATIA, where he leads the sales organization and drives revenue growth. With extensive experience in B2B sales and a deep understanding of marketing technology solutions, Steve helps clients identify the right strategies to achieve their marketing objectives. His consultative approach and industry expertise make him a trusted advisor to marketing and sales leaders across various industries." },
+  { name: "Rachel Davis", role: "Vice President of Sales", image: "rachel-davis.jpg", email: "rdavis@datia.io", phone: "678.521.7584", bio: "Rachel Davis is Vice President of Sales at DATIA, specializing in enterprise client relationships and strategic account management. She brings a wealth of experience in consultative selling and has a proven ability to understand complex client needs and deliver tailored solutions. Rachel's expertise in account-based marketing and lead generation strategies helps clients maximize their marketing ROI and achieve sustainable growth." },
+  { name: "Kurt Dyrli", role: "Editorial Director", image: "kurt-dyrli.jpg", email: "kdyrli@datia.io", phone: "860.916.5818", bio: "Kurt Dyrli serves as Editorial Director at DATIA, overseeing content strategy and thought leadership initiatives. With a background in journalism and content marketing, Kurt ensures that DATIA's messaging resonates with target audiences and effectively communicates the value of data-driven marketing solutions. His expertise in storytelling and content optimization helps clients build stronger brand narratives and engage their prospects more effectively." },
+  { name: "Dana Jackson", role: "Fractional Head of Research", image: "dana-jackson.jpg", email: "djackson@datia.io", bio: "Dana Jackson is the Fractional Head of Research at DATIA, leading market research initiatives and competitive intelligence efforts. With extensive experience in data analysis and market research methodologies, Dana provides valuable insights that inform DATIA's strategic direction and help clients better understand their target markets. Her research expertise enables more effective targeting and positioning strategies for client campaigns." },
+  { name: "Amy Metcalfe", role: "Senior Director, Marketing & Operations", image: "amy-metcalfe.jpg", email: "ametcalfe@datia.io", phone: "732.236.4215", bio: "Amy Metcalfe serves as Senior Director of Marketing & Operations at DATIA, where she oversees marketing strategy execution and operational excellence. With a strong background in marketing operations and process optimization, Amy ensures that DATIA's internal marketing efforts align with client best practices. Her expertise in marketing automation and campaign management helps both DATIA and its clients achieve greater efficiency and effectiveness in their marketing efforts." },
 ]
 
 const advisors = [
@@ -110,9 +112,16 @@ function SiteHeader() {
   return (
     <header className="site-header home-header">
       <div className="site-header-inner home-header-inner">
-        <a className="brand-logo" href="/" aria-label="DATIA home"><Image src={image("datia-ai-logo.png")} alt="DATIA AI" width={176} height={40} unoptimized /></a>
-        <nav className="main-nav" aria-label="Main navigation">{navItems.map(([label, href]) => <a href={href} key={label}>{label}</a>)}</nav>
-        <a className="button button-red header-cta" href="/get-started">Partner with Us</a>
+        <Link className="brand-logo" href="/" aria-label="DATIA home"><Image src={image("datia-ai-logo.png")} alt="DATIA AI" width={176} height={40} unoptimized /></Link>
+        <nav className="main-nav" aria-label="Main navigation">{navItems.map(([label, href]) => <Link href={href} key={label}>{label}</Link>)}</nav>
+        <Link className="button button-red header-cta" href="/get-started">Partner with Us</Link>
+        <details className="mobile-menu">
+          <summary className="mobile-menu-toggle" aria-label="Open navigation"><span /></summary>
+          <nav className="mobile-menu-nav" aria-label="Mobile navigation">
+            {navItems.map(([label, href]) => <Link href={href} key={label}>{label}</Link>)}
+            <Link className="button button-red" href="/get-started">Partner with Us</Link>
+          </nav>
+        </details>
       </div>
     </header>
   )
@@ -121,16 +130,16 @@ function SiteHeader() {
 function SiteFooter() {
   return (
     <footer className="site-footer home-footer">
-      <a className="brand-logo" href="/" aria-label="DATIA home"><Image src={image("datia-ai-logo-white.png")} alt="DATIA AI" width={176} height={40} unoptimized /></a>
+      <Link className="brand-logo" href="/" aria-label="DATIA home"><Image src={image("datia-ai-logo-white.png")} alt="DATIA AI" width={176} height={40} unoptimized /></Link>
       <p>A sales and marketing intelligence company offering enhanced lead generation and media services that integrate intent data and AI-driven insights.</p>
-      <nav aria-label="Footer navigation">{navItems.map(([label, href]) => <a href={href} key={label}>{label}</a>)}</nav>
+      <nav aria-label="Footer navigation">{navItems.map(([label, href]) => <Link href={href} key={label}>{label}</Link>)}</nav>
       <small>© {new Date().getFullYear()} DATIA. All rights reserved.</small>
     </footer>
   )
 }
 
 function PageHero({ page }: { page: PageDefinition }) {
-  return <section className="page-hero"><h1>{page.title}</h1><p>{page.subtitle}</p></section>
+  return <section className={`page-hero${page.kind === "team" ? " team-page-hero" : ""}`}><h1>{page.title}</h1><p>{page.subtitle}</p></section>
 }
 
 function StoryContent() {
@@ -148,7 +157,7 @@ function StoryContent() {
           <p>Solutions begin with an in-depth consultation to identify key target audiences and deliver on marketing objectives.</p>
         </div>
       </section>
-      <section className="page-callout"><p className="eyebrow">A different approach to growth</p><h2>Experience the Difference</h2><p>Ready to see how our approach can transform your B2B marketing results?</p><a className="button button-red" href="/get-started">Partner with Us</a></section>
+      <section className="page-callout"><p className="eyebrow">A different approach to growth</p><h2>Experience the Difference</h2><p>Ready to see how our approach can transform your B2B marketing results?</p><Link className="button button-red" href="/get-started">Partner with Us</Link></section>
     </>
   )
 }
@@ -158,7 +167,7 @@ function ServicesContent() {
     <section className="inner-content-section services-page-content">
       <div className="section-heading"><h2>We are a purpose-built partner for marketing and sales leaders</h2><p>From strategy to execution, our integrated approach ensures every aspect of your B2B marketing works together seamlessly.</p></div>
       <div className="detail-service-grid">{services.map((service) => <article className="detail-service-card" key={service.name}><p className="article-category">{service.name}</p><h3>{service.subtitle}</h3><p>{service.description}</p><div className="service-feature-columns"><div><h4>Features</h4><ul>{service.features.map((feature) => <li key={feature}>{feature}</li>)}</ul></div><div><h4>Process</h4><ul><li>Audience and objective alignment</li><li>Campaign strategy and execution</li></ul></div><div><h4>Benefits</h4><ul><li>More relevant engagement</li><li>Measurable campaign outcomes</li></ul></div></div></article>)}</div>
-      <section className="page-callout"><h2>Decidedly Different</h2><p>Our proven methodology and expert team deliver consistent results across all service areas.</p><a className="button button-red" href="/get-started">Get Started Today</a></section>
+      <section className="page-callout"><h2>Decidedly Different</h2><p>Our proven methodology and expert team deliver consistent results across all service areas.</p><Link className="button button-red" href="/get-started">Get Started Today</Link></section>
     </section>
   )
 }
@@ -169,7 +178,7 @@ function PeopleContent({ kind }: { kind: "team" | "advisors" }) {
   return (
     <section className="inner-content-section people-section">
       <div className="section-heading"><h2>{isTeam ? "Leadership Team" : "Meet our Expert Collective"}</h2><p>{isTeam ? "Our experienced leadership team brings decades of B2B marketing expertise to every client engagement." : "A collective of respected leaders and industry pioneers offering trusted counsel and market intelligence."}</p></div>
-      <div className="people-grid">{people.map((person) => <article className="person-card" key={person.name}><div className="person-photo"><Image src={image(person.image)} alt={person.name} width={520} height={500} unoptimized /></div><div className="person-details"><h3>{person.name}</h3><p className="person-role">{person.role}</p>{"email" in person && <a href={`mailto:${person.email}`}>{person.email}</a>}{"phone" in person && <a href={`tel:${person.phone?.replaceAll(".", "")}`}>{person.phone}</a>}{"body" in person && <p className="person-bio">{person.body}</p>}<a className="person-bio-link" href="/get-started">{isTeam ? "View Bio" : "Read Full Bio"}</a></div></article>)}</div>
+      <div className="people-grid">{people.map((person) => <article className="person-card" key={person.name}><div className="person-photo"><Image src={image(person.image)} alt={person.name} width={520} height={500} unoptimized /></div><div className="person-details"><h3>{person.name}</h3><p className="person-role">{person.role}</p>{"email" in person && <a href={`mailto:${person.email}`}>{person.email}</a>}{"phone" in person && <a href={`tel:${person.phone?.replaceAll(".", "")}`}>{person.phone}</a>}{"body" in person && <p className="person-bio">{person.body}</p>}<Link className="person-bio-link" href="/get-started">{isTeam ? "View Bio" : "Read Full Bio"}</Link></div></article>)}</div>
     </section>
   )
 }
@@ -215,7 +224,8 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
       <PageHero page={page} />
       {page.kind === "story" && <StoryContent />}
       {page.kind === "services" && <ServicesContent />}
-      {(page.kind === "team" || page.kind === "advisors") && <PeopleContent kind={page.kind} />}
+      {page.kind === "team" && <TeamDirectory people={team} />}
+      {page.kind === "advisors" && <PeopleContent kind="advisors" />}
       {page.kind === "trusted" && <TrustedContent />}
       {page.kind === "contact" && <ContactContent />}
       <SiteFooter />

@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 const site = "https://www.datia.io"
 
@@ -68,17 +69,17 @@ function SiteHeader() {
   return (
     <header className="site-header home-header">
       <div className="site-header-inner home-header-inner">
-        <a className="brand-logo" href="/" aria-label="DATIA home">
+        <Link className="brand-logo" href="/" aria-label="DATIA home">
           <Image src={`${site}/images/datia-ai-logo.png`} alt="DATIA AI" width={176} height={40} unoptimized />
-        </a>
+        </Link>
         <nav className="main-nav" aria-label="Main navigation">
-          <a href="/about/decidedly-different">Our Story</a>
-          <a href="/services">Services</a>
-          <a href="/about/our-team">Meet the Team</a>
-          <a href="/about/our-advisors">Advisory Board</a>
-          <a href="/trusted-by">Trusted By</a>
+          <Link href="/about/decidedly-different">Our Story</Link>
+          <Link href="/services">Services</Link>
+          <Link href="/about/our-team">Meet the Team</Link>
+          <Link href="/about/our-advisors">Advisory Board</Link>
+          <Link href="/trusted-by">Trusted By</Link>
         </nav>
-        <a className="button button-red header-cta" href="/get-started">Partner with Us</a>
+        <Link className="button button-red header-cta" href="/get-started">Partner with Us</Link>
       </div>
     </header>
   )
@@ -109,7 +110,7 @@ export default function HomePage() {
           ))}
         </div>
         <p className="services-count">Showing 5 of our core services</p>
-        <a className="button button-red learn-services" href="/services">Learn More About Our Services</a>
+        <Link className="button button-red learn-services" href="/services">Learn More About Our Services</Link>
       </section>
 
       <section className="markets-section" id="markets">
@@ -153,16 +154,16 @@ export default function HomePage() {
       <section className="home-cta">
         <p>DATIA AI</p>
         <h2>Gain a Competitive Edge in Every Conversation.</h2>
-        <a className="button button-red" href="/get-started">Partner with Us</a>
+        <Link className="button button-red" href="/get-started">Partner with Us</Link>
       </section>
 
       <footer className="site-footer home-footer">
-        <a className="brand-logo" href="/" aria-label="DATIA home"><Image src={`${site}/images/datia-ai-logo-white.png`} alt="DATIA AI" width={176} height={40} unoptimized /></a>
+        <Link className="brand-logo" href="/" aria-label="DATIA home"><Image src={`${site}/images/datia-ai-logo-white.png`} alt="DATIA AI" width={176} height={40} unoptimized /></Link>
         <p>The AI-enabled fusion of data and media</p>
         <nav aria-label="Footer navigation">
-          <a href="/about/decidedly-different">Our Story</a>
-          <a href="/about/our-team">Meet the Team</a>
-          <a href="/about/our-advisors">Advisory Board</a>
+          <Link href="/about/decidedly-different">Our Story</Link>
+          <Link href="/about/our-team">Meet the Team</Link>
+          <Link href="/about/our-advisors">Advisory Board</Link>
           <a href={`${site}/partner`}>Partner with Us</a>
         </nav>
         <small>© {new Date().getFullYear()} DATIA. All rights reserved.</small>
