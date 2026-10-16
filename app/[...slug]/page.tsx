@@ -3,6 +3,8 @@ import Link from "next/link"
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import TeamDirectory from "../team-directory"
+import AdvisorDirectory from "../advisor-directory"
+import HomePage from "../page"
 
 const site = "https://www.datia.io"
 const image = (path: string) => `${site}/images/${path}`
@@ -61,32 +63,11 @@ const team = [
 ]
 
 const advisors = [
-  { name: "Randall Dennis", role: "Market Leader, Convergint", image: "randall-dennis.jpg", body: "A seasoned market leader at Convergint, Randall brings extensive experience in technology solutions and strategic business development. His expertise in enterprise solutions and go-to-market strategies helps guide DATIA’s strategic direction and client engagement." },
-  { name: "Terry Arsenault", role: "Founder | Ecommerce Brand Builder | Business Intelligence Expert — Vyne", image: "terry-arsenault.png", body: "A technology leader with over 20 years of experience in business intelligence and data strategy, Terry helps organizations harness data to drive smarter decisions and long-term growth." },
-  { name: "Kathy Hurley", role: "Principal Consultant, Kathy Hurley Consulting LLC", image: "kathy-hurley.jpg", body: "With decades of experience in B2B marketing and consulting, Kathy brings deep expertise in market analysis, competitive positioning, and growth strategies." },
-  { name: "Tom Fowler", role: "Sales and Marketing Advisor", image: "tom-fowler.jpg", body: "Tom’s media career spans publishing, business media, sales, marketing, and leadership roles across a wide range of media and publishing companies." },
-  { name: "Jason McKenna", role: "Strategic Advisor", image: "jason-mckenna.jpg", body: "Jason brings practical experience and strategic perspective to DATIA’s advisory collective." },
-]
-
-const clientLogos = [
-  ["Microsoft", "microsoft.png"],
-  ["Qualcomm Snapdragon", "qualcomm-snapdragon.webp"],
-  ["AlphaBEST Education", "alphabest-education.png"],
-  ["Extron", "extron.png"],
-  ["Genetec", "genetec.png"],
-  ["Right at School", "right-at-school.png"],
-  ["Transfinder", "transfinder.png"],
-  ["VOLT AI", "volt.png"],
-  ["Schneider Electric", "schneider-electric-new.jpeg"],
-  ["Participate Learning", "participate-learning.png"],
-  ["College Board", "collegeboard.png"],
-]
-
-const testimonials = [
-  { quote: "Partnering with DATIA on our ABM campaign has been a great experience. From the early research and planning stages through the live campaign, their team has been responsive, insightful, and easy to work with. We’ve seen strong engagement and high-quality leads so far.", name: "Anamaria Knight", role: "Senior Director Product/Marketing/R&E · Participate Learning" },
-  { quote: "DATIA has been awesome to work with. Their creative ideas, campaign strategy, and the way they bring everything together with great assets has really pushed our marketing forward. They take the time to get to know you and your desired outcomes.", name: "Mark McGinnis", role: "Chief Evangelist · TriVigil" },
-  { quote: "DATIA’s team brought deep industry experience and expertise to our custom research project, delivering valuable insights that directly informed our strategy.", name: "Shannon Zaher", role: "Vice President, Product Marketing · Raptor Technologies" },
-  { quote: "I’ve partnered with DATIA to create several content pieces. From a logistics standpoint, they’re very responsive, and they bring great knowledge about the K-12 market to the table.", name: "Taylor Frey", role: "Sr. Marketing Manager" },
+  { name: "Randall Dennis", role: "Market Leader, Convergint", image: "randall-dennis.jpg", body: "Randall Dennis is a seasoned market leader at Convergint, bringing extensive experience in technology solutions and strategic business development. With a proven track record in driving growth and innovation, Randall provides valuable insights into market trends and customer needs. His expertise in enterprise solutions and go-to-market strategies helps guide DATIA's strategic direction and client engagement approaches." },
+  { name: "Terry Arsenault", role: "Founder | Ecommerce Brand Builder | Business Intelligence Expert - Vyne", image: "terry-arsenault.png", body: "Terry Arsenault is a seasoned technology leader with over 20 years of experience, specializing in business intelligence and data strategy. Throughout his career, Terry has helped organizations harness the power of data to drive smarter decisions and long-term growth. As the founder of a digital agency and multiple ecommerce brands, he combines deep technical expertise with hands-on entrepreneurial experience. His work spans building scalable Shopify stores, leveraging AI to automate operations, and crafting performance-driven marketing strategies. Today, Terry focuses on helping businesses grow through data, technology, and a sharp understanding of digital commerce." },
+  { name: "Kathy Hurley", role: "Principal Consultant, Kathy Hurley Consulting LLC", image: "kathy-hurley.jpg", body: "Kathy Hurley is the Principal Consultant at Kathy Hurley Consulting LLC, specializing in strategic marketing and business development. With decades of experience in B2B marketing and consulting, Kathy brings deep expertise in market analysis, competitive positioning, and growth strategies. Her consulting background provides DATIA with valuable perspectives on client needs and market opportunities, helping to shape service offerings and strategic initiatives." },
+  { name: "Tom Fowler", role: "Sales and Marketing Advisor", image: "tom-fowler.jpg", body: "Tom Fowler started his media career in 1978 as the City Editor and then Managing Editor at the Oakland Press, a mid-size daily newspaper based in Pontiac, MI. He then transferred over to the business side to become the Sales and Marketing Manager for the newspaper. In 1984, he migrated to the B-to-B media arena as the Circulation Manager for Fairchild Publications, a business unit of Cap Cities Media, which published over 35 magazines and directories. From there, he became the Publisher and Group Publisher of media platforms at various media and publishing companies: Thompson Media, Cahners Travel Group, Pennwell, Summit Business Media and the International Media News Group. Tom has a history of solid accomplishments in the Energy, Financial and Healthcare media sectors, as well as experience and success in executive leadership roles. His diverse experiences include acquisitions, international event management and website development, turnaround strategies, new business development, strategic marketing planning and employee development. Over the years, he has demonstrated a record of managing and building business units with full P&L responsibility, leading these businesses through the publishing revolution from print to digital to data-driven media solutions. Fowler has a BA degree from Yale University, 1974 and an MBA from the Harvard Business School, 1978." },
+  { name: "Jason McKenna", role: "V.P. of Global Educational Strategy, VEX Robotics", image: "jason-mckenna.jpg", body: "Jason McKenna serves as Vice President of Global Educational Strategy at VEX Robotics, where he leads strategic initiatives in educational technology and market development. His expertise in educational markets and technology adoption provides DATIA with valuable insights into the education sector. Jason's experience in scaling educational programs globally and understanding institutional decision-making processes helps inform DATIA's approach to serving educational clients and developing targeted marketing strategies." },
 ]
 
 const navItems = [
@@ -105,6 +86,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const page = pages[slug.join("/")]
   if (!page) return { title: "DATIA" }
+  if (slug.join("/") === "trusted-by") {
+    return { title: "DATIA | Prospect Intelligence Platforms", description: "The AI-enabled fusion of data and media." }
+  }
   return { title: `${page.title} | DATIA`, description: page.subtitle }
 }
 
@@ -128,18 +112,32 @@ function SiteHeader() {
 }
 
 function SiteFooter() {
+  const footerLinks = [
+    ["Our Story", "/about/decidedly-different"],
+    ["Meet the Team", "/about/our-team"],
+    ["Advisory Board", "/about/our-advisors"],
+    ["Trusted By", "/trusted-by"],
+    ["Privacy Policy", `${site}/privacy-policy`],
+  ] as const
+  const markets = ["Education", "Government", "HR", "Financial Services", "Retail", "Healthcare", "Technology", "Cybersecurity/Identity"]
+
   return (
-    <footer className="site-footer home-footer">
-      <Link className="brand-logo" href="/" aria-label="DATIA home"><Image src={image("datia-ai-logo-white.png")} alt="DATIA AI" width={176} height={40} unoptimized /></Link>
-      <p>A sales and marketing intelligence company offering enhanced lead generation and media services that integrate intent data and AI-driven insights.</p>
-      <nav aria-label="Footer navigation">{navItems.map(([label, href]) => <Link href={href} key={label}>{label}</Link>)}</nav>
-      <small>© {new Date().getFullYear()} DATIA. All rights reserved.</small>
+    <footer className="site-footer inner-footer">
+      <div className="inner-footer-about">
+        <Link className="brand-logo" href="/" aria-label="DATIA home"><Image src={image("datia-ai-logo-white.png")} alt="DATIA AI" width={176} height={40} unoptimized /></Link>
+        <p>A sales and marketing intelligence company offering enhanced lead generation and media services that integrate intent data and AI-driven insights.</p>
+        <h2>Markets Served</h2>
+        <ul>{markets.map((market) => <li key={market}>{market}</li>)}</ul>
+      </div>
+      <nav aria-label="Footer navigation">{footerLinks.map(([label, href]) => <Link href={href} key={label}>{label}</Link>)}</nav>
+      <small>© 2025. All rights reserved.</small>
     </footer>
   )
 }
 
 function PageHero({ page }: { page: PageDefinition }) {
-  return <section className={`page-hero${page.kind === "team" ? " team-page-hero" : ""}`}><h1>{page.title}</h1><p>{page.subtitle}</p></section>
+  const className = page.kind === "team" ? "team-page-hero" : page.kind === "advisors" ? "advisor-page-hero" : page.kind === "contact" ? "contact-page-hero" : ""
+  return <section className={`page-hero ${className}`}><h1>{page.title}</h1><p>{page.subtitle}</p></section>
 }
 
 function StoryContent() {
@@ -172,44 +170,67 @@ function ServicesContent() {
   )
 }
 
-function PeopleContent({ kind }: { kind: "team" | "advisors" }) {
-  const isTeam = kind === "team"
-  const people = isTeam ? team : advisors
-  return (
-    <section className="inner-content-section people-section">
-      <div className="section-heading"><h2>{isTeam ? "Leadership Team" : "Meet our Expert Collective"}</h2><p>{isTeam ? "Our experienced leadership team brings decades of B2B marketing expertise to every client engagement." : "A collective of respected leaders and industry pioneers offering trusted counsel and market intelligence."}</p></div>
-      <div className="people-grid">{people.map((person) => <article className="person-card" key={person.name}><div className="person-photo"><Image src={image(person.image)} alt={person.name} width={520} height={500} unoptimized /></div><div className="person-details"><h3>{person.name}</h3><p className="person-role">{person.role}</p>{"email" in person && <a href={`mailto:${person.email}`}>{person.email}</a>}{"phone" in person && <a href={`tel:${person.phone?.replaceAll(".", "")}`}>{person.phone}</a>}{"body" in person && <p className="person-bio">{person.body}</p>}<Link className="person-bio-link" href="/get-started">{isTeam ? "View Bio" : "Read Full Bio"}</Link></div></article>)}</div>
-    </section>
-  )
+
+function ContactMailIcon() {
+  return <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m4 7 8 6 8-6" /></svg>
 }
 
-function TrustedContent() {
-  return (
-    <>
-      <section className="inner-content-section trusted-page-content">
-        <div className="brand-wall">{clientLogos.map(([name, file]) => <div className="partner-logo-cell" key={name}><Image src={`${site}/logos/${file}`} alt={`${name} logo`} width={190} height={60} unoptimized /></div>)}</div>
-      </section>
-      <section className="testimonial-section"><div className="section-heading"><p className="eyebrow">Client Spotlight</p><h2>What our partners say</h2></div><div className="testimonial-grid">{testimonials.map((item) => <blockquote className="testimonial-card" key={item.name}><span className="quote-mark" aria-hidden="true">“</span><p>{item.quote}</p><footer><strong>{item.name}</strong><span>{item.role}</span></footer></blockquote>)}</div></section>
-    </>
-  )
+function ContactPhoneIcon() {
+  return <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M7 3h3l2 5-2 2c1.2 2.2 2.8 3.8 5 5l2-2 5 2v3c0 1.1-.9 2-2 2C10.7 20 4 13.3 4 5c0-1.1.9-2 2-2h1Z" /></svg>
+}
+
+function ContactLinkedInIcon() {
+  return <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M5.2 7.7a1.9 1.9 0 1 0 0-3.8 1.9 1.9 0 0 0 0 3.8ZM3.6 9.2h3.2v10.5H3.6V9.2Zm5.2 0h3.1v1.4h.1a3.4 3.4 0 0 1 3.1-1.7c3.3 0 3.9 2.2 3.9 5v5.8h-3.2v-5.1c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7v5.2H8.8V9.2Z" /></svg>
 }
 
 function ContactContent() {
   return (
-    <section className="contact-layout inner-content-section">
-      <div className="contact-form-panel"><p className="eyebrow">Get Started.</p><h2>Request more information and rates.</h2><form className="datia-contact-form">
-        <label>First Name *<input required name="firstName" autoComplete="given-name" /></label>
-        <label>Last Name *<input required name="lastName" autoComplete="family-name" /></label>
-        <label>Email *<input required name="email" type="email" autoComplete="email" /></label>
-        <label>Phone<input name="phone" type="tel" autoComplete="tel" /></label>
-        <label className="form-wide">Company Name *<input required name="company" autoComplete="organization" /></label>
-        <label className="form-wide">Website<input name="website" type="url" placeholder="https://yourcompany.com" /></label>
-        <fieldset className="form-wide"><legend>Solutions of Interest</legend>{["ABMi", "TGL", "PUSH Ad Targeting", "Content Studio", "Custom Research"].map((solution) => <label className="solution-option" key={solution}><input type="checkbox" name="solutions" value={solution} />{solution}</label>)}</fieldset>
-        <label className="form-wide">Message<textarea name="message" placeholder="Tell us about your marketing goals..." rows={5} /></label>
-        <button className="button button-red form-wide" type="button">Submit</button>
-      </form></div>
-      <aside className="contact-details"><p className="eyebrow">Get in Touch</p><h2>Let’s talk about your goals.</h2><p>Connect directly with our team to discuss your marketing objectives and explore how we can help.</p>{team.map((person) => <div className="contact-person" key={person.name}><strong>{person.name}</strong><span>{person.role}</span><a href={`mailto:${person.email}`}>{person.email}</a>{person.phone && <a href={`tel:${person.phone.replaceAll(".", "")}`}>{person.phone}</a>}</div>)}</aside>
-    </section>
+    <>
+      <section className="contact-form-section">
+        <div className="contact-form-panel">
+          <h2>Get Started.</h2>
+          <p className="contact-form-intro">Request more information and rates.</p>
+          <form className="datia-contact-form">
+            <div className="contact-fields">
+              <label className="field-first">First Name *<input required name="firstName" autoComplete="given-name" /></label>
+              <label className="field-last">Last Name *<input required name="lastName" autoComplete="family-name" /></label>
+              <label className="field-company">Company Name *<input required name="company" autoComplete="organization" /></label>
+              <label className="field-email">Email *<input required name="email" type="email" autoComplete="email" /></label>
+              <label className="field-website">Website<input name="website" type="url" placeholder="https://yourcompany.com" /></label>
+              <label className="field-phone">Phone<input name="phone" type="tel" autoComplete="tel" /></label>
+            </div>
+            <div className="contact-form-options">
+              <fieldset className="solutions-fieldset">
+                <legend>Solutions of Interest</legend>
+                {[["ABMi", "TGL"], ["PUSH Ad Targeting", "Content Studio"], ["Custom Research"]].map((row) => (
+                  <div className="solution-row" key={row.join("-")}>{row.map((solution) => <label className="solution-option" key={solution}><input type="checkbox" name="solutions" value={solution} />{solution}</label>)}</div>
+                ))}
+              </fieldset>
+              <label className="message-field">Message<textarea name="message" placeholder="Tell us about your marketing goals..." rows={4} /></label>
+              <button className="contact-submit" type="button">Submit</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section className="contact-team-section">
+        <div className="contact-team-heading">
+          <h2>Get in Touch</h2>
+          <p>Connect directly with our team to discuss your marketing objectives and explore how we can help.</p>
+        </div>
+        <div className="contact-team-grid">
+          {team.map((person) => (
+            <article className="contact-team-card" key={person.name}>
+              <Image src={image(person.image)} alt={person.name} width={64} height={64} unoptimized />
+              <h3>{person.name}</h3>
+              <p className="contact-team-role">{person.role}</p>
+              <a className="contact-team-detail" href={`mailto:${person.email}`}><ContactMailIcon />{person.email}</a>
+              {person.phone && <a className="contact-team-detail" href={`tel:${person.phone.replaceAll(".", "")}`}><ContactPhoneIcon />{person.phone}</a>}
+              <a className="contact-connect" href={`https://www.linkedin.com/search/results/people/?keywords=${encodeURIComponent(person.name)}`} target="_blank" rel="noreferrer"><ContactLinkedInIcon />Connect</a>
+            </article>
+          ))}
+        </div>
+      </section>
+    </>
   )
 }
 
@@ -217,16 +238,16 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
   const { slug } = await params
   const page = pages[slug.join("/")]
   if (!page) notFound()
+  if (page.kind === "trusted") return <HomePage />
 
   return (
-    <main className="datia-inner-page">
+    <main className={`datia-inner-page ${page.kind === "advisors" ? "advisor-page" : page.kind === "contact" ? "contact-page" : ""}`}>
       <SiteHeader />
       <PageHero page={page} />
       {page.kind === "story" && <StoryContent />}
       {page.kind === "services" && <ServicesContent />}
       {page.kind === "team" && <TeamDirectory people={team} />}
-      {page.kind === "advisors" && <PeopleContent kind="advisors" />}
-      {page.kind === "trusted" && <TrustedContent />}
+      {page.kind === "advisors" && <AdvisorDirectory people={advisors} />}
       {page.kind === "contact" && <ContactContent />}
       <SiteFooter />
     </main>

@@ -400,3 +400,114 @@ button, a { -webkit-tap-highlight-color: transparent; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
+
+.advisor-page .advisor-page-hero { min-height: 277px; }
+.advisor-page .advisor-page-hero p { max-width: 900px; font-size: 25px; }
+.advisor-page .advisor-section { width: min(100% - 64px, 1156px); padding: 75px 0 80px; }
+.advisor-section-heading { margin-bottom: 61px; }
+.advisor-section-heading h2 { font-size: 36px; line-height: 1.25; }
+.advisor-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 32px; }
+.advisor-card { min-width: 0; min-height: 278px; display: flex; flex-direction: column; padding: 24px; border: 1px solid #e1e1e1; border-radius: 8px; background: #fff; box-shadow: 0 1px 2px rgb(0 0 0 / 5%); }
+.advisor-card-heading { display: flex; align-items: center; gap: 16px; min-height: 80px; }
+.advisor-photo { position: relative; width: 80px; height: 80px; flex: 0 0 auto; }
+.advisor-photo img { width: 80px; height: 80px; display: block; border-radius: 50%; object-fit: cover; }
+.advisor-photo button { position: absolute; inset: 0; display: grid; place-items: center; border: 0; border-radius: 50%; background: rgb(0 0 0 / 0%); color: transparent; font: inherit; cursor: pointer; transition: background-color .16s ease, color .16s ease; }
+.advisor-photo:hover button, .advisor-photo button:focus-visible { background: rgb(0 0 0 / 62%); color: #fff; }
+.advisor-title { min-width: 0; }
+.advisor-title h3 { margin: 0; font-size: 22px; line-height: 1.3; }
+.advisor-title p { margin: 0; color: #62666b; font-size: 15px; line-height: 1.5; }
+.advisor-bio { display: -webkit-box; overflow: hidden; margin: 18px 0 0; color: #555b61; font-size: 15px; line-height: 1.55; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+.advisor-bio-expanded { display: block; overflow: visible; }
+.advisor-card-actions { display: flex; align-items: center; gap: 32px; margin-top: auto; padding-top: 18px; }
+.advisor-linkedin { width: 18px; height: 18px; display: inline-flex; color: #111; }
+.advisor-linkedin svg { width: 18px; height: 18px; }
+.advisor-card-actions button { padding: 0; border: 0; background: none; color: var(--datia-red); font: inherit; font-size: 14px; cursor: pointer; }
+.advisor-card-actions button:hover { text-decoration: underline; }
+
+.contact-page .contact-page-hero { min-height: 184px; padding: 31px 24px 34px; }
+.contact-page .contact-page-hero h1 { font-size: 48px; }
+.contact-page .contact-page-hero p { max-width: 920px; margin-top: 12px; font-size: 19px; line-height: 1.45; }
+.contact-form-section { padding: 37px 24px 38px; }
+.contact-form-panel { width: min(100%, 1156px); margin: 0 auto; padding: 27px 24px 24px; border-radius: 8px; background: #fff; box-shadow: 0 5px 16px rgb(0 0 0 / 13%); }
+.contact-form-panel h2 { margin: 0; font-size: 23px; line-height: 1.35; }
+.contact-form-intro { margin: 6px 0 14px; color: #777; font-size: 16px; }
+.datia-contact-form { display: grid; grid-template-columns: 2fr 1fr; align-items: start; gap: 16px; }
+.contact-fields { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 15px 12px; }
+.contact-fields > label, .message-field { min-width: 0; display: flex; flex-direction: column; gap: 7px; color: #444a52; font-size: 16px; }
+.contact-fields input, .message-field textarea { width: 100%; min-height: 40px; padding: 9px 12px; border: 1px solid #d5d5d5; border-radius: 5px; background: #fff; color: #111; font: inherit; font-size: 14px; }
+.field-first, .field-last { grid-column: span 2; }
+.field-company, .field-email, .field-website, .field-phone { grid-column: span 4; }
+.contact-form-options { display: flex; flex-direction: column; gap: 15px; }
+.solutions-fieldset { display: flex; flex-direction: column; gap: 10px; margin: 0; padding: 0; border: 0; }
+.solutions-fieldset legend { margin-bottom: 10px; color: #444a52; font-size: 16px; }
+.solution-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.solution-option { display: flex; align-items: center; gap: 8px; color: #222; font-size: 14px; line-height: 1.35; }
+.solution-option input { width: 20px; height: 20px; margin: 0; accent-color: var(--datia-red); }
+.message-field textarea { min-height: 80px; resize: vertical; }
+.contact-submit { align-self: flex-end; min-width: 125px; min-height: 41px; padding: 0 22px; border: 0; border-radius: 7px; background: #050505; color: #fff; font: inherit; font-size: 16px; cursor: pointer; }
+.contact-submit:hover { background: #282828; }
+.contact-team-section { padding: 58px 24px 64px; background: #f7f8fa; }
+.contact-team-heading { max-width: 760px; margin: 0 auto 42px; text-align: center; }
+.contact-team-heading h2 { margin: 0; font-size: 36px; }
+.contact-team-heading p { margin: 15px 0 0; color: #62666b; font-size: 19px; line-height: 1.5; }
+.contact-team-grid { width: min(100%, 900px); margin: 0 auto; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.contact-team-card { min-width: 0; min-height: 205px; display: flex; flex-direction: column; align-items: center; padding: 18px 14px 16px; border: 1px solid #e1e1e1; border-radius: 7px; background: #fff; text-align: center; }
+.contact-team-card > img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; }
+.contact-team-card h3 { margin: 10px 0 0; font-size: 15px; line-height: 1.35; }
+.contact-team-role { min-height: 21px; margin: 5px 0 8px; color: #666; font-size: 13px; line-height: 1.45; }
+.contact-team-detail { max-width: 100%; display: flex; align-items: center; gap: 6px; margin-top: 5px; overflow: hidden; color: #555; font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
+.contact-team-detail span { color: #62666b; font-size: 13px; }
+.contact-team-detail svg, .contact-connect svg { width: 14px; height: 14px; flex: 0 0 auto; }
+.contact-connect { display: inline-flex; align-items: center; gap: 8px; margin-top: 13px; color: var(--datia-red); font-size: 13px; }
+.contact-team-card a:hover { text-decoration: underline; }
+
+.inner-footer { width: 100%; display: grid; grid-template-columns: minmax(0, 2fr) minmax(180px, .9fr); align-items: start; gap: 30px 64px; padding: 45px max(24px, calc((100% - 1184px) / 2)) 24px; background: #080808; color: #fff; text-align: left; }
+.inner-footer-about .brand-logo img { width: 132px; height: auto; }
+.inner-footer-about > p { max-width: 760px; margin: 14px 0 20px; color: #d0d0d0; font-size: 14px; line-height: 1.55; }
+.inner-footer-about h2 { margin: 0 0 10px; color: #fff; font-size: 15px; }
+.inner-footer-about ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px 18px; margin: 0; padding: 0; color: #d0d0d0; font-size: 13px; list-style: none; }
+.inner-footer-about li { display: flex; align-items: center; gap: 8px; }
+.inner-footer-about li::before { width: 6px; height: 6px; flex: 0 0 auto; border-radius: 50%; background: var(--datia-red); content: ""; }
+.inner-footer nav { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; color: #e6e6e6; font-size: 14px; }
+.inner-footer nav a:hover { color: var(--datia-red); }
+.inner-footer small { grid-column: 1 / -1; width: 100%; margin: 0; padding-top: 20px; border-top: 1px solid #333; color: #ccc; font-size: 12px; text-align: center; }
+
+@media (max-width: 760px) {
+  .advisor-page .advisor-page-hero { min-height: 248px; }
+  .advisor-page .advisor-page-hero p { font-size: 20px; }
+  .advisor-page .advisor-section { width: calc(100% - 36px); padding: 52px 0 58px; }
+  .advisor-section-heading { margin-bottom: 36px; }
+  .advisor-section-heading h2 { font-size: 30px; }
+  .advisor-grid { grid-template-columns: 1fr; gap: 16px; }
+  .advisor-card { min-height: 255px; padding: 18px; }
+  .advisor-title h3 { font-size: 20px; }
+  .advisor-title p { font-size: 14px; }
+  .contact-page .contact-page-hero { min-height: 204px; padding: 40px 20px; }
+  .contact-page .contact-page-hero h1 { font-size: 40px; }
+  .contact-page .contact-page-hero p { font-size: 17px; }
+  .contact-form-section { padding: 24px 18px 28px; }
+  .contact-form-panel { padding: 23px 18px; }
+  .datia-contact-form { grid-template-columns: 1fr; gap: 18px; }
+  .contact-form-options { gap: 17px; }
+  .contact-team-section { padding: 48px 18px 54px; }
+  .contact-team-heading { margin-bottom: 30px; }
+  .contact-team-heading h2 { font-size: 30px; }
+  .contact-team-heading p { font-size: 17px; }
+  .contact-team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .inner-footer { grid-template-columns: minmax(0, 1fr); gap: 25px; padding: 38px 24px 22px; }
+  .inner-footer nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .inner-footer small { grid-column: auto; }
+}
+
+@media (max-width: 520px) {
+  .advisor-card-heading { align-items: flex-start; gap: 13px; }
+  .advisor-photo, .advisor-photo img { width: 68px; height: 68px; }
+  .advisor-title h3 { font-size: 18px; }
+  .advisor-bio { font-size: 14px; }
+  .contact-page .contact-page-hero h1 { font-size: 35px; }
+  .contact-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .field-first, .field-last, .field-company, .field-email, .field-website, .field-phone { grid-column: span 2; }
+  .solution-row { grid-template-columns: 1fr 1fr; }
+  .contact-team-grid { grid-template-columns: 1fr; }
+  .inner-footer-about ul { grid-template-columns: 1fr 1fr; }
+}
