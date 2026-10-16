@@ -4,7 +4,7 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import TeamDirectory from "../team-directory"
 import AdvisorDirectory from "../advisor-directory"
-import HomePage from "../page"
+import TrustedByPage from "../trusted-by-page"
 
 const site = "https://www.datia.io"
 const image = (path: string) => `${site}/images/${path}`
@@ -87,7 +87,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const page = pages[slug.join("/")]
   if (!page) return { title: "DATIA" }
   if (slug.join("/") === "trusted-by") {
-    return { title: "DATIA | Prospect Intelligence Platforms", description: "The AI-enabled fusion of data and media." }
+    return { title: "Trusted by Leading Brands | DATIA", description: page.subtitle }
   }
   return { title: `${page.title} | DATIA`, description: page.subtitle }
 }
@@ -238,7 +238,7 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
   const { slug } = await params
   const page = pages[slug.join("/")]
   if (!page) notFound()
-  if (page.kind === "trusted") return <HomePage />
+  if (page.kind === "trusted") return <TrustedByPage />
 
   return (
     <main className={`datia-inner-page ${page.kind === "advisors" ? "advisor-page" : page.kind === "contact" ? "contact-page" : ""}`}>
