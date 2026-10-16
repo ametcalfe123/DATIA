@@ -1,66 +1,171 @@
+import Image from "next/image"
+
+const site = "https://www.datia.io"
+
+const services = [
+  {
+    name: "ABMi",
+    subtitle: "Account-Based Marketing Intelligence",
+    description:
+      "Precision-targeted marketing strategies that focus on high-value accounts with personalized campaigns driven by AI-driven behavioral data.",
+  },
+  {
+    name: "TGL",
+    subtitle: "Targeted Generated Leads",
+    description:
+      "Prospect identification and interest for fueling the sales pipeline with top-of-funnel leads.",
+  },
+  {
+    name: "PUSH",
+    subtitle: "Programmatic User-Specific Hyper-targeting",
+    description:
+      "Strategic advertising campaigns tailored to your ideal buyers for maximum engagement and conversion.",
+  },
+  {
+    name: "Content Studio",
+    subtitle: "Content Creation & Strategy",
+    description: "Custom content creation, tailored to specific goals and objectives.",
+  },
+  {
+    name: "Custom Research",
+    subtitle: "Market Research & Analysis",
+    description: "Showcase industry expertise and product innovation.",
+  },
+]
+
+const markets = [
+  { name: "EDU", groups: ["K12", "Higher Ed"], icon: "edu" },
+  { name: "GOV", groups: ["State/Local", "Federal"], icon: "gov" },
+  { name: "HR", groups: ["Employee Benefits", "Human Resources"], icon: "hr" },
+  { name: "Financial Services", groups: ["Investment Advisor", "Banking", "Insurance"], icon: "financial" },
+  { name: "Technology", groups: ["Identity", "Enterprise", "Cybersecurity"], icon: "technology" },
+  { name: "Retail", groups: ["Tech", "C-Suite Management"], icon: "retail" },
+  { name: "Healthcare", groups: ["Tech", "C-Suite Management"], icon: "healthcare" },
+]
+
+const articles = [
+  {
+    category: "Lead Generation",
+    title: "Empower Don&apos;t Push: How to Meet Leads on Their Own Terms",
+    image: "empower-leads-article.avif",
+    description:
+      "Discover effective strategies for empowering prospects rather than pushing them, creating authentic connections that drive better conversion rates and long-term relationships.",
+    read: "8 min read",
+    href: "https://www.datiak12.io/partner-insights/white-papers-guides/whitepaper/15740322/datia-k12-empower-dont-push-how-to-meet-leads-on-Their%20own-terms",
+  },
+  {
+    category: "Lead Nurturing",
+    title: "Nurture or Sell: Finding the Perfect Balance to Convert Leads Without Scaring Them Off",
+    image: "nurture-or-sell-article.avif",
+    description:
+      "Learn how to strike the optimal balance between nurturing prospects and moving them toward a decision.",
+    read: "6 min read",
+    href: "https://www.datiak12.io/partner-insights/white-papers-guides/whitepaper/15738538/datia-k12-nurture-or-sell-finding-the-perfect-balance-to-convert-leads-without-scaring-them-off",
+  },
+]
+
+function SiteHeader() {
+  return (
+    <header className="site-header home-header">
+      <div className="site-header-inner home-header-inner">
+        <a className="brand-logo" href="/" aria-label="DATIA home">
+          <Image src={`${site}/images/datia-ai-logo.png`} alt="DATIA AI" width={176} height={40} unoptimized />
+        </a>
+        <nav className="main-nav" aria-label="Main navigation">
+          <a href="/about/decidedly-different">Our Story</a>
+          <a href="/services">Services</a>
+          <a href="/about/our-team">Meet the Team</a>
+          <a href="/about/our-advisors">Advisory Board</a>
+          <a href="/trusted-by">Trusted By</a>
+        </nav>
+        <a className="button button-red header-cta" href="/get-started">Partner with Us</a>
+      </div>
+    </header>
+  )
+}
+
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-background text-foreground">
-      <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6 sm:px-10">
-        <a aria-label="DATIA home" className="flex items-center gap-3 font-semibold tracking-tight" href="#home">
-          <span aria-hidden="true" className="flex size-8 items-center justify-center rounded-lg bg-primary text-sm font-bold text-primary-foreground">
-            D
-          </span>
-          <span className="text-lg">DATIA</span>
-        </a>
-        <span className="rounded-full border border-border px-3 py-1.5 font-mono text-xs text-muted-foreground">
-          APP STARTER
-        </span>
-      </header>
-
-      <section className="mx-auto grid w-full max-w-6xl items-center gap-14 px-6 pb-20 pt-16 sm:px-10 sm:pb-28 sm:pt-24 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20" id="home">
-        <div className="max-w-xl">
-          <p className="mb-6 flex items-center gap-2 font-mono text-xs font-medium uppercase tracking-[0.18em] text-primary">
-            <span aria-hidden="true" className="size-2 rounded-full bg-primary" />
-            A clean slate for what&apos;s next
-          </p>
-          <h1 className="text-balance text-5xl font-semibold leading-[1.08] tracking-[-0.055em] sm:text-6xl lg:text-7xl">
-            Your next idea starts here.
-          </h1>
-          <p className="mt-6 max-w-lg text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
-            DATIA is ready for its first build. This fast, flexible foundation gives you a clear place to shape what comes next.
-          </p>
-          <a className="mt-9 inline-flex min-h-12 items-center justify-center rounded-lg bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" href="#starter">
-            Explore the starter
-            <span aria-hidden="true" className="ml-3 text-base">→</span>
-          </a>
-        </div>
-
-        <aside aria-labelledby="starter-title" className="rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-8" id="starter">
-          <div className="flex items-start justify-between gap-4">
-            <div>
-              <p className="font-mono text-xs uppercase tracking-[0.16em] text-muted-foreground">Foundation / 001</p>
-              <h2 className="mt-3 text-xl font-semibold tracking-tight" id="starter-title">A good place to begin</h2>
-            </div>
-            <span aria-hidden="true" className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10 font-mono text-sm font-medium text-primary">↳</span>
-          </div>
-          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-            The essentials are in place. Open a page file and start making it yours.
-          </p>
-          <div className="mt-7 overflow-hidden rounded-xl bg-foreground p-5 text-background">
-            <p className="mb-4 font-mono text-xs text-background/60">YOUR PROJECT, READY</p>
-            <ul className="space-y-3 font-mono text-xs sm:text-sm">
-              <li className="flex items-center gap-3"><span className="text-primary">/</span><span>app/page.tsx</span><span className="ml-auto text-background/50">home</span></li>
-              <li className="flex items-center gap-3"><span className="text-primary">/</span><span>app/layout.tsx</span><span className="ml-auto text-background/50">metadata</span></li>
-              <li className="flex items-center gap-3"><span className="text-primary">/</span><span>app/globals.css</span><span className="ml-auto text-background/50">theme</span></li>
-            </ul>
-          </div>
-          <div className="mt-6 flex flex-wrap gap-2" aria-label="Included technologies">
-            <span className="rounded-md bg-muted px-2.5 py-1.5 font-mono text-xs text-muted-foreground">Next.js 16</span>
-            <span className="rounded-md bg-muted px-2.5 py-1.5 font-mono text-xs text-muted-foreground">TypeScript</span>
-            <span className="rounded-md bg-muted px-2.5 py-1.5 font-mono text-xs text-muted-foreground">Tailwind CSS 4</span>
-          </div>
-        </aside>
+    <main className="datia-home">
+      <SiteHeader />
+      <section className="home-hero" aria-labelledby="home-title">
+        <h1 id="home-title">Prospect Intelligence Platforms</h1>
+        <p>The AI-enabled fusion of data and media</p>
       </section>
 
-      <footer className="mx-auto flex w-full max-w-6xl flex-col gap-2 border-t border-border px-6 py-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:px-10">
-        <span>DATIA · Ready for your first build</span>
-        <span className="font-mono">Next.js · App Router</span>
+      <section className="services-section" id="services">
+        <div className="section-heading">
+          <h2>Our Services</h2>
+          <p>Comprehensive, AI-enabled B2B marketing solutions designed to drive growth.</p>
+        </div>
+        <div className="service-grid">
+          {services.map((service) => (
+            <article className="service-card" key={service.name}>
+              <span className="target-icon" aria-hidden="true" />
+              <h3>{service.name}</h3>
+              <p className="service-subtitle">{service.subtitle}</p>
+              <p className="service-description">{service.description}</p>
+            </article>
+          ))}
+        </div>
+        <p className="services-count">Showing 5 of our core services</p>
+        <a className="button button-red learn-services" href="/services">Learn More About Our Services</a>
+      </section>
+
+      <section className="markets-section" id="markets">
+        <div className="section-heading">
+          <h2>Markets Served</h2>
+          <p>We deliver specialized B2B marketing solutions across diverse industries, understanding the unique challenges and opportunities in each market.</p>
+        </div>
+        <div className="market-grid">
+          {markets.map((market) => (
+            <article className="market-card" key={market.name}>
+              <Image src={`${site}/images/${market.icon}-icon.png`} alt="" width={48} height={48} unoptimized />
+              <h3>{market.name}</h3>
+              <ul>{market.groups.map((group) => <li key={group}>{group}</li>)}</ul>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="buzz-section" id="buzz">
+        <div className="section-heading">
+          <h2>Marketing Buzz</h2>
+          <p>Stay ahead of the curve with our latest insights, strategies, and industry trends.</p>
+        </div>
+        <div className="article-grid">
+          {articles.map((article) => (
+            <article className="article-card" key={article.title}>
+              <a href={article.href} className="article-image">
+                <Image src={`${site}/images/${article.image}`} alt={article.title.replace("&apos;", "'")} width={800} height={450} unoptimized />
+              </a>
+              <div className="article-content">
+                <p className="article-category">{article.category}</p>
+                <h3><a href={article.href}>{article.title.replace("&apos;", "'")}</a></h3>
+                <p className="article-description">{article.description}</p>
+                <div className="article-footer"><span>{article.read}</span><a href={article.href}>Read More <span aria-hidden="true">→</span></a></div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="home-cta">
+        <p>DATIA AI</p>
+        <h2>Gain a Competitive Edge in Every Conversation.</h2>
+        <a className="button button-red" href="/get-started">Partner with Us</a>
+      </section>
+
+      <footer className="site-footer home-footer">
+        <a className="brand-logo" href="/" aria-label="DATIA home"><Image src={`${site}/images/datia-ai-logo-white.png`} alt="DATIA AI" width={176} height={40} unoptimized /></a>
+        <p>The AI-enabled fusion of data and media</p>
+        <nav aria-label="Footer navigation">
+          <a href="/about/decidedly-different">Our Story</a>
+          <a href="/about/our-team">Meet the Team</a>
+          <a href="/about/our-advisors">Advisory Board</a>
+          <a href={`${site}/partner`}>Partner with Us</a>
+        </nav>
+        <small>© {new Date().getFullYear()} DATIA. All rights reserved.</small>
       </footer>
     </main>
   )
