@@ -80,7 +80,7 @@ function TrustedHeader() {
     <header className="site-header home-header">
       <div className="site-header-inner home-header-inner">
         <Link className="brand-logo" href="/" aria-label="DATIA home">
-          <Image src={`${site}/images/datia-ai-logo.png`} alt="DATIA AI" width={176} height={40} unoptimized />
+          <Image src={`/images/datia-ai-logo.png`} alt="DATIA AI" width={176} height={40} unoptimized />
         </Link>
         <nav className="main-nav" aria-label="Main navigation">
           {navItems.map(([label, href]) => <Link href={href} key={label}>{label}</Link>)}
@@ -112,7 +112,7 @@ function TrustedFooter() {
     <footer className="site-footer inner-footer">
       <div className="inner-footer-about">
         <Link className="brand-logo" href="/" aria-label="DATIA home">
-          <Image src={`${site}/images/datia-ai-logo-white.png`} alt="DATIA AI" width={176} height={40} unoptimized />
+          <Image src={`/images/datia-ai-logo-white.png`} alt="DATIA AI" width={176} height={40} unoptimized />
         </Link>
         <p>A sales and marketing intelligence company offering enhanced lead generation and media services that integrate intent data and AI-driven insights.</p>
         <h2>Markets Served</h2>
@@ -150,7 +150,7 @@ export default function TrustedByPage() {
         <div className="trusted-logo-grid">
           {clients.map((client) => (
             <a href={client.url} target="_blank" rel="noopener noreferrer" title={`Visit ${client.name}`} key={client.name}>
-              <Image src={`${site}/logos/${client.image}`} alt={`${client.name} logo`} width={160} height={96} unoptimized loading="lazy" />
+              <Image src={`/logos/${client.image}`} alt={`${client.name} logo`} width={160} height={96} unoptimized loading="lazy" />
             </a>
           ))}
         </div>

@@ -70,7 +70,7 @@ function SiteHeader() {
     <header className="site-header home-header">
       <div className="site-header-inner home-header-inner">
         <Link className="brand-logo" href="/" aria-label="DATIA home">
-          <Image src={`${site}/images/datia-ai-logo.png`} alt="DATIA AI" width={176} height={40} unoptimized />
+          <Image src={`/images/datia-ai-logo.png`} alt="DATIA AI" width={176} height={40} unoptimized />
         </Link>
         <nav className="main-nav" aria-label="Main navigation">
           <Link href="/about/decidedly-different">Our Story</Link>
@@ -158,7 +158,7 @@ export default function HomePage() {
       </section>
 
       <footer className="site-footer home-footer">
-        <Link className="brand-logo" href="/" aria-label="DATIA home"><Image src={`${site}/images/datia-ai-logo-white.png`} alt="DATIA AI" width={176} height={40} unoptimized /></Link>
+        <Link className="brand-logo" href="/" aria-label="DATIA home"><Image src={`/images/datia-ai-logo-white.png`} alt="DATIA AI" width={176} height={40} unoptimized /></Link>
         <p>The AI-enabled fusion of data and media</p>
         <nav aria-label="Footer navigation">
           <Link href="/about/decidedly-different">Our Story</Link>

@@ -7,7 +7,7 @@ import AdvisorDirectory from "../advisor-directory"
 import TrustedByPage from "../trusted-by-page"
 
 const site = "https://www.datia.io"
-const image = (path: string) => `${site}/images/${path}`
+const image = (path: string) => `/images/${path}`
 
 type PageKind = "story" | "services" | "team" | "advisors" | "trusted" | "contact"
 type PageDefinition = { title: string; subtitle: string; kind: PageKind }
