@@ -4,7 +4,40 @@ const site = "https://www.datia.io"
 const partner = `${site}/partner`
 
 const partners = [
-  "Allegion", "AlphaBEST Education", "Chartwells", "College Board", "Communities in Schools", "CrowdStrike", "Extron", "Genetec", "Lebra", "Microsoft", "Otus", "Palo Alto Networks", "ParentSquare", "Participate Learning", "Pathwise", "PMX Sync", "PowerSchool", "Prodigy", "Qualcomm Snapdragon", "Raptor Technologies", "Renaissance", "RethinkFirst", "Right at School", "Ruckus", "Sandy Hook Promise", "Scanmarker", "Schneider Electric", "Stryker", "Student", "Symetrix", "Transfinder", "TriVigil", "Valcom", "Volt",
+  { name: "Allegion", image: "allegion.png" },
+  { name: "AlphaBEST Education", image: "alphabest-education.png" },
+  { name: "Chartwells", image: "chartwells.jpg" },
+  { name: "College Board", image: "collegeboard.png" },
+  { name: "Communities in Schools", image: "communities-in-schools.png" },
+  { name: "CrowdStrike", image: "crowdstrike.png" },
+  { name: "Extron", image: "extron.png" },
+  { name: "Genetec", image: "genetec.png" },
+  { name: "Lebra", image: "lebra.png" },
+  { name: "Microsoft", image: "microsoft.png" },
+  { name: "Otus", image: "otus.png" },
+  { name: "Palo Alto Networks", image: "palo-alto-networks.jpg" },
+  { name: "ParentSquare", image: "parentsquare.png" },
+  { name: "Participate Learning", image: "participate-learning.png" },
+  { name: "Pathwise", image: "pathwise.png" },
+  { name: "PMX Sync", image: "primex-sync.png" },
+  { name: "PowerSchool", image: "powerschool.jpg" },
+  { name: "Prodigy", image: "prodigy.png" },
+  { name: "Qualcomm Snapdragon", image: "qualcomm-snapdragon.webp" },
+  { name: "Raptor Technologies", image: "raptor.webp" },
+  { name: "Renaissance", image: "renaissance.png" },
+  { name: "RethinkFirst", image: "rethinkfirst.jpg" },
+  { name: "Right at School", image: "right-at-school.png" },
+  { name: "Ruckus", image: "ruckus-commscope.png" },
+  { name: "Sandy Hook Promise", image: "sandy-hook-promise.jpg" },
+  { name: "Scanmarker", image: "scanmarker.png" },
+  { name: "Schneider Electric", image: "schneider-electric-new.jpeg" },
+  { name: "Stryker", image: "stryker.png" },
+  { name: "Student", image: "studient.png" },
+  { name: "Symetrix", image: "symetrix.png" },
+  { name: "Transfinder", image: "transfinder.png" },
+  { name: "TriVigil", image: "trivigil.png" },
+  { name: "Valcom", image: "valcom.png" },
+  { name: "Volt", image: "volt.png" },
 ]
 
 const dataServices = [
@@ -33,7 +66,7 @@ function PartnerHeader() {
   return (
     <header className="site-header partner-header">
       <div className="site-header-inner partner-header-inner">
-        <a className="brand-logo" href={site} aria-label="DATIA home"><Image src={`${partner}/images/datia-ai-logo.png`} alt="DATIA AI" width={150} height={40} unoptimized /></a>
+        <a className="brand-logo" href={site} aria-label="DATIA home"><Image src={`/images/datia-ai-logo.png`} alt="DATIA AI" width={150} height={40} unoptimized /></a>
         <p className="header-tagline"><span aria-hidden="true" />THE AI-ENABLED FUSION OF DATA AND MEDIA</p>
         <nav className="partner-nav" aria-label="Partner page navigation">
           <a href="#abmxi">Flagship Offering</a>
@@ -98,10 +131,11 @@ export default function PartnerPage() {
       <section className="trusted-section" id="testimonials">
         <div className="section-heading"><p className="eyebrow">Partnership that performs</p><h2>Trusted by Leading Brands</h2></div>
         <div className="partner-logo-grid">
-          {partners.map((name) => {
-            const file = name.replaceAll(" ", "_").replaceAll("&", "and")
-            return <div className="partner-logo-cell" key={name}><Image src={`${partner}/logos/${file}.png`} alt={name} width={190} height={60} loading="lazy" unoptimized /></div>
-          })}
+          {partners.map(({ name, image }) => (
+            <div className="partner-logo-cell" key={name}>
+              <Image src={`/logos/${image}`} alt={name} width={190} height={60} loading="lazy" unoptimized />
+            </div>
+          ))}
         </div>
       </section>
 
@@ -118,7 +152,7 @@ export default function PartnerPage() {
       </section>
 
       <footer className="site-footer partner-footer">
-        <a className="brand-logo" href={site} aria-label="DATIA home"><Image src={`${partner}/images/datia-ai-logo.png`} alt="DATIA AI" width={150} height={40} unoptimized /></a>
+        <a className="brand-logo" href={site} aria-label="DATIA home"><Image src={`/images/datia-ai-logo.png`} alt="DATIA AI" width={150} height={40} unoptimized /></a>
         <p>ADVISED BY</p>
         <nav aria-label="Footer navigation"><a href="#abmxi">Flagship Offering</a><a href="#services">Marketing Services</a><a href="#testimonials">Trusted By</a><a href={`${site}`}>DATIA Home</a></nav>
         <small>© {new Date().getFullYear()} DATIA. All rights reserved.</small>

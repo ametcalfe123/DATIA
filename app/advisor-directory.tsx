@@ -10,8 +10,6 @@ type Advisor = {
   body: string
 }
 
-const site = "https://www.datia.io"
-
 function LinkedInIcon() {
   return (
     <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
@@ -39,7 +37,7 @@ export default function AdvisorDirectory({ people }: { people: Advisor[] }) {
             <article className="advisor-card" key={person.name}>
               <div className="advisor-card-heading">
                 <div className="advisor-photo">
-                  <Image src={`${site}/images/${person.image}`} alt={person.name} width={80} height={80} unoptimized />
+                  <Image src={`/images/${person.image}`} alt={person.name} width={80} height={80} unoptimized />
                   <button type="button" onClick={() => toggleBio(person.name)} aria-label={`${isExpanded ? "Hide" : "Show"} ${person.name}'s full biography`} aria-expanded={isExpanded}>Bio</button>
                 </div>
                 <div className="advisor-title">

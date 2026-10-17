@@ -29,7 +29,7 @@ export function SiteHeader({ variant = "home" }: SiteHeaderProps) {
       <div className="site-header-inner">
         <Link className="site-logo" href="/" aria-label="DATIA AI home">
           <Image
-            src="https://www.datia.io/images/datia-ai-logo.png"
+            src="/images/datia-ai-logo.png"
             alt="DATIA AI"
             width={2092}
             height={640}
@@ -57,7 +57,7 @@ export function SiteFooter() {
       <div className="site-footer-inner">
         <div className="site-footer-brand">
           <Link href="/" aria-label="DATIA AI home">
-            <Image src="https://www.datia.io/images/datia-ai-logo-white.png" alt="DATIA AI" width={2092} height={640} sizes="172px" />
+            <Image src="/images/datia-ai-logo-white.png" alt="DATIA AI" width={2092} height={640} sizes="172px" />
           </Link>
           <p>A sales and marketing intelligence company offering enhanced lead generation and media services that integrate intent data and AI-driven insights.</p>
         </div>
