@@ -100,7 +100,7 @@ export default function PartnerPage() {
           <p>Buyer intelligence sharpens targeting, your exact personas are warmed across LinkedIn, Facebook and brand-safe websites, then your thought leadership goes out by targeted email — because decision-makers engage with content several times before they&apos;re ready to talk to Sales.</p>
         </div>
         <div className="abm-visual">
-          <Image src={`${partner}/images/section-1a-transparent.png`} alt="DATIA simplifies and consolidates intent signals, traditional media, government data, and agency services" width={900} height={460} unoptimized />
+          <Image src="/partner/images/section-1a-transparent.png" alt="DATIA simplifies and consolidates intent signals, traditional media, government data, and agency services" width={900} height={460} unoptimized />
         </div>
         <div className="data-service-grid">
           {dataServices.map((item) => <article className="data-service-card" key={item.title}><span className="data-service-dot" aria-hidden="true" /><h3>{item.title}</h3><p>{item.text}</p></article>)}
