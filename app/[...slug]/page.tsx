@@ -220,7 +220,7 @@ function ContactContent() {
         <div className="contact-team-grid">
           {team.map((person) => (
             <article className="contact-team-card" key={person.name}>
-              <Image src={image(person.image)} alt={person.name} width={64} height={64} unoptimized />
+              <Image src={`/images/${person.image}`} alt={person.name} width={64} height={64} unoptimized />
               <h3>{person.name}</h3>
               <p className="contact-team-role">{person.role}</p>
               <a className="contact-team-detail" href={`mailto:${person.email}`}><ContactMailIcon />{person.email}</a>
