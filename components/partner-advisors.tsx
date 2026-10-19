@@ -25,9 +25,11 @@ const advisors: PartnerAdvisor[] = [
   },
   {
     name: "Dr. Robert Avossa",
+    linkedin: "https://www.linkedin.com/search/results/people/?keywords=Robert%20Avossa",
     role: "Former Superintendent, Palm Beach County Schools",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-10-19%20at%2010.20.57%E2%80%AFAM-BXn17sMS60g7Ale73ow4D13hntdvDO.png",
-    crop: true,
+    bioRole: "CEO, K-12 Leadership Matters | Former Superintendent, Palm Beach County Schools",
+    image: "robert-avossa.jpg",
+    bio: "Dr. Robert Avossa is a nationally recognized education leader who served as Superintendent of the School District of Palm Beach County, one of the largest school districts in the United States. He went on to serve as Senior Vice President at LRP Publications, bringing his perspective as a district leader to the education media and information space. Today, Robert is the founder and CEO of K-12 Leadership Matters, where he provides strategic guidance to school district leaders, and serves as a Board Member and Superintendent in Residence at Scoir, Inc. His deep understanding of how districts evaluate, buy, and adopt solutions gives DATIA valuable insight into the education market and helps shape how clients engage K-12 decision-makers.",
   },
   {
     name: "Randall Dennis",
