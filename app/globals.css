@@ -141,7 +141,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .partner-section-heading .eyebrow { margin-top: 0; }
 
 .eyebrow { margin: 0 0 12px; color: var(--datia-red); font-size: 10px; font-weight: var(--font-weight-bold); letter-spacing: .16em; line-height: 1.5; text-transform: uppercase; }
-.abm-content-layout { width: min(100%, 1816px); margin: 34px auto 0; display: grid; grid-template-columns: minmax(300px, .72fr) minmax(0, 1.55fr); align-items: center; gap: 30px; }
+.abm-content-layout { width: min(100%, 1816px); margin: 34px auto 0; display: grid; grid-template-columns: minmax(300px, .72fr) minmax(0, 1.55fr); align-items: center; gap: 14px; }
 .abm-visual { width: 100%; margin: 0; text-align: right; }
 .abm-visual img { display: block; width: 100%; height: auto; max-height: 760px; margin-left: auto; object-fit: contain; object-position: right center; }
 .data-service-grid { width: 100%; margin: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
@@ -282,7 +282,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .partner-nav a { font-size: 11px; }
   .partner-header .header-cta { margin-left: 0; }
 
-  .abm-content-layout { grid-template-columns: minmax(260px, .8fr) minmax(0, 1.2fr); gap: 20px; }
+  .abm-content-layout { grid-template-columns: minmax(260px, .8fr) minmax(0, 1.2fr); gap: 12px; }
   .data-service-card { padding: 16px 18px; }
   .markets-served-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .service-grid { gap: 20px; }
