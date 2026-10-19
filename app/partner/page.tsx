@@ -8,34 +8,40 @@ const partners = [
   { name: "College Board", image: "collegeboard.png" },
   { name: "Communities in Schools", image: "communities-in-schools.png" },
   { name: "CrowdStrike", image: "crowdstrike.png" },
-  { name: "Extron", image: "extron.png" },
-  { name: "Genetec", image: "genetec.png" },
-  { name: "Lebra", image: "lebra.png" },
-  { name: "Microsoft", image: "microsoft.png" },
-  { name: "Otus", image: "otus.png" },
-  { name: "Palo Alto Networks", image: "palo-alto-networks.jpg" },
-  { name: "ParentSquare", image: "parentsquare.png" },
-  { name: "Participate Learning", image: "participate-learning.png" },
-  { name: "Pathwise", image: "pathwise.png" },
-  { name: "PMX Sync", image: "primex-sync.png" },
-  { name: "PowerSchool", image: "powerschool.jpg" },
-  { name: "Prodigy", image: "prodigy.png" },
-  { name: "Qualcomm Snapdragon", image: "qualcomm-snapdragon.webp" },
-  { name: "Raptor Technologies", image: "raptor.webp" },
-  { name: "Renaissance", image: "renaissance.png" },
-  { name: "RethinkFirst", image: "rethinkfirst.jpg" },
-  { name: "Right at School", image: "right-at-school.png" },
-  { name: "Ruckus", image: "ruckus-commscope.png" },
-  { name: "Sandy Hook Promise", image: "sandy-hook-promise.jpg" },
-  { name: "Scanmarker", image: "scanmarker.png" },
-  { name: "Schneider Electric", image: "schneider-electric-new.jpeg" },
-  { name: "Stryker", image: "stryker.png" },
-  { name: "Student", image: "studient.png" },
-  { name: "Symetrix", image: "symetrix.png" },
-  { name: "Transfinder", image: "transfinder.png" },
-  { name: "TriVigil", image: "trivigil.png" },
-  { name: "Valcom", image: "valcom.png" },
-  { name: "Volt", image: "volt.png" },
+]
+
+const markets = [
+  { name: "Education", detail: "K-12, Higher Ed", image: "edu-icon.png" },
+  { name: "Government", detail: "State and Local, Federal", image: "gov-icon.png" },
+  { name: "HR", detail: "Human Resources, Employee Benefits", image: "hr-icon.png" },
+  { name: "Financial Services", detail: "Investment Advisors, Banking, Insurance", image: "financial-icon.png" },
+  { name: "Technology", detail: "Identity, Enterprise, Cybersecurity", image: "technology-icon.png" },
+  { name: "Retail", detail: "Technology, C-Suite and Management", image: "retail-icon.png" },
+  { name: "Healthcare", detail: "Technology, C-Suite and Management", image: "healthcare-icon.png" },
+]
+
+const testimonials = [
+  { quote: "Partnering with DATIA on our ABM experience was great. From the early research and planning stages through the live campaign, their team has been responsive, insightful, and easy to work with. We have seen strong engagement and high-quality leads.", name: "Anamaria Knight", role: "Senior Director, Product/Marketing/R&E", company: "Participate Learning" },
+  { quote: "DATIA has been awesome to work with. Their creative ideas, campaign strategy, and the way they bring everything together with great assets has really pushed our marketing forward. They take the time to get to know you and your desired outcomes.", name: "Mark McGinnis", role: "Chief Evangelist", company: "TriVigil" },
+  { quote: "DATIA's team brought deep industry experience and expertise to our custom research project, delivering valuable insights that directly informed our strategy. Their smart work and commitment to best practices ensure we receive actionable, high-quality analysis.", name: "Shannon Zaher", role: "Vice President, Product Marketing", company: "Raptor Technologies" },
+]
+
+const partnerTeam = [
+  { name: "Jim Callan", role: "Founder/CEO", image: "jim-callan-new.jpg" },
+  { name: "Steve Bevilacqua", role: "Vice President of Sales", image: "steve-bevilacqua.jpg" },
+  { name: "Rachel Davis", role: "Vice President of Sales", image: "rachel-davis.jpg" },
+  { name: "Kurt Dyrli", role: "Editorial Director", image: "kurt-dyrli.jpg" },
+  { name: "Dana Jackson", role: "Fractional Head of Research", image: "dana-jackson.jpg" },
+  { name: "Amy Metcalfe", role: "Senior Director, Marketing & Operations", image: "amy-metcalfe.jpg" },
+]
+
+const advisors = [
+  { name: "Jason McKenna", role: "V.P. of Global Educational Strategy", image: "jason-mckenna.jpg" },
+  { name: "Dr. Robert Asossa", role: "Former Superintendent", image: "" },
+  { name: "Randall Dennis", role: "Market Leader, Convergint", image: "randall-dennis.jpg" },
+  { name: "Kathy Hurley", role: "Principal Consultant", image: "kathy-hurley.jpg" },
+  { name: "Terry Arsenault", role: "Founder, Vyne", image: "terry-arsenault.png" },
+  { name: "Tom Fowler", role: "Sales and Marketing Advisor", image: "tom-fowler.jpg" },
 ]
 
 const dataServices = [
@@ -53,18 +59,15 @@ const growthStages = [
 ]
 
 const offerings = [
-  { title: "Put qualified prospects into your pipeline", text: "Reach the right decision-makers with data-driven account intelligence and targeted engagement." },
-  { title: "Reach ideal buyers across the open web", text: "Get in front of your audience in the environments where they spend their time." },
-  { title: "Give buyers content that moves them forward", text: "Create relevant, useful content for every stage of the decision process." },
-  { title: "Turn expertise into market authority", text: "Build credibility and lasting recognition in the markets that matter." },
-  { title: "Elevate your thought leadership position", text: "Bring your best ideas to the audiences ready to hear them." },
+  { name: "TGL", label: "Targeted Guaranteed Leads", title: "Put qualified prospects into your pipeline", text: "Prospect identification and intent analysis for fueling the sales pipeline with high-converting, top-of-funnel leads.", action: "See TGL in action" },
+  { name: "PUSH", label: "Persona-Based Ad Targeting", title: "Reach ideal buyers across the open web", text: "Strategic advertising campaigns tailored to your ideal buyers for maximum engagement and conversion across the open web.", action: "Explore PUSH targeting" },
 ]
 
 function PartnerHeader() {
   return (
     <header className="site-header partner-header">
       <div className="site-header-inner partner-header-inner">
-        <Link className="brand-logo" href="/" aria-label="DATIA home"><Image src="/images/datia-ai-logo.png" alt="DATIA AI" width={150} height={40} unoptimized /></Link>
+        <Link className="brand-logo" href="/" aria-label="DATIA home"><Image src="/images/datia-ai-logo.png" alt="DATIA AI" width={150} height={40} loading="eager" unoptimized /></Link>
         <p className="header-tagline"><span aria-hidden="true" />THE AI-ENABLED FUSION OF DATA AND MEDIA</p>
         <nav className="partner-nav" aria-label="Partner page navigation">
           <a href="#abmxi">Flagship Offering</a>
@@ -103,7 +106,11 @@ export default function PartnerPage() {
         <div className="data-service-grid">
           {dataServices.map((item) => <article className="data-service-card" key={item.title}><span className="data-service-dot" aria-hidden="true" /><h3>{item.title}</h3><p>{item.text}</p></article>)}
         </div>
-        <h3 className="simplify-title">Simplify and Consolidate</h3>
+        <div className="simplify-banner">
+          <h3>Simplify and Consolidate</h3>
+          <p>These platforms show how the signals DATIA puts them to work by unifying buyer, audience, data, media, and lead generation in one sales-ready intelligence dashboard.</p>
+        </div>
+        <Link className="abmxi-more-link" href="/services">How ABMxi works <span aria-hidden="true">→</span></Link>
       </section>
 
       <section className="growth-section">
@@ -118,42 +125,127 @@ export default function PartnerPage() {
 
       <section className="partner-services-section" id="services">
         <div className="section-heading">
-          <p className="eyebrow">Demand Gen and Marketing Services</p>
-          <h2>We help create opportunities for your sales team</h2>
+          <h2>Demand Gen and Marketing Services</h2>
+          <p>Flexible solutions to fuel your buyer engagement strategy.</p>
         </div>
         <div className="offerings-grid">
-          {offerings.map((item) => <article className="offering-card" key={item.title}><span aria-hidden="true" className="offering-arrow">↗</span><h3>{item.title}</h3><p>{item.text}</p></article>)}
+          {offerings.map((item) => (
+            <article className="offering-card" key={item.name}>
+              <span className="offering-icon" aria-hidden="true">{item.name === "TGL" ? "◎" : "↗"}</span>
+              <p className="offering-name">{item.name}</p>
+              <h3>{item.title}</h3>
+              <p className="offering-label">{item.label}</p>
+              <p>{item.text}</p>
+              <Link href="/get-started" className="offering-link">{item.action} <span aria-hidden="true">→</span></Link>
+            </article>
+          ))}
+        </div>
+        <div className="markets-served">
+          <h3>Markets We Serve</h3>
+          <div className="markets-served-grid">
+            {markets.map((market) => (
+              <article className="market-served-card" key={market.name}>
+                <Image src={`/images/${market.image}`} alt="" width={24} height={24} loading="eager" unoptimized />
+                <h4>{market.name}</h4>
+                <p>{market.detail}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="trusted-section" id="testimonials">
-        <div className="section-heading"><p className="eyebrow">Partnership that performs</p><h2>Trusted by Leading Brands</h2></div>
-        <div className="partner-logo-grid">
+        <div className="section-heading">
+          <h2>Trusted by Leading Brands</h2>
+          <p>DATIA believes in the power of collaboration. Here are some of the organizations we&apos;ve worked with to drive meaningful outcomes.</p>
+        </div>
+        <div className="partner-logo-grid" aria-label="Featured partners">
           {partners.map(({ name, image }) => (
             <div className="partner-logo-cell" key={name}>
-              <Image src={`/logos/${image}`} alt={name} width={190} height={60} loading="lazy" unoptimized />
+              <Image src={`/logos/${image}`} alt={name} width={190} height={60} loading="eager" unoptimized />
             </div>
+          ))}
+        </div>
+        <div className="partner-video-wrap">
+          <p>Allison Danes · Right at School</p>
+          <div className="partner-video-frame">
+            <iframe src="https://fast.wistia.net/embed/iframe/pghthuyp7z?seo=false&videoFoam=true" title="Allison Danes — Right at School" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen />
+          </div>
+        </div>
+        <div className="partner-testimonial-grid">
+          {testimonials.map((testimonial) => (
+            <article className="partner-testimonial-card" key={testimonial.name}>
+              <span aria-hidden="true" className="testimonial-quote-mark">“</span>
+              <blockquote>{testimonial.quote}</blockquote>
+              <footer><strong>{testimonial.name}</strong><span>{testimonial.role}</span><small>{testimonial.company}</small></footer>
+            </article>
           ))}
         </div>
       </section>
 
-      <section className="different-section" id="about">
-        <div className="different-copy"><p className="eyebrow">A better way to grow</p><h2>Decidedly Different</h2><p>DATIA brings data, media, and marketing expertise together to help you connect with the right buyers—and turn attention into action.</p><Link className="button button-red" href="/about/decidedly-different">Our Story <span aria-hidden="true">→</span></Link></div>
-        <div className="different-art" aria-hidden="true"><div className="different-art-circle"><span>DATA</span><span>MEDIA</span><strong>DATIA</strong><span>INTENT</span></div></div>
-      </section>
-
-      <section className="team-cta">
-        <p className="eyebrow">Let&apos;s move forward</p>
-        <h2>Talk to the team</h2>
-        <p>Let&apos;s start a conversation about your next opportunity.</p>
-        <Link className="button button-red" href="/get-started">Meet the team <span aria-hidden="true">→</span></Link>
+      <section className="partner-contact-section" id="about">
+        <div className="partner-contact-content">
+          <div className="partner-contact-heading">
+            <p className="eyebrow">The people behind the platform</p>
+            <h2>Talk to the DATIA team</h2>
+            <p>Tell us what you&apos;re working on and which services you&apos;re interested in.</p>
+          </div>
+          <div className="partner-team">
+            <h3>Meet the team</h3>
+            <div className="partner-team-grid">
+              {partnerTeam.map((person) => (
+                <article className="partner-team-person" key={person.name}>
+                  <Image src={`/images/${person.image}`} alt={person.name} width={88} height={88} loading="eager" unoptimized />
+                  <strong>{person.name}</strong>
+                  <span>{person.role}</span>
+                </article>
+              ))}
+            </div>
+          </div>
+          <form className="partner-contact-form">
+            <div className="partner-form-grid">
+              <label>First name<input autoComplete="given-name" name="firstName" required /></label>
+              <label>Last name<input autoComplete="family-name" name="lastName" required /></label>
+              <label>Email<input autoComplete="email" name="email" type="email" required /></label>
+              <label>Phone<input autoComplete="tel" name="phone" type="tel" /></label>
+              <label>Company name<input autoComplete="organization" name="company" /></label>
+              <label>Website<input autoComplete="url" name="website" type="url" /></label>
+            </div>
+            <fieldset className="partner-solutions">
+              <legend>Solutions of interest</legend>
+              {[["ABMxi", "Targeted Guaranteed Leads (TGL)"], ["Persona-Based Ad Targeting (PUSH)", "Content Studio"], ["Research", "Web Seminars"]].map((row) => (
+                <div className="partner-solution-row" key={row.join("-")}>{row.map((solution) => <label key={solution}><input name="solutions" type="checkbox" value={solution} />{solution}</label>)}</div>
+              ))}
+            </fieldset>
+            <label className="partner-message">Message<textarea name="message" rows={4} /></label>
+            <button className="button button-red" type="button">Partner with Us <span aria-hidden="true">→</span></button>
+          </form>
+        </div>
       </section>
 
       <footer className="site-footer partner-footer">
-        <Link className="brand-logo" href="/" aria-label="DATIA home"><Image src="/images/datia-ai-logo.png" alt="DATIA AI" width={150} height={40} unoptimized /></Link>
-        <p>ADVISED BY</p>
-        <nav aria-label="Footer navigation"><a href="#abmxi">Flagship Offering</a><a href="#services">Marketing Services</a><a href="#testimonials">Trusted By</a><Link href="/">DATIA Home</Link><Link href="/privacy-policy">Privacy Policy</Link></nav>
-        <small>© {new Date().getFullYear()} DATIA. All rights reserved.</small>
+        <div className="partner-footer-main">
+          <div className="partner-footer-brand">
+            <Link className="brand-logo" href="/" aria-label="DATIA home"><Image src="/images/datia-ai-logo-white.png" alt="DATIA AI" width={150} height={40} loading="eager" unoptimized /></Link>
+            <p>Insights born from data.</p>
+          </div>
+          <div><h3>Services</h3><Link href="/services">Account-Based Marketing Intelligence (ABMxi)</Link><Link href="/services">Targeted Guaranteed Leads (TGL)</Link><Link href="/services">Persona-Based Ad Targeting (PUSH)</Link><Link href="/services">Content Studio</Link><Link href="/services">Research</Link></div>
+          <div><h3>Company</h3><Link href="/services">Flagship Offering</Link><Link href="/services">Marketing Services</Link><Link href="/trusted-by">Testimonials</Link><Link href="/about/decidedly-different">About</Link></div>
+          <div><h3>Connect</h3><a href="#about">Partner with Us</a><a href="https://www.linkedin.com/company/datia-ai/" target="_blank" rel="noreferrer">LinkedIn</a></div>
+        </div>
+        <div className="partner-advisors">
+          <p>Advised by</p>
+          <div className="partner-advisor-grid">
+            {advisors.map((advisor) => (
+              <div className="partner-advisor" key={advisor.name}>
+                {advisor.image ? <Image src={`/images/${advisor.image}`} alt="" width={48} height={48} loading="eager" unoptimized /> : <span className="partner-advisor-initials" aria-hidden="true">RA</span>}
+                <strong>{advisor.name}</strong>
+                <span>{advisor.role}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="partner-footer-bottom"><small>© {new Date().getFullYear()} DATIA AI. All rights reserved.</small><nav aria-label="Legal navigation"><Link href="/privacy-policy">Privacy Policy</Link></nav></div>
       </footer>
     </main>
   )
