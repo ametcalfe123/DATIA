@@ -187,8 +187,8 @@ export function PartnerHero() {
     <section className="partner-hero" aria-labelledby="partner-hero-title">
       <div className="partner-hero-content">
         <h1 id="partner-hero-title">
-          <span className="partner-hero-mainline">From Impression to Appointment.</span>
-          <span>A Content-Driven, Intent Strategy</span>
+          <span className="partner-hero-mainline">From Buyer Intent to Qualified Opportunities</span>
+          <span className="partner-hero-subline">A Content-Driven Approach to a Stronger Pipeline.</span>
         </h1>
         <p className="partner-hero-copy">
           DATIA brings buyer identification, cross-channel engagement, and intent intelligence together in one place, turning insights into action and action into qualified leads.
