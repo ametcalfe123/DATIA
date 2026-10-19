@@ -4,9 +4,9 @@ import Image from "next/image"
 
 const team = [
   { name: "Jim Callan", role: "Founder/CEO", image: "partner-jim-callan.jpg" },
+  { name: "Kurt Dyrli", role: "Editorial Director", image: "partner-kurt-dyrli.jpg" },
   { name: "Steve Bevilacqua", role: "Vice President of Sales", image: "partner-steve-bevilacqua.jpg" },
   { name: "Rachel Davis", role: "Vice President of Sales", image: "partner-rachel-davis.jpg" },
-  { name: "Kurt Dyrli", role: "Editorial Director", image: "partner-kurt-dyrli.jpg" },
   { name: "Dana Jackson", role: "Fractional Head of Research", image: "partner-dana-jackson.jpg" },
   { name: "Amy Metcalfe", role: "Senior Director, Marketing & Operations", image: "partner-amy-metcalfe.jpg" },
 ]
@@ -28,6 +28,7 @@ export function PartnerContact() {
         <div className="partner-contact-heading">
           <h2 id="contact-title">The People Behind the Platform</h2>
         </div>
+        <div className="partner-contact-layout">
         <div className="partner-team">
           <div className="partner-team-grid">
             {team.map((person) => (
@@ -39,6 +40,7 @@ export function PartnerContact() {
             ))}
           </div>
         </div>
+        <div className="partner-contact-main">
         <p className="partner-contact-intro">Tell us what you&apos;re working on and which services you&apos;re interested in.</p>
         <form className="partner-contact-form" onSubmit={(event) => event.preventDefault()}>
           <div className="partner-form-grid">
@@ -59,6 +61,8 @@ export function PartnerContact() {
           </fieldset>
           <label className="partner-message">Message<textarea name="message" rows={4} /></label>
         </form>
+        </div>
+        </div>
       </div>
     </section>
   )
