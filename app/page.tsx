@@ -2,12 +2,9 @@ import Image from "next/image"
 import Link from "next/link"
 import {
   ArrowRight,
-  GraduationCap,
-  Landmark,
   Megaphone,
   Pencil,
   Search,
-  ShoppingBag,
   Target,
   Users,
 } from "lucide-react"
@@ -47,23 +44,21 @@ const services = [
 ]
 
 const markets = [
-  { name: "EDU", groups: ["K12", "Higher Ed"], image: "edu-icon.png", Icon: GraduationCap },
-  { name: "GOV", groups: ["State/Local", "Federal"], Icon: Landmark },
-  { name: "HR", groups: ["Employee Benefits", "Human Resources"], image: "hr-icon.png", Icon: Users },
+  { name: "EDU", groups: ["K12", "Higher Ed"], image: "edu-icon.png" },
+  { name: "GOV", groups: ["State/Local", "Federal"], image: "gov-icon.png" },
+  { name: "HR", groups: ["Employee Benefits", "Human Resources"], image: "hr-icon.png" },
   {
     name: "Financial Services",
     groups: ["Investment Advisor", "Banking", "Insurance"],
     image: "financial-icon.png",
-    Icon: Landmark,
   },
   {
     name: "Technology",
     groups: ["Identity", "Enterprise", "Cybersecurity"],
     image: "technology-icon.png",
-    Icon: Search,
   },
-  { name: "Retail", groups: ["Tech", "C-Suite Management"], Icon: ShoppingBag },
-  { name: "Healthcare", groups: ["Tech", "C-Suite Management"], image: "healthcare-icon.png", Icon: Users },
+  { name: "Retail", groups: ["Tech", "C-Suite Management"], image: "retail-icon.png" },
+  { name: "Healthcare", groups: ["Tech", "C-Suite Management"], image: "healthcare-icon.png" },
 ]
 
 const articles = [
@@ -214,14 +209,10 @@ export default function HomePage() {
           </p>
         </div>
         <div className="market-grid">
-          {markets.map(({ name, groups, image, Icon }) => (
+          {markets.map(({ name, groups, image }) => (
             <article className="market-card" key={name}>
               <div className="market-icon" aria-hidden="true">
-                {image ? (
-                  <Image src={`/images/${image}`} alt="" width={24} height={24} unoptimized />
-                ) : (
-                  <Icon className="market-icon-glyph" />
-                )}
+                <Image src={`/images/${image}`} alt="" width={24} height={24} unoptimized />
               </div>
               <h3>{name}</h3>
               <ul>
