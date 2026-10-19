@@ -3,12 +3,10 @@ import {
   ArrowRight,
   Database,
   FileText,
-  Globe2,
   Mail,
   Megaphone,
   PhoneCall,
   Search,
-  Target,
   TrendingUp,
   Users,
   Video,
@@ -188,7 +186,6 @@ export function PartnerHero() {
   return (
     <section className="partner-hero" aria-labelledby="partner-hero-title">
       <div className="partner-hero-content">
-        <p className="partner-hero-kicker">AI-enabled fusion of data and media</p>
         <h1 id="partner-hero-title">
           <span className="partner-hero-mainline">From Impression to Appointment.</span>
           <span>A Content-Driven, Intent Strategy</span>
@@ -197,15 +194,8 @@ export function PartnerHero() {
           DATIA brings buyer identification, cross-channel engagement, and intent intelligence together in one place, turning insights into action and action into qualified leads.
         </p>
         <a className="button button-red partner-hero-button" href="#contact">
-          Partner with Us <ArrowRight aria-hidden="true" size={17} />
+          Partner with Us <ArrowRight aria-hidden="true" size={22} />
         </a>
-      </div>
-      <div className="partner-hero-proof" aria-label="DATIA connects audience, media, and intent">
-        <span><Target aria-hidden="true" />Audience</span>
-        <i aria-hidden="true" />
-        <span><Globe2 aria-hidden="true" />Media</span>
-        <i aria-hidden="true" />
-        <span><TrendingUp aria-hidden="true" />Intent</span>
       </div>
     </section>
   )
@@ -366,15 +356,10 @@ export function AboutSection() {
     <section className="partner-about-section" id="about" aria-labelledby="about-title">
       <div className="partner-about-content">
         <div className="partner-about-copy">
-          <p className="eyebrow">A different kind of growth partner</p>
           <h2 id="about-title">Decidedly Different</h2>
           <p>Buyers now do most of their research independently, often narrowing their shortlist long before they ever speak with a salesperson.</p>
           <p>DATIA combines industry-specialized targeting, thought leadership activation, and buyer intelligence to help partners build familiarity with decision-makers before Sales outreach, and prioritize accounts based on cumulative engagement and buying signals.</p>
           <p>DATIA keeps your brand in front of the 95% of target prospects who aren&apos;t ready to buy today, but will be tomorrow, next month, or next year.</p>
-        </div>
-        <div className="partner-about-signature">
-          <Image src="/images/datia-ai-logo-white.png" alt="DATIA AI" width={206} height={54} unoptimized />
-          <span>Insights born from data.</span>
         </div>
       </div>
     </section>

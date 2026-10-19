@@ -4,12 +4,12 @@ import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 
 const team = [
-  { name: "Jim Callan", role: "Founder/CEO", image: "jim-callan-new.jpg" },
-  { name: "Steve Bevilacqua", role: "Vice President of Sales", image: "steve-bevilacqua.jpg" },
-  { name: "Rachel Davis", role: "Vice President of Sales", image: "rachel-davis.jpg" },
-  { name: "Kurt Dyrli", role: "Editorial Director", image: "kurt-dyrli.jpg" },
-  { name: "Dana Jackson", role: "Fractional Head of Research", image: "dana-jackson.jpg" },
-  { name: "Amy Metcalfe", role: "Senior Director, Marketing & Operations", image: "amy-metcalfe.jpg" },
+  { name: "Jim Callan", role: "Founder/CEO", image: "partner-jim-callan.jpg" },
+  { name: "Steve Bevilacqua", role: "Vice President of Sales", image: "partner-steve-bevilacqua.jpg" },
+  { name: "Rachel Davis", role: "Vice President of Sales", image: "partner-rachel-davis.jpg" },
+  { name: "Kurt Dyrli", role: "Editorial Director", image: "partner-kurt-dyrli.jpg" },
+  { name: "Dana Jackson", role: "Fractional Head of Research", image: "partner-dana-jackson.jpg" },
+  { name: "Amy Metcalfe", role: "Senior Director, Marketing & Operations", image: "partner-amy-metcalfe.jpg" },
 ]
 
 const solutions = [
@@ -27,7 +27,6 @@ export function PartnerContact() {
     <section className="partner-contact-section" id="contact" aria-labelledby="contact-title">
       <div className="partner-contact-content">
         <div className="partner-contact-heading">
-          <p className="eyebrow">Start a conversation</p>
           <h2 id="contact-title">Talk to the DATIA team</h2>
           <p>Tell us what you&apos;re working on and which services you&apos;re interested in.</p>
         </div>
