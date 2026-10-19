@@ -121,7 +121,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .partner-nav a { color: #333; font-size: 12px; font-weight: var(--font-weight-semibold); }
 .partner-header .header-cta { min-height: 42px; padding-inline: 20px; border-radius: 24px; }
 .partner-mobile-menu { display: none; }
-.partner-hero { position: relative; min-height: 604px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 52px 24px 42px; border-bottom: 5px solid #ed1c24; background: #141414; color: #fff; text-align: center; }
+.partner-hero { position: relative; min-height: 604px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 52px 24px 42px; border-top: 5px solid #ed1c24; border-bottom: 5px solid #ed1c24; background: #141414; color: #fff; text-align: center; }
 .partner-hero-content { width: min(100%, 1480px); }
 .partner-hero h1 { max-width: 1480px; margin: 0 auto; font-size: clamp(42px, 4.5vw, 80px); font-weight: var(--font-weight-bold); line-height: 1.1; letter-spacing: -.04em; text-wrap: balance; }
 .partner-hero h1 span { display: block; margin-top: 0; color: #fff; font-size: 1em; font-weight: var(--font-weight-bold); letter-spacing: inherit; }
@@ -180,7 +180,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .growth-subtitle { min-height: 43px; margin: 0 0 12px; color: var(--datia-red); font-size: 13px; font-weight: var(--font-weight-semibold); line-height: 1.5; }
 .growth-description { margin: 0; color: #626262; font-size: 14px; line-height: 1.65; }
 .growth-closing { max-width: 1280px; margin: 30px auto 0; color: var(--datia-red); font-family: inherit; font-size: 21px; font-weight: var(--font-weight-bold); line-height: 1.8; text-align: center; }
-.partner-services-section { padding: 76px 32px 56px; border-top: 5px solid #ed1c24; background: #111; color: #fff; scroll-margin-top: 88px; }
+.partner-services-section { padding: 76px 32px 56px; border-top: 5px solid #ed1c24; border-bottom: 5px solid #ed1c24; background: #111; color: #fff; scroll-margin-top: 88px; }
 .partner-services-section .section-heading { max-width: 890px; }
 .partner-services-section .section-heading h2 { color: #fff; font-size: 32px; line-height: 1.2; }
 .partner-services-section .section-heading > p:not(.eyebrow) { margin-top: 12px; color: #d0d0d0; font-size: 21px; line-height: 1.6; }
@@ -227,13 +227,13 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .partner-testimonial-card footer { display: flex; flex-direction: column; gap: 4px; padding-top: 16px; border-top: 1px solid #e7e7e7; color: #666; font-size: 12px; line-height: 1.5; }
 .partner-testimonial-card footer strong { color: #202020; font-size: 14px; }
 .partner-testimonial-card footer small { color: #777; font-size: 10px; font-weight: var(--font-weight-bold); letter-spacing: .1em; text-transform: uppercase; }
-.partner-about-section { position: relative; isolation: isolate; overflow: hidden; padding: 86px 24px 82px; background: #111; color: #fff; scroll-margin-top: 88px; }
+.partner-about-section { position: relative; isolation: isolate; overflow: hidden; padding: 86px 24px 82px; border-top: 5px solid #ed1c24; border-bottom: 5px solid #ed1c24; background: #111; color: #fff; scroll-margin-top: 88px; }
 .partner-about-section::after { position: absolute; inset: 0 0 0 auto; z-index: -1; width: min(20%, 360px); background: rgb(237 28 36 / 5%); clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%); content: ""; pointer-events: none; }
 .partner-about-content { width: min(100%, 1280px); margin: 0 auto; }
 .partner-about-copy { max-width: none; text-align: center; }
 .partner-about-copy h2 { margin: 0 0 15px; color: #fff; font-size: clamp(30px, 2.5vw, 36px); letter-spacing: -.04em; line-height: 1.15; }
 .partner-about-copy > p { margin: 16px 0 0; color: #d3d3d3; font-size: 21px; line-height: 1.8; }
-.partner-contact-section { position: relative; isolation: isolate; overflow: hidden; padding: 88px 32px 90px; background: linear-gradient(rgb(12 12 12 / 52%), rgb(12 12 12 / 64%)), url('/partner/images/partner-architectural-bg.jpg') center 38% / cover no-repeat; color: #fff; scroll-margin-top: 88px; }
+.partner-contact-section { position: relative; isolation: isolate; overflow: hidden; padding: 88px 32px 90px; border-bottom: 5px solid #ed1c24; background: linear-gradient(rgb(12 12 12 / 52%), rgb(12 12 12 / 64%)), url('/partner/images/partner-architectural-bg.jpg') center 38% / cover no-repeat; color: #fff; scroll-margin-top: 88px; }
 .partner-contact-content { width: min(100%, 1250px); margin: 0 auto; }
 .partner-contact-heading { text-align: center; }
 .partner-contact-heading h2 { margin: 0; color: #fff; font-size: clamp(32px, 2.8vw, 40px); line-height: 1.15; }
