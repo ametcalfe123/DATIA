@@ -315,6 +315,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .partner-advisor .partner-advisor-crop-image { position: absolute; top: -65%; left: -138%; width: 338% !important; max-width: none; height: auto !important; border-radius: 0; object-fit: fill; }
 .partner-advisor-initials { display: grid; place-items: center; border: 1px solid #555; color: #ddd; font-size: 13px; }
 .partner-advisor strong { font-size: 12px; }
+.partner-advisor-button { padding: 0; border: 0; background: none; font-family: inherit; text-align: center; cursor: pointer; }
+.partner-advisor-button img, .partner-advisor-button .partner-advisor-crop { transition: transform .18s ease, box-shadow .18s ease; }
+.partner-advisor-button:hover img, .partner-advisor-button:hover .partner-advisor-crop { transform: translateY(-2px); box-shadow: 0 0 0 2px var(--datia-red); }
+.partner-advisor-button:focus-visible { outline: 2px solid var(--datia-red); outline-offset: 4px; border-radius: 6px; }
 .partner-advisor > span:last-child { max-width: 175px; color: #aaa; }
 .partner-footer-bottom { width: min(100%, 1250px); margin: 40px auto 0; padding-top: 17px; border-top: 1px solid #363636; display: flex; justify-content: space-between; gap: 15px; color: #aaa; font-size: 10px; }
 .partner-footer-bottom nav { display: flex; gap: 22px; text-transform: uppercase; }
