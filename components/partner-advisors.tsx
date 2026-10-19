@@ -28,7 +28,7 @@ const advisors: PartnerAdvisor[] = [
     linkedin: "https://www.linkedin.com/search/results/people/?keywords=Robert%20Avossa",
     role: "Former Superintendent, Palm Beach County Schools",
     bioRole: "CEO, K-12 Leadership Matters | Former Superintendent, Palm Beach County Schools",
-    image: "robert-avossa.jpg",
+    image: "robert-avossa.jpg?v=2",
     bio: "Dr. Robert Avossa is a nationally recognized education leader who served as Superintendent of the School District of Palm Beach County, one of the largest school districts in the United States. He went on to serve as Senior Vice President at LRP Publications, bringing his perspective as a district leader to the education media and information space. Today, Robert is the founder and CEO of K-12 Leadership Matters, where he provides strategic guidance to school district leaders, and serves as a Board Member and Superintendent in Residence at Scoir, Inc. His deep understanding of how districts evaluate, buy, and adopt solutions gives DATIA valuable insight into the education market and helps shape how clients engage K-12 decision-makers.",
   },
   {
@@ -59,7 +59,7 @@ const advisors: PartnerAdvisor[] = [
     linkedin: "https://www.linkedin.com/search/results/people/?keywords=Tom%20Fowler",
     role: "B2B media publisher since 1978",
     bioRole: "Sales and Marketing Advisor",
-    image: "tom-fowler.jpg",
+    image: "tom-fowler.jpg?v=3",
     bio: "Tom Fowler started his media career in 1978 as the City Editor and then Managing Editor at the Oakland Press, a mid-size daily newspaper based in Pontiac, MI. He then transferred over to the business side to become the Sales and Marketing Manager for the newspaper. In 1984, he migrated to the B-to-B media arena as the Circulation Manager for Fairchild Publications, a business unit of Cap Cities Media, which published over 35 magazines and directories. From there, he became the Publisher and Group Publisher of media platforms at various media and publishing companies: Thompson Media, Cahners Travel Group, Pennwell, Summit Business Media and the International Media News Group. Tom has a history of solid accomplishments in the Energy, Financial and Healthcare media sectors, as well as experience and success in executive leadership roles. His diverse experiences include acquisitions, international event management and website development, turnaround strategies, new business development, strategic marketing planning and employee development. Over the years, he has demonstrated a record of managing and building business units with full P&L responsibility, leading these businesses through the publishing revolution from print to digital to data-driven media solutions. Fowler has a BA degree from Yale University, 1974 and an MBA from the Harvard Business School, 1978.",
   },
 ]
