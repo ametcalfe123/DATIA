@@ -236,6 +236,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .partner-about-copy h2 { margin: 0 0 15px; color: #fff; font-size: clamp(30px, 2.5vw, 36px); letter-spacing: -.04em; line-height: 1.15; }
   .partner-about-copy > p { margin: 16px 0 0; color: #d3d3d3; font-size: 21px; line-height: 1.8; }
   @media (min-width: 1448px) { .partner-about-copy > p { margin-inline: calc((100% - 1400px) / 2); } }
+  @media (min-width: 1024px) { .partner-about-copy > p { padding-inline: 96px; } }
 .partner-contact-section { position: relative; isolation: isolate; overflow: hidden; padding: 88px 32px 90px; background: #f5f5f5; color: var(--datia-black); scroll-margin-top: 88px; }
 .partner-contact-content { width: min(100%, 1250px); margin: 0 auto; }
 .partner-contact-heading { text-align: center; }
