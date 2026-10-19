@@ -265,6 +265,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .partner-advisor-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; }
 .partner-advisor { display: flex; flex-direction: column; align-items: center; gap: 7px; color: #fff; font-size: 11px; line-height: 1.45; }
 .partner-advisor img, .partner-advisor-initials { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; }
+.partner-advisor-crop { position: relative; display: block; width: 52px; height: 52px; flex: 0 0 auto; overflow: hidden; border-radius: 50%; }
+.partner-advisor .partner-advisor-crop-image { position: absolute; top: -65%; left: -138%; width: 338% !important; max-width: none; height: auto !important; border-radius: 0; object-fit: fill; }
 .partner-advisor-initials { display: grid; place-items: center; border: 1px solid #555; color: #ddd; font-size: 13px; }
 .partner-advisor strong { font-size: 12px; }
 .partner-advisor > span:last-child { max-width: 175px; color: #aaa; }

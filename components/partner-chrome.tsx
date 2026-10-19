@@ -2,9 +2,11 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 
-const advisors = [
+type PartnerAdvisor = { name: string; role: string; image?: string; crop?: boolean }
+
+const advisors: PartnerAdvisor[] = [
   { name: "Jason McKenna", role: "VP of Global Educational Strategy, VEX Robotics", image: "jason-mckenna.jpg" },
-  { name: "Dr. Robert Avossa", role: "Former Superintendent, Palm Beach County Schools" },
+  { name: "Dr. Robert Avossa", role: "Former Superintendent, Palm Beach County Schools", image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-10-19%20at%2010.20.57%E2%80%AFAM-BXn17sMS60g7Ale73ow4D13hntdvDO.png", crop: true },
   { name: "Randall Dennis", role: "Market Leader, Convergint", image: "randall-dennis.jpg" },
   { name: "Kathy Hurley", role: "Principal Consultant, Kathy Hurley Consulting", image: "kathy-hurley.jpg" },
   { name: "Terry Arsenault", role: "Founder, Vyne", image: "terry-arsenault.png" },
@@ -49,7 +51,11 @@ export function PartnerFooter() {
         <div className="partner-advisor-grid">
           {advisors.map((advisor) => (
             <div className="partner-advisor" key={advisor.name}>
-              {advisor.image ? (
+              {advisor.image ? advisor.crop ? (
+                <span className="partner-advisor-crop">
+                  <Image src={advisor.image} alt="" width={746} height={610} className="partner-advisor-crop-image" unoptimized loading="lazy" />
+                </span>
+              ) : (
                 <Image src={`/images/${advisor.image}`} alt="" width={52} height={52} unoptimized loading="lazy" />
               ) : (
                 <span className="partner-advisor-initials" aria-hidden="true">RA</span>
