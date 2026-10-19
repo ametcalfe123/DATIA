@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image"
-import { ArrowRight } from "lucide-react"
 
 const team = [
   { name: "Jim Callan", role: "Founder/CEO", image: "partner-jim-callan.jpg" },
@@ -59,7 +58,6 @@ export function PartnerContact() {
             </div>
           </fieldset>
           <label className="partner-message">Message<textarea name="message" rows={4} /></label>
-          <button className="button button-red" type="submit">Partner with Us <ArrowRight aria-hidden="true" size={17} /></button>
         </form>
       </div>
     </section>
