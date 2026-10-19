@@ -155,10 +155,12 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .growth-section .section-heading h2, .partner-services-section .section-heading h2, .trusted-section .section-heading h2 { color: #171717; font-size: clamp(32px, 3.2vw, 42px); line-height: 1.15; }
 .growth-section .section-heading > p:not(.eyebrow), .partner-services-section .section-heading > p:not(.eyebrow), .trusted-section .section-heading > p:not(.eyebrow) { max-width: 760px; font-size: 16px; line-height: 1.6; }
 .growth-grid { position: relative; width: min(100%, 1250px); margin: 46px auto 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
-.growth-card { min-height: 325px; padding: 25px 23px; border: 1px solid #e7e7e7; border-radius: 9px; background: #fff; box-shadow: 0 10px 32px rgb(0 0 0 / 4%); }
+.growth-card { min-height: 325px; padding: 25px 23px; border: 1px solid #e7e7e7; border-radius: 9px; background: #fff; box-shadow: 0 10px 32px rgb(0 0 0 / 4%); transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease; }
+.growth-card:hover { transform: translateY(-4px); border-color: #ededed; box-shadow: 0 14px 32px rgb(0 0 0 / 9%); }
 .growth-card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 25px; }
 .growth-icon { width: 56px; height: 56px; display: grid; place-items: center; border: 1px solid #ead2d3; border-radius: 50%; background: #f8eeee; color: var(--datia-red); }
-.growth-number { color: #b9b9b9; font-size: 13px; font-weight: var(--font-weight-bold); letter-spacing: .12em; }
+.growth-number { display: block; color: #f8f8f8; font-size: 64px; font-weight: var(--font-weight-regular); letter-spacing: -.06em; line-height: 1; transform-origin: top right; transition: color .22s ease, transform .22s ease; user-select: none; }
+.growth-card:hover .growth-number, .growth-number:hover { color: #ffe4e5; transform: scale(1.06); }
 .growth-card h3 { margin: 0 0 6px; font-size: 22px; line-height: 1.25; }
 .growth-subtitle { min-height: 43px; margin: 0 0 12px; color: var(--datia-red); font-size: 13px; font-weight: var(--font-weight-semibold); line-height: 1.5; }
 .growth-description { margin: 0; color: #626262; font-size: 14px; line-height: 1.65; }
