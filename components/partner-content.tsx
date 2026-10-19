@@ -350,17 +350,6 @@ export function ServicesSection() {
           </article>
         ))}
       </div>
-      <div className="markets-served" aria-labelledby="markets-title">
-        <h3 className="eyebrow" id="markets-title">Markets We Serve</h3>
-        <div className="markets-served-grid">
-          {markets.map((market) => (
-            <article className="market-served-card" key={market.name}>
-              <h4>{market.name}</h4>
-              <p>{market.detail}</p>
-            </article>
-          ))}
-        </div>
-      </div>
     </section>
   )
 }
@@ -424,6 +413,17 @@ export function AboutSection() {
           <p>Buyers now do most of their research independently, often narrowing their shortlist long before they ever speak with a salesperson.</p>
           <p>DATIA combines industry-specialized targeting, thought leadership activation, and buyer intelligence to help partners build familiarity with decision-makers before Sales outreach, and prioritize accounts based on cumulative engagement and buying signals.</p>
           <p>DATIA keeps your brand in front of the 95% of target prospects who aren&apos;t ready to buy today, but will be tomorrow, next month, or next year.</p>
+        </div>
+      </div>
+      <div className="markets-served" aria-labelledby="markets-title">
+        <h3 className="eyebrow" id="markets-title">Markets We Serve</h3>
+        <div className="markets-served-grid">
+          {markets.map((market) => (
+            <article className="market-served-card" key={market.name}>
+              <h4>{market.name}</h4>
+              <p>{market.detail}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>

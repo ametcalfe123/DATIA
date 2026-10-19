@@ -196,7 +196,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .offering-link svg { color: currentColor; transition: transform .18s ease; }
 .offering-link:hover { background: #f7f7f8; }
 .offering-link:hover svg { transform: translateX(4px); }
-.markets-served { width: min(100%, 890px); margin: 52px auto 0; padding-top: 52px; border-top: 1px solid #303030; text-align: center; }
+.markets-served { width: min(100%, 890px); margin: 52px auto 0; padding-top: 52px; border-top: 1px solid #ed1c24; text-align: center; }
 .markets-served > .eyebrow { margin: 0 0 18px; color: #e5e5e5; font-size: 10px; letter-spacing: .15em; }
 .markets-served-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px 19px; }
 .market-served-card { min-height: 102px; padding: 18px 12px; border: 1px solid #303030; border-radius: 10px; color: #fff; }
