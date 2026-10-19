@@ -774,3 +774,80 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .privacy-policy-copy h2 { margin-top: 28px; font-size: 21px; }
   .privacy-policy-copy h3 { font-size: 18px; }
 }
+
+/* Partner landing page parity */
+.partner-page .partner-header-inner { min-height: 64px; }
+.partner-page .abm-section { padding-bottom: 54px; }
+.partner-page .simplify-heading { margin: 26px 0 0; color: #1a1a1a; font-size: 18px; text-align: center; }
+.partner-page .partner-services-section { padding: 68px 24px 74px; background: #f5f5f5; color: #171717; }
+.partner-page .partner-services-section .section-heading { max-width: 720px; }
+.partner-page .partner-services-section .section-heading h2 { color: #171717; font-size: 30px; }
+.partner-page .partner-services-section .eyebrow { color: #ed1c24; }
+.partner-page .offerings-grid { width: min(100%, 940px); grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 30px; }
+.partner-page .offering-card { min-height: 210px; padding: 22px; border-color: #e5e5e5; border-radius: 7px; box-shadow: 0 2px 8px rgb(0 0 0 / 3%); }
+.partner-page .offering-icon { width: 34px; height: 34px; background: #f5f5f5; }
+.partner-page .offering-name { margin-top: 12px; }
+.partner-page .offering-card h3 { margin-top: 0; font-size: 17px; }
+.partner-page .offering-card .offering-label { margin: 5px 0 9px; font-size: 12px; }
+.partner-page .offering-card .offering-description { margin: 0; color: #666; font-size: 13px; line-height: 1.55; }
+.partner-page .trusted-section { padding: 70px 24px 74px; background: #fff; }
+.partner-page .trusted-section .section-heading { margin-bottom: 32px; }
+.partner-page .trusted-section .section-heading h2 { color: #171717; font-size: 30px; }
+.partner-page .partner-logo-grid { width: min(100%, 1024px); grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px 18px; }
+.partner-page .partner-logo-cell { height: 76px; padding: 10px; border: 1px solid #f2f2f2; }
+.partner-page .partner-logo-cell img { max-width: 100%; max-height: 54px; object-fit: contain; }
+.partner-page .partner-about-section { padding: 62px 24px; background: #111; color: #fff; }
+.partner-page .partner-about-content { width: min(100%, 920px); margin: 0 auto; display: grid; grid-template-columns: 1fr 320px; align-items: center; gap: 70px; }
+.partner-page .partner-about-content h2 { margin: 0 0 12px; color: #fff; font-size: 32px; line-height: 1.2; }
+.partner-page .partner-about-content p:not(.eyebrow) { max-width: 540px; margin: 0 0 22px; color: #d3d3d3; font-size: 15px; line-height: 1.6; }
+.partner-page .partner-about-content .eyebrow { color: #ed1c24; }
+.partner-page .datia-orbit { position: relative; width: 290px; height: 290px; display: flex; align-items: center; justify-content: center; justify-self: center; border: 1px solid #363636; border-radius: 50%; }
+.partner-page .datia-orbit-wordmark { width: 90px; height: auto; filter: brightness(0) invert(1); }
+.partner-page .datia-orbit strong { color: #fff; font-size: 28px; letter-spacing: .1em; }
+.partner-page .orbit-label { position: absolute; color: #999; font-size: 8px; letter-spacing: .22em; }
+.partner-page .orbit-data { top: 66px; }
+.partner-page .orbit-media { top: 84px; }
+.partner-page .orbit-intent { bottom: 68px; }
+.partner-page .partner-contact-section { padding: 58px 24px 62px; background: #fff; color: #171717; }
+.partner-page .partner-contact-heading { text-align: center; }
+.partner-page .partner-contact-heading .eyebrow { color: #ed1c24; }
+.partner-page .partner-contact-heading h2 { margin: 0; color: #171717; font-size: 34px; }
+.partner-page .partner-contact-heading > p:not(.eyebrow) { margin: 8px 0 18px; color: #656565; font-size: 14px; }
+.partner-page .partner-contact-heading .button { min-height: 38px; border-radius: 22px; font-size: 12px; }
+.partner-page .partner-footer { min-height: 0; padding: 24px 24px 16px; display: flex; flex-direction: column; align-items: center; gap: 12px; background: #fff; color: #555; }
+.partner-page .partner-footer .brand-logo img { width: 90px; height: auto; }
+.partner-page .partner-footer-advised { margin: 0; color: #666; font-size: 8px; letter-spacing: .2em; text-transform: uppercase; }
+.partner-page .partner-footer nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; color: #444; font-size: 10px; }
+.partner-page .partner-footer small { color: #999; font-size: 9px; }
+@media (max-width: 1100px) {
+  .partner-page .partner-about-content { grid-template-columns: 1fr 260px; gap: 32px; }
+  .partner-page .datia-orbit { width: 250px; height: 250px; }
+  .partner-page .partner-logo-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .partner-page .partner-services-section { padding: 52px 18px; }
+  .partner-page .partner-services-section .section-heading h2,
+  .partner-page .trusted-section .section-heading h2 { font-size: 26px; }
+  .partner-page .offerings-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .partner-page .offering-card { min-height: 0; padding: 16px 14px; }
+  .partner-page .offering-card h3 { font-size: 15px; }
+  .partner-page .offering-card .offering-description { font-size: 12px; }
+  .partner-page .partner-logo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .partner-page .partner-logo-cell { height: 60px; padding: 7px; }
+  .partner-page .partner-logo-cell img { max-height: 42px; }
+  .partner-page .partner-about-section { padding: 48px 20px; }
+  .partner-page .partner-about-content { grid-template-columns: 1fr; gap: 28px; text-align: center; }
+  .partner-page .partner-about-content h2 { font-size: 29px; }
+  .partner-page .partner-about-content p:not(.eyebrow) { margin-inline: auto; }
+  .partner-page .datia-orbit { width: 220px; height: 220px; }
+  .partner-page .orbit-data { top: 45px; }
+  .partner-page .orbit-media { top: 63px; }
+  .partner-page .orbit-intent { bottom: 48px; }
+  .partner-page .partner-contact-section { padding: 48px 18px; }
+  .partner-page .partner-contact-heading h2 { font-size: 30px; }
+  .partner-page .partner-footer { padding-inline: 18px; }
+  .partner-page .partner-footer nav { gap: 8px 14px; }
+  .partner-page .partner-header-inner { width: calc(100% - 32px); gap: 8px 12px; }
+  .partner-page .partner-nav { width: 100%; justify-content: center; flex-wrap: wrap; overflow: visible; gap: 4px 14px; padding: 8px 0 2px; }
+  .partner-page .partner-nav a { font-size: 11px; }
+}
