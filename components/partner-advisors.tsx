@@ -51,7 +51,7 @@ const advisors: PartnerAdvisor[] = [
     linkedin: "https://www.linkedin.com/search/results/people/?keywords=Terry%20Arsenault",
     role: "Founder, Vyne",
     bioRole: "Founder | Ecommerce Brand Builder | Business Intelligence Expert - Vyne",
-    image: "terry-arsenault.png",
+    image: "terry-arsenault.jpg",
     bio: "Terry Arsenault is a seasoned technology leader with over 20 years of experience, specializing in business intelligence and data strategy. Throughout his career, Terry has helped organizations harness the power of data to drive smarter decisions and long-term growth. As the founder of a digital agency and multiple ecommerce brands, he combines deep technical expertise with hands-on entrepreneurial experience. His work spans building scalable Shopify stores, leveraging AI to automate operations, and crafting performance-driven marketing strategies. Today, Terry focuses on helping businesses grow through data, technology, and a sharp understanding of digital commerce.",
   },
   {
