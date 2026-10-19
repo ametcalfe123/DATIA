@@ -233,24 +233,24 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .partner-about-copy { max-width: none; text-align: center; }
 .partner-about-copy h2 { margin: 0 0 15px; color: #fff; font-size: clamp(30px, 2.5vw, 36px); letter-spacing: -.04em; line-height: 1.15; }
 .partner-about-copy > p { margin: 16px 0 0; color: #d3d3d3; font-size: 21px; line-height: 1.8; }
-.partner-contact-section { position: relative; isolation: isolate; overflow: hidden; padding: 88px 32px 90px; border-bottom: 5px solid #ed1c24; background: linear-gradient(rgb(12 12 12 / 52%), rgb(12 12 12 / 64%)), url('/partner/images/partner-architectural-bg.jpg') center 38% / cover no-repeat; color: #fff; scroll-margin-top: 88px; }
+.partner-contact-section { position: relative; isolation: isolate; overflow: hidden; padding: 88px 32px 90px; background: #f5f5f5; color: var(--datia-black); scroll-margin-top: 88px; }
 .partner-contact-content { width: min(100%, 1250px); margin: 0 auto; }
 .partner-contact-heading { text-align: center; }
-.partner-contact-heading h2 { margin: 0; color: #fff; font-size: clamp(32px, 2.8vw, 40px); line-height: 1.15; }
-.partner-contact-heading > p:last-child { margin: 12px 0 0; color: #d1d1d1; font-size: 16px; line-height: 1.6; }
+.partner-contact-heading h2 { margin: 0; color: #171717; font-size: clamp(32px, 2.8vw, 40px); line-height: 1.15; }
+.partner-contact-heading > p:last-child { margin: 12px 0 0; color: var(--datia-text); font-size: 16px; line-height: 1.6; }
 .partner-team { width: min(100%, 960px); margin: 28px auto 38px; text-align: left; }
-.partner-team > .eyebrow { color: #e0e0e0; }
-.partner-team h3 { margin: 0 0 24px; color: #fff; font-size: 28px; line-height: 1.2; }
+.partner-team > .eyebrow { color: var(--datia-red); }
+.partner-team h3 { margin: 0 0 24px; color: #171717; font-size: 28px; line-height: 1.2; }
 .partner-team-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 18px; }
-.partner-team-person { min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 8px; color: #fff; text-align: center; }
+.partner-team-person { min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 8px; color: #171717; text-align: center; }
 .partner-team-person img { width: 120px; height: 120px; border-radius: 8px; object-fit: cover; }
 .partner-team-person strong { margin-top: 2px; font-size: 14px; line-height: 1.35; }
-.partner-team-person span { max-width: 160px; color: #c5c5c5; font-size: 12px; line-height: 1.5; }
-.partner-contact-form { width: min(100%, 650px); margin: 0 auto; padding: 30px; border: 1px solid rgb(255 255 255 / 18%); border-radius: 12px; background: rgb(18 18 18 / 78%); backdrop-filter: blur(4px); }
+.partner-team-person span { max-width: 160px; color: var(--datia-text); font-size: 12px; line-height: 1.5; }
+.partner-contact-form { width: min(100%, 650px); margin: 0 auto; padding: 30px; border: 1px solid var(--datia-line); border-radius: 12px; background: #fff; }
 .partner-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 17px 18px; }
-.partner-contact-form label, .partner-solutions legend { color: #e0e0e0; font-size: 13px; line-height: 1.4; }
+.partner-contact-form label, .partner-solutions legend { color: #333; font-size: 13px; line-height: 1.4; }
 .partner-form-grid label { display: flex; flex-direction: column; gap: 8px; }
-.partner-contact-form input:not([type="checkbox"]), .partner-contact-form textarea { width: 100%; min-height: 46px; padding: 10px 12px; border: 1px solid #4b4b4b; border-radius: 5px; background: #151515; color: #fff; font-size: 14px; }
+.partner-contact-form input:not([type="checkbox"]), .partner-contact-form textarea { width: 100%; min-height: 46px; padding: 10px 12px; border: 1px solid #d4d4d4; border-radius: 5px; background: #fff; color: var(--datia-black); font-size: 14px; }
 .partner-contact-form input:focus, .partner-contact-form textarea:focus { outline: 2px solid #ed1c24; outline-offset: 2px; }
 .partner-contact-form textarea { min-height: 110px; resize: vertical; }
 .partner-solutions { margin: 23px 0; padding: 0; border: 0; }
