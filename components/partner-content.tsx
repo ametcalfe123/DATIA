@@ -1,12 +1,15 @@
 import Image from "next/image"
 import {
   ArrowRight,
+  ChevronDown,
+  CircleCheck,
   Database,
   FileText,
   Mail,
   Megaphone,
   PhoneCall,
   Search,
+  Star,
   TrendingUp,
   Users,
   Video,
@@ -61,6 +64,35 @@ const growthStages = [
     description: "Growth packs add leads and impressions on demand for priority markets, campaigns, or buying windows.",
     Icon: TrendingUp,
   },
+]
+
+const abmxiDeliverables = [
+  "Turnkey campaign creative development",
+  "Persona + geo-targeting",
+  "LinkedIn + Facebook deployment",
+  "Brand-safe website deployment",
+  "Buyer intelligence + signal stacking",
+  "Targeted impressions",
+  "Guaranteed persona-targeted leads",
+  "Lead scoring + engagement tracking",
+  "Sales-ready Intelligence Dashboard",
+]
+
+const abmxiSignals = [
+  "Buyer Intel",
+  "Reading behavior",
+  "RFPs and bids",
+  "Grants and bonds",
+  "Strategic initiatives",
+  "Leadership changes",
+  "Industry news",
+]
+
+const abmxiSalesOutcomes = [
+  "Engagement context",
+  "Account signals",
+  "Lead scoring",
+  "SQLs distinguished from MQLs",
 ]
 
 const services = [
@@ -236,9 +268,6 @@ export function AbmSection() {
   <p>By unifying buyer intent, audience data, cross-channel media, and lead generation, DATIA transforms disconnected insights into coordinated action, delivering a more complete view of the buyer and a more direct path from initial interest to qualified sales opportunities.</p>
   </div>
   <GrowthSection />
-  <div className="abmxi-cta-panel">
-        <a className="abmxi-more-link" href="#growth">How ABMxi works <ArrowRight aria-hidden="true" size={22} /></a>
-      </div>
     </section>
   )
 }
@@ -264,6 +293,40 @@ export function GrowthSection() {
         ))}
       </div>
       <p className="growth-closing">Engagement and intelligence then help Sales know who to prioritize, why now, and what to discuss.</p>
+      <details className="abmxi-dropdown">
+        <summary className="button button-red abmxi-dropdown-toggle">
+          How ABMxi works <ChevronDown className="abmxi-dropdown-chevron" aria-hidden="true" size={20} />
+        </summary>
+        <div className="abmxi-dropdown-panel">
+          <h3>How ABMxi works</h3>
+          <div className="abmxi-dropdown-grid">
+            <div>
+              <h4>What you get</h4>
+              <ul>
+                {abmxiDeliverables.map((item) => (
+                  <li key={item}><CircleCheck aria-hidden="true" size={20} />{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h4>Signals we track</h4>
+              <ul className="abmxi-dot-list">
+                {abmxiSignals.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h4>What sales gets</h4>
+              <ul>
+                {abmxiSalesOutcomes.map((item) => (
+                  <li key={item}><Star aria-hidden="true" size={20} />{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </details>
     </section>
   )
 }
