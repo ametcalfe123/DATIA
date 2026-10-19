@@ -15,12 +15,12 @@ import {
 
 const alternatives = [
   {
-    title: "Public-record data",
-    description: "Additional paid tools that surface institutional, procurement, budget, and activity signals, no contactable leads.",
+    title: "Public record data",
+    description: "Paid tools that surface institutional, procurement, budget, and activity signals, no contactable leads.",
   },
   {
     title: "Intent data",
-    description: "Paid tools identifying accounts showing buying signals only, no engagement options.",
+    description: "Additional paid tools identifying accounts showing buying signals only, no engagement options.",
   },
   {
     title: "Traditional media",
@@ -44,7 +44,7 @@ const growthStages = [
     number: "02",
     title: "Warm",
     subtitle: "Build familiarity through content",
-    description: "Your personas see your brand on LinkedIn, Facebook, and brand-safe websites before anyone asks them for anything.",
+    description: "Your personas see your brand on LinkedIn, Facebook, and brand-safe websites because decision-makers engage with content several times before they're ready to talk to sales.",
     Icon: Megaphone,
   },
   {
@@ -187,11 +187,11 @@ export function PartnerHero() {
     <section className="partner-hero" aria-labelledby="partner-hero-title">
       <div className="partner-hero-content">
         <h1 id="partner-hero-title">
-          <span className="partner-hero-mainline">From Impression to Appointment.</span>
-          <span>A Content-Driven, Intent Strategy</span>
+          <span className="partner-hero-mainline">From Buyer Intent to Qualified Opportunities</span>
+          <span className="partner-hero-subline">A Content-Driven Approach to a Stronger Pipeline</span>
         </h1>
         <p className="partner-hero-copy">
-          DATIA brings buyer identification, cross-channel engagement, and intent intelligence together in one place, turning insights into action and action into qualified leads.
+          DATIA unifies buyer identification, cross-channel engagement, and intent intelligence into one powerful intelligence dashboard, helping you turn actionable insights into meaningful engagement and engagement into qualified leads.
         </p>
         <a className="button button-red partner-hero-button" href="#contact">
           Partner with Us <ArrowRight aria-hidden="true" size={22} />
@@ -207,34 +207,36 @@ export function AbmSection() {
       <div className="section-heading partner-section-heading">
         <p className="eyebrow">Flagship offering</p>
         <h2 id="abm-title">ABMxi — Account-Based Marketing Intelligence</h2>
-        <p className="partner-section-lede">A content journey from insight to impact. Not simply an intent-driven lead program.</p>
-        <p>Lead intelligence drives performance, and most marketers rely on four separate providers to get the full picture.</p>
-        <p>Buyer intelligence sharpens targeting. Your exact personas are warmed across LinkedIn, Facebook, and brand-safe websites, then your thought leadership goes out by targeted email — because decision-makers engage with content several times before they&apos;re ready to talk to Sales.</p>
+        <p>The whole is greater than the sum of its parts, yet most marketers rely on <strong>four separate providers</strong> to get the full picture.</p>
       </div>
-      <div className="abm-visual">
-        <Image
-          src="/partner/images/section-1a-transparent.png"
-          alt="DATIA unifies audience data, intent, media, and lead generation"
-          width={1600}
-          height={820}
-          unoptimized
-          priority
-        />
+      <div className="abm-content-layout">
+        <div className="data-service-grid">
+          {alternatives.map((service, index) => (
+            <article className="data-service-card" key={service.title}>
+              <span className="data-service-number">{index + 1}</span>
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
+            </article>
+          ))}
+        </div>
+        <div className="abm-visual">
+          <Image
+            src="/partner/images/section-1a-transparent.png"
+            alt="DATIA unifies audience data, intent, media, and lead generation"
+            width={1600}
+            height={820}
+            unoptimized
+            priority
+          />
+        </div>
       </div>
-      <div className="data-service-grid">
-        {alternatives.map((service, index) => (
-          <article className="data-service-card" key={service.title}>
-            <span className="data-service-number">{index + 1}</span>
-            <h3>{service.title}</h3>
-            <p>{service.description}</p>
-          </article>
-        ))}
-      </div>
-      <div className="simplify-banner">
-        <h3>Simplify and Consolidate</h3>
-        <p>These platforms show you the signals. DATIA puts them to work by unifying intent, audience data, media, and lead generation in one sales-ready intelligence dashboard.</p>
-      </div>
-      <div className="abmxi-cta-panel">
+  <div className="simplify-banner">
+  <h3>Simplify and Consolidate</h3>
+  <p>DATIA brings all of these capabilities together in one connected intelligence platform, where each component strengthens the others.</p>
+  <p>By unifying buyer intent, audience data, cross-channel media, and lead generation, DATIA transforms disconnected insights into coordinated action, delivering a more complete view of the buyer and a more direct path from initial interest to qualified sales opportunities.</p>
+  </div>
+  <GrowthSection />
+  <div className="abmxi-cta-panel">
         <a className="abmxi-more-link" href="#growth">How ABMxi works <ArrowRight aria-hidden="true" size={22} /></a>
       </div>
     </section>
@@ -246,9 +248,8 @@ export function GrowthSection() {
     <section className="growth-section" id="growth" aria-labelledby="growth-title">
       <div className="section-heading">
         <p className="eyebrow">A connected buyer journey</p>
-        <h2 id="growth-title">How We Fuel Growth</h2>
-        <p>A turnkey, multi-touch ABM experience, not simply an intent-driven lead program.</p>
-      </div>
+        <h2 id="growth-title">How DATIA Fuels Growth</h2>
+            </div>
       <div className="growth-grid">
         {growthStages.map(({ number, title, subtitle, description, Icon }) => (
           <article className="growth-card" key={title}>
