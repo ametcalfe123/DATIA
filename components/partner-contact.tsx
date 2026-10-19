@@ -27,12 +27,10 @@ export function PartnerContact() {
     <section className="partner-contact-section" id="contact" aria-labelledby="contact-title">
       <div className="partner-contact-content">
         <div className="partner-contact-heading">
-          <h2 id="contact-title">Talk to the DATIA team</h2>
+          <h2 id="contact-title">The People Behind the Platform</h2>
           <p>Tell us what you&apos;re working on and which services you&apos;re interested in.</p>
         </div>
         <div className="partner-team">
-          <p className="eyebrow">The people behind the platform</p>
-          <h3>Meet the team</h3>
           <div className="partner-team-grid">
             {team.map((person) => (
               <article className="partner-team-person" key={person.name}>
