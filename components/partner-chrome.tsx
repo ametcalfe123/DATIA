@@ -44,19 +44,12 @@ export function PartnerFooter() {
           <p>Insights born from data.</p>
         </div>
         <div>
-          <h3>Services</h3>
-          <a href="#abmxi">Account-Based Marketing Intelligence (ABMxi)</a>
-          <a href="#services">Targeted Guaranteed Leads (TGL)</a>
-          <a href="#services">Persona-Based Ad Targeting (PUSH)</a>
-          <a href="#services">Content Studio</a>
-          <a href="#services">Research</a>
-        </div>
-        <div>
           <h3>Company</h3>
           <a href="#abmxi">Flagship Offering</a>
           <a href="#services">Marketing Services</a>
           <a href="#testimonials">Testimonials</a>
           <a href="#about">About</a>
+          <Link className="partner-footer-privacy" href="/privacy-policy">Privacy Policy</Link>
         </div>
         <div>
           <h3>Connect</h3>
@@ -68,10 +61,6 @@ export function PartnerFooter() {
       </div>
       <div className="partner-footer-bottom">
         <small>© {new Date().getFullYear()} DATIA AI. All rights reserved.</small>
-        <nav aria-label="Legal links">
-          <Link href="/privacy-policy">Privacy Policy</Link>
-          <Link href="/terms">Terms of Service</Link>
-        </nav>
       </div>
     </footer>
   )
