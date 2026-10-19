@@ -130,11 +130,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .partner-section-heading > p + p { margin-top: 14px; }
 .abm-visual { max-width: 760px; margin: 25px auto; text-align: center; }
 .abm-visual img { width: min(100%, 620px); max-height: 340px; object-fit: contain; }
-.data-service-grid { width: min(100%, 870px); margin: 22px auto 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
-.data-service-card { min-height: 150px; padding: 20px 16px; border: 1px solid #e1e1e1; border-radius: 8px; background: #fff; text-align: left; box-shadow: 0 5px 13px rgb(0 0 0 / 6%); }
-.data-service-dot { display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: var(--datia-red); }
-.data-service-card h3 { margin: 12px 0 7px; font-size: 15px; }
-.data-service-card p { margin: 0; color: #666; font-size: 12px; line-height: 1.55; }
+.data-service-grid { width: min(100%, 1800px); margin: 22px auto 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+  .data-service-card { min-height: 280px; padding: 32px; border: 1px solid #e1e1e1; border-radius: 16px; background: #fff; text-align: left; box-shadow: 0 10px 30px -12px rgb(0 0 0 / 25%); }
+  .data-service-number { display: block; margin: 0 0 20px; color: #3f3f46; font-size: 12px; font-weight: 600; line-height: 1.4; }
+  .data-service-card h3 { margin: 0 0 16px; font-size: 22px; line-height: 1.25; }
+  .data-service-card p { margin: 0; color: #4b4b52; font-size: 17px; line-height: 1.6; }
 .simplify-banner { width: min(100%, 870px); margin: 18px auto 0; padding: 20px 24px; border-radius: 8px; background: var(--datia-red); color: #fff; }
 .simplify-banner h3 { margin: 0; font-size: 17px; }
 .simplify-banner p { margin: 8px 0 0; color: #fff; font-size: 12px; line-height: 1.55; }

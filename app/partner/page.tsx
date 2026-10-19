@@ -159,10 +159,18 @@ export default function PartnerPage() {
           />
         </div>
         <div className="data-service-grid">
-          <article className="data-service-card"><span className="data-service-dot" aria-hidden="true" /><h3>Public-record data</h3><p>First-party insight into the organizations and people that matter.</p></article>
-          <article className="data-service-card"><span className="data-service-dot" aria-hidden="true" /><h3>Intent data</h3><p>Signals that show which accounts are actively researching.</p></article>
-          <article className="data-service-card"><span className="data-service-dot" aria-hidden="true" /><h3>Traditional media</h3><p>Brand-safe reach across the channels your buyers trust.</p></article>
-          <article className="data-service-card"><span className="data-service-dot" aria-hidden="true" /><h3>Creative agency</h3><p>Content and creative that make every interaction count.</p></article>
+          {[
+            { title: "Public-record data", description: "Additional paid tools that surface institutional, procurement, budget, and activity signals, no contactable leads." },
+            { title: "Intent data", description: "Paid tools identifying accounts showing buying signals only, no engagement options." },
+            { title: "Traditional media", description: "Advertising and native content within individual industry channels, sold and reported on its own." },
+            { title: "Creative agency", description: "Social, programmatic, content, research and ad production, on a separate retainer." },
+          ].map((service, index) => (
+            <article className="data-service-card" key={service.title}>
+              <span className="data-service-number" aria-hidden="true">{index + 1}</span>
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
+            </article>
+          ))}
         </div>
         <h3 className="simplify-heading">Simplify and Consolidate</h3>
       </section>
