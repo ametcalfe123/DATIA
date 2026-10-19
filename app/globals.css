@@ -149,7 +149,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .data-service-number { display: block; margin: 0 0 7px; color: #333; font-size: 14px; font-weight: var(--font-weight-semibold); }
 .data-service-card h3 { margin: 0 0 8px; font-size: clamp(18px, 1.2vw, 22px); line-height: 1.25; letter-spacing: -.035em; }
 .data-service-card p { margin: 0; color: #5d5d5d; font-size: clamp(14px, .92vw, 16px); line-height: 1.5; }
-.simplify-banner { width: min(92.5%, 1816px); min-height: 309px; margin: 42px auto 0; padding: 70px; border-radius: 24px; background: #ff0000; color: #fff; box-shadow: 0 3px 5px rgb(0 0 0 / 12%); }
+.simplify-banner { width: calc(min(92.5%, 1816px) - 3in); min-height: 309px; margin: 42px auto 0; padding: 70px; border-radius: 24px; background: #ff0000; color: #fff; box-shadow: 0 3px 5px rgb(0 0 0 / 12%); }
 .simplify-banner h3 { margin: 0; font-size: clamp(26px, 1.72vw, 36px); line-height: 1.3; letter-spacing: -.03em; }
 .simplify-banner > p { max-width: 1500px; margin: 30px 0 0; color: #fff; font-size: clamp(18px, 1.34vw, 28px); line-height: 1.65; }
 .abmxi-dropdown { width: min(100%, 1280px); margin: 32px auto 0; display: flex; flex-direction: column; align-items: center; }

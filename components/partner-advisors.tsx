@@ -11,11 +11,13 @@ type PartnerAdvisor = {
   image?: string
   crop?: boolean
   bio?: string
+  linkedin?: string
 }
 
 const advisors: PartnerAdvisor[] = [
   {
     name: "Jason McKenna",
+    linkedin: "https://www.linkedin.com/search/results/people/?keywords=Jason%20McKenna",
     role: "VP of Global Educational Strategy, VEX Robotics",
     bioRole: "V.P. of Global Educational Strategy, VEX Robotics",
     image: "jason-mckenna.jpg",
@@ -29,12 +31,14 @@ const advisors: PartnerAdvisor[] = [
   },
   {
     name: "Randall Dennis",
+    linkedin: "https://www.linkedin.com/search/results/people/?keywords=Randall%20Dennis",
     role: "Market Leader, Convergint",
     image: "randall-dennis.jpg",
     bio: "Randall Dennis is a seasoned market leader at Convergint, bringing extensive experience in technology solutions and strategic business development. With a proven track record in driving growth and innovation, Randall provides valuable insights into market trends and customer needs. His expertise in enterprise solutions and go-to-market strategies helps guide DATIA's strategic direction and client engagement approaches.",
   },
   {
     name: "Kathy Hurley",
+    linkedin: "https://www.linkedin.com/search/results/people/?keywords=Kathy%20Hurley",
     role: "Principal Consultant, Kathy Hurley Consulting",
     bioRole: "Principal Consultant, Kathy Hurley Consulting LLC",
     image: "kathy-hurley.jpg",
@@ -42,6 +46,7 @@ const advisors: PartnerAdvisor[] = [
   },
   {
     name: "Terry Arsenault",
+    linkedin: "https://www.linkedin.com/search/results/people/?keywords=Terry%20Arsenault",
     role: "Founder, Vyne",
     bioRole: "Founder | Ecommerce Brand Builder | Business Intelligence Expert - Vyne",
     image: "terry-arsenault.png",
@@ -49,6 +54,7 @@ const advisors: PartnerAdvisor[] = [
   },
   {
     name: "Tom Fowler",
+    linkedin: "https://www.linkedin.com/search/results/people/?keywords=Tom%20Fowler",
     role: "B2B media publisher since 1978",
     bioRole: "Sales and Marketing Advisor",
     image: "tom-fowler.jpg",
@@ -133,6 +139,13 @@ export function PartnerAdvisors() {
             )}
             <h3 id="partner-advisor-bio-name">{activeAdvisor.name}</h3>
             <p className="partner-bio-role">{activeAdvisor.bioRole ?? activeAdvisor.role}</p>
+            {activeAdvisor.linkedin && (
+              <p className="partner-bio-contact">
+                <a href={activeAdvisor.linkedin} target="_blank" rel="noopener noreferrer">
+                  LinkedIn Profile<span className="sr-only"> (opens in a new tab)</span>
+                </a>
+              </p>
+            )}
             <p className="partner-bio-text">{activeAdvisor.bio}</p>
           </div>
         )}
