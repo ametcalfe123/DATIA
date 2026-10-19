@@ -15,12 +15,12 @@ import {
 
 const alternatives = [
   {
-    title: "Public-record data",
-    description: "Additional paid tools that surface institutional, procurement, budget, and activity signals, no contactable leads.",
+    title: "Public record data",
+    description: "Paid tools that surface institutional, procurement, budget, and activity signals, no contactable leads.",
   },
   {
     title: "Intent data",
-    description: "Paid tools identifying accounts showing buying signals only, no engagement options.",
+    description: "Additional paid tools identifying accounts showing buying signals only, no engagement options.",
   },
   {
     title: "Traditional media",
