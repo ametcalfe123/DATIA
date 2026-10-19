@@ -12,8 +12,6 @@ type TeamMember = {
   bio: string
 }
 
-const site = "https://www.datia.io"
-
 function MailIcon() {
   return <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m4 7 8 6 8-6" /></svg>
 }
@@ -46,7 +44,7 @@ export default function TeamDirectory({ people }: { people: TeamMember[] }) {
               <div className="team-member-photo-wrap">
                 <Image
                   className="team-member-photo"
-                  src={`${site}/images/${person.image}`}
+                  src={`/images/${person.image}`}
                   alt={person.name}
                   width={96}
                   height={96}
@@ -91,7 +89,7 @@ export default function TeamDirectory({ people }: { people: TeamMember[] }) {
             </button>
             <Image
               className="team-bio-photo"
-              src={`${site}/images/${selectedPerson.image}`}
+              src={`/images/${selectedPerson.image}`}
               alt=""
               width={112}
               height={112}

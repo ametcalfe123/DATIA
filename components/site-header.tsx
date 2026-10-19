@@ -70,7 +70,7 @@ export function SiteFooter() {
           <Link href="#team">Meet the Team</Link>
           <Link href="#advisory-board">Advisory Board</Link>
           <Link href="#trusted-by">Trusted By</Link>
-          <Link href="https://www.datia.io/privacy-policy">Privacy Policy</Link>
+          <Link href="/privacy-policy">Privacy Policy</Link>
         </nav>
       </div>
       <div className="site-footer-bottom">© 2025. All rights reserved.</div>
