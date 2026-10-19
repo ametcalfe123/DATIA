@@ -1,0 +1,19 @@
+{
+  "app": {
+    "[project]/app/[...slug]/page": [
+      "static/media/fa0520225c6f3d07-s.p.33u8lzvd44aqk.woff2"
+    ],
+    "[project]/app/_not-found/page": [
+      "static/media/fa0520225c6f3d07-s.p.33u8lzvd44aqk.woff2"
+    ],
+    "[project]/app/page": [
+      "static/media/fa0520225c6f3d07-s.p.33u8lzvd44aqk.woff2"
+    ],
+    "[project]/app/partner/page": [
+      "static/media/fa0520225c6f3d07-s.p.33u8lzvd44aqk.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pages": {},
+  "pagesUsingSizeAdjust": false
+}
