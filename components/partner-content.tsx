@@ -114,6 +114,7 @@ const services = [
     title: "Reach ideal buyers across the open web",
     description: "Strategic advertising campaigns tailored to your ideal buyers for maximum engagement and conversion across the open web.",
     action: "Explore PUSH targeting",
+    popup: true,
     Icon: Zap,
     whatYouGet: ["Persona development", "Cross-platform ad management", "Dynamic creative optimization", "Advanced audience segmentation"],
     howItWorks: ["Define audience", "Creative assets", "Launch and optimize", "Analyze and scale"],
