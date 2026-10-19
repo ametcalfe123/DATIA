@@ -18,11 +18,11 @@ import {
 const alternatives = [
   {
     title: "Public-record data",
-    description: "Additional paid tools that surface institutional procurement, budget, and activity signals — with no contactable leads.",
+    description: "Additional paid tools that surface institutional, procurement, budget, and activity signals, no contactable leads.",
   },
   {
     title: "Intent data",
-    description: "Paid tools identify accounts showing buying signals, but offer no way to engage them.",
+    description: "Paid tools identifying accounts showing buying signals only, no engagement options.",
   },
   {
     title: "Traditional media",
@@ -30,7 +30,7 @@ const alternatives = [
   },
   {
     title: "Creative agency",
-    description: "Social, programmatic, content, research, and ad production on a separate retainer.",
+    description: "Social, programmatic, content, research and ad production, on a separate retainer.",
   },
 ]
 
@@ -70,7 +70,7 @@ const services = [
     name: "TGL",
     category: "Targeted Guaranteed Leads",
     title: "Put qualified prospects into your pipeline",
-    description: "Prospect identification and intent analysis to fuel your sales pipeline with high-converting, top-of-funnel leads.",
+    description: "Prospect identification and intent analysis for fueling the sales pipeline with high-converting, top-of-funnel leads.",
     action: "See TGL in action",
     Icon: Users,
   },
@@ -78,7 +78,7 @@ const services = [
     name: "PUSH",
     category: "Persona-Based Ad Targeting",
     title: "Reach ideal buyers across the open web",
-    description: "Strategic advertising campaigns tailored to your ideal buyers for maximum engagement and conversion.",
+    description: "Strategic advertising campaigns tailored to your ideal buyers for maximum engagement and conversion across the open web.",
     action: "Explore PUSH targeting",
     Icon: Zap,
   },
@@ -86,7 +86,7 @@ const services = [
     name: "CONTENT STUDIO",
     category: "Content Creation & Strategy",
     title: "Give buyers content that moves them forward",
-    description: "Custom content tailored to your goals — from whitepapers to interactive media that drives action.",
+    description: "Custom content creation, tailored to specific goals and objectives. From whitepapers to interactive media that drives action.",
     action: "Inside Content Studio",
     Icon: FileText,
   },
@@ -110,7 +110,7 @@ const services = [
     name: "BDR SERVICES",
     category: "Business Development Representative",
     title: "We help create opportunities for your sales team",
-    description: "Turn marketing-generated interest into qualified sales conversations.",
+    description: "Turning marketing-generated interest into qualified sales conversations.",
     action: "See our service",
     Icon: PhoneCall,
   },
@@ -234,19 +234,18 @@ export function AbmSection() {
       <div className="data-service-grid">
         {alternatives.map((service, index) => (
           <article className="data-service-card" key={service.title}>
-            <span className="data-service-number">0{index + 1}</span>
+            <span className="data-service-number">{index + 1}</span>
             <h3>{service.title}</h3>
             <p>{service.description}</p>
           </article>
         ))}
       </div>
       <div className="simplify-banner">
-        <div>
-          <p className="eyebrow">One connected platform</p>
-          <h3>Simplify and Consolidate</h3>
-          <p>These platforms show you the signals. DATIA puts them to work by unifying intent, audience data, media, and lead generation in one sales-ready intelligence dashboard.</p>
-        </div>
-        <a className="abmxi-more-link" href="#growth">How ABMxi works <ArrowRight aria-hidden="true" size={17} /></a>
+        <h3>Simplify and Consolidate</h3>
+        <p>These platforms show you the signals. DATIA puts them to work by unifying intent, audience data, media, and lead generation in one sales-ready intelligence dashboard.</p>
+      </div>
+      <div className="abmxi-cta-panel">
+        <a className="abmxi-more-link" href="#growth">How ABMxi works <ArrowRight aria-hidden="true" size={22} /></a>
       </div>
     </section>
   )
@@ -282,7 +281,6 @@ export function ServicesSection() {
   return (
     <section className="partner-services-section" id="services" aria-labelledby="services-title">
       <div className="section-heading">
-        <p className="eyebrow">Flexible solutions for your buyer journey</p>
         <h2 id="services-title">Demand Gen and Marketing Services</h2>
         <p>Flexible solutions to fuel your buyer engagement strategy.</p>
       </div>
@@ -299,12 +297,10 @@ export function ServicesSection() {
         ))}
       </div>
       <div className="markets-served" aria-labelledby="markets-title">
-        <p className="eyebrow">Industry experience</p>
-        <h3 id="markets-title">Markets We Serve</h3>
+        <h3 className="eyebrow" id="markets-title">Markets We Serve</h3>
         <div className="markets-served-grid">
           {markets.map((market) => (
             <article className="market-served-card" key={market.name}>
-              <Image src={`/images/${market.image}`} alt="" width={36} height={36} unoptimized />
               <h4>{market.name}</h4>
               <p>{market.detail}</p>
             </article>
