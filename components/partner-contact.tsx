@@ -157,7 +157,7 @@ export function PartnerContact() {
             <label>Email<input name="email" type="email" autoComplete="email" required /></label>
             <label>Phone<input name="phone" type="tel" autoComplete="tel" /></label>
             <label>Company name<input name="company" type="text" autoComplete="organization" required /></label>
-            <label>Website<input name="website" type="url" autoComplete="url" /></label>
+            <label>Website<input name="website" type="text" inputMode="url" autoComplete="url" maxLength={500} placeholder="www.example.com" /></label>
           </div>
           <fieldset className="partner-solutions">
             <legend>Solutions of Interest</legend>
