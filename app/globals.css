@@ -274,7 +274,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .partner-footer-main h3 { margin: 0 0 5px; color: #fff; font-size: 16px; }
 .partner-footer-main a { display: inline-flex; align-items: center; gap: 4px; }
 .partner-footer-main a:hover, .partner-footer-bottom a:hover { color: #fff; }
-.partner-advisors { width: min(100%, 1250px); margin: 0 auto 40px; padding: 0 0 40px; border-bottom: 1px solid #ed1c24; text-align: center; }
+.partner-advisors { position: relative; width: min(100%, 1250px); margin: 0 auto 40px; padding: 0 0 40px; text-align: center; }
+.partner-advisors::after { position: absolute; bottom: 0; left: 50%; width: min(100%, 890px); height: 1px; background: #ed1c24; transform: translateX(-50%); content: ""; }
 .partner-advisors > p { margin: 0 0 21px; color: #fff; font-size: 16px; font-weight: var(--font-weight-bold); }
 .partner-advisor-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; }
 .partner-advisor { display: flex; flex-direction: column; align-items: center; gap: 7px; color: #fff; font-size: 11px; line-height: 1.45; }
