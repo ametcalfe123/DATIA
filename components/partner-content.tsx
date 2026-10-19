@@ -248,7 +248,7 @@ export function GrowthSection() {
     <section className="growth-section" id="growth" aria-labelledby="growth-title">
       <div className="section-heading">
         <p className="eyebrow">A connected buyer journey</p>
-        <h2 id="growth-title">How We Fuel Growth</h2>
+        <h2 id="growth-title">How DATIA Fuels Growth</h2>
             </div>
       <div className="growth-grid">
         {growthStages.map(({ number, title, subtitle, description, Icon }) => (
