@@ -198,7 +198,23 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .offering-link { min-height: 40px; display: inline-flex; align-items: center; gap: 7px; margin-top: 16px; padding: 8px 15px; border: 1px solid #d7d7dc; border-radius: 999px; color: #1c1c20; box-shadow: 0 1px 2px rgb(0 0 0 / 10%); font-size: 12px; font-weight: var(--font-weight-semibold); }
 .offering-link svg { color: currentColor; transition: transform .18s ease; }
 .offering-link:hover { background: #f7f7f8; }
-.offering-link:hover svg { transform: translateX(4px); }
+  .offering-link:hover svg { transform: translateX(4px); }
+  button.offering-link { background: #fff; font-family: inherit; cursor: pointer; }
+  button.offering-link:hover { background: #f7f7f8; }
+  .offering-details[hidden] { display: none; }
+  .offering-details { width: 100%; margin-top: 18px; padding-top: 18px; border-top: 1px solid #e4e4e7; animation: offering-details-in .25s ease-out; }
+  .offering-details .offering-link:hover svg { transform: translateY(-3px); }
+  .offering-details-title { margin: 0 0 14px; font-size: 14px; font-weight: var(--font-weight-semibold); }
+  .offering-details-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .offering-details-grid h5 { margin: 0 0 10px; color: #414149; font-size: 9px; font-weight: var(--font-weight-semibold); letter-spacing: .12em; text-transform: uppercase; }
+  .offering-details-grid ul { margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; list-style: none; }
+  .offering-details-grid li { display: flex; align-items: flex-start; gap: 7px; color: #42424b; font-size: 12px; line-height: 1.45; }
+  .offering-details-grid li svg { flex: 0 0 auto; margin-top: 1px; color: var(--datia-red); }
+  .offering-dot-list li::before { flex: 0 0 auto; width: 5px; height: 5px; margin: 6px 4px 0; border-radius: 50%; background: var(--datia-red); content: ""; }
+  .offerings-grid { align-items: start; }
+  @keyframes offering-details-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+  @media (max-width: 700px) { .offering-details-grid { grid-template-columns: 1fr; gap: 18px; } .offering-details-grid li { font-size: 14px; } }
+
 .markets-served { width: min(100%, 890px); margin: 52px auto 0; padding-top: 52px; border-top: 1px solid #ed1c24; text-align: center; }
 .markets-served > .eyebrow { margin: 0 0 18px; color: #e5e5e5; font-size: 21px; font-weight: var(--font-weight-bold); letter-spacing: 0; line-height: 1.5; text-transform: none; }
 .markets-served-grid { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 18px 19px; }
