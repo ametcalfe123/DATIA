@@ -1,8 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
 
-const site = "https://www.datia.io"
-
 const clients = [
   { name: "Microsoft", image: "microsoft.png", url: "https://www.microsoft.com/" },
   { name: "Qualcomm Snapdragon", image: "qualcomm-snapdragon.webp", url: "https://www.qualcomm.com/" },
@@ -104,7 +102,7 @@ function TrustedFooter() {
     ["Meet the Team", "/about/our-team"],
     ["Advisory Board", "/about/our-advisors"],
     ["Trusted By", "/trusted-by"],
-    ["Privacy Policy", `${site}/privacy-policy`],
+    ["Privacy Policy", "/privacy-policy"],
   ] as const
   const markets = ["Education", "Government", "HR", "Financial Services", "Retail", "Healthcare", "Technology", "Cybersecurity/Identity"]
 

@@ -5,8 +5,8 @@ import "./globals.css"
 const publicSans = Public_Sans({ subsets: ["latin"], variable: "--font-public-sans" })
 
 export const metadata: Metadata = {
-  title: "DATIA | Prospect Intelligence Platforms",
-  description: "The AI-enabled fusion of data and media. DATIA brings buyer identification, cross-channel engagement, and intent intelligence together.",
+  title: "DATIA",
+  description: "Innovative B2B marketing strategies that drive results",
 }
 
 export const viewport: Viewport = {

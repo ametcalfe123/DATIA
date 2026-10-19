@@ -1,7 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
-
-const site = "https://www.datia.io"
+import {
+  ArrowRight,
+  Megaphone,
+  Pencil,
+  Search,
+  Target,
+  Users,
+} from "lucide-react"
 
 const services = [
   {
@@ -9,45 +15,56 @@ const services = [
     subtitle: "Account-Based Marketing Intelligence",
     description:
       "Precision-targeted marketing strategies that focus on high-value accounts with personalized campaigns driven by AI-driven behavioral data.",
+    Icon: Target,
   },
   {
     name: "TGL",
     subtitle: "Targeted Generated Leads",
-    description:
-      "Prospect identification and interest for fueling the sales pipeline with top-of-funnel leads.",
+    description: "Prospect identification and interest for fueling the sales pipeline with top-of-funnel leads.",
+    Icon: Users,
   },
   {
     name: "PUSH",
     subtitle: "Programmatic User-Specific Hyper-targeting",
-    description:
-      "Strategic advertising campaigns tailored to your ideal buyers for maximum engagement and conversion.",
+    description: "Strategic advertising campaigns tailored to your ideal buyers for maximum engagement and conversion.",
+    Icon: Megaphone,
   },
   {
     name: "Content Studio",
     subtitle: "Content Creation & Strategy",
     description: "Custom content creation, tailored to specific goals and objectives.",
+    Icon: Pencil,
   },
   {
     name: "Custom Research",
     subtitle: "Market Research & Analysis",
     description: "Showcase industry expertise and product innovation.",
+    Icon: Search,
   },
 ]
 
 const markets = [
-  { name: "EDU", groups: ["K12", "Higher Ed"], icon: "edu" },
-  { name: "GOV", groups: ["State/Local", "Federal"], icon: "gov" },
-  { name: "HR", groups: ["Employee Benefits", "Human Resources"], icon: "hr" },
-  { name: "Financial Services", groups: ["Investment Advisor", "Banking", "Insurance"], icon: "financial" },
-  { name: "Technology", groups: ["Identity", "Enterprise", "Cybersecurity"], icon: "technology" },
-  { name: "Retail", groups: ["Tech", "C-Suite Management"], icon: "retail" },
-  { name: "Healthcare", groups: ["Tech", "C-Suite Management"], icon: "healthcare" },
+  { name: "EDU", groups: ["K12", "Higher Ed"], image: "edu-icon.png" },
+  { name: "GOV", groups: ["State/Local", "Federal"], image: "gov-icon.png" },
+  { name: "HR", groups: ["Employee Benefits", "Human Resources"], image: "hr-icon.png" },
+  {
+    name: "Financial Services",
+    groups: ["Investment Advisor", "Banking", "Insurance"],
+    image: "financial-icon.png",
+  },
+  {
+    name: "Technology",
+    groups: ["Identity", "Enterprise", "Cybersecurity"],
+    image: "technology-icon.png",
+  },
+  { name: "Retail", groups: ["Tech", "C-Suite Management"], image: "retail-icon.png" },
+  { name: "Healthcare", groups: ["Tech", "C-Suite Management"], image: "healthcare-icon.png" },
 ]
 
 const articles = [
   {
     category: "Lead Generation",
-    title: "Empower Don&apos;t Push: How to Meet Leads on Their Own Terms",
+    title: "Empower Don't Push: How to Meet Leads on Their Own Terms",
     image: "empower-leads-article.avif",
     description:
       "Discover effective strategies for empowering prospects rather than pushing them, creating authentic connections that drive better conversion rates and long-term relationships.",
@@ -59,10 +76,21 @@ const articles = [
     title: "Nurture or Sell: Finding the Perfect Balance to Convert Leads Without Scaring Them Off",
     image: "nurture-or-sell-article.avif",
     description:
-      "Learn how to strike the optimal balance between nurturing prospects and moving them toward a decision.",
+      "Learn how to strike the optimal balance between nurturing prospects and making the sale, ensuring you convert leads effectively without overwhelming or alienating them.",
     read: "6 min read",
     href: "https://www.datiak12.io/partner-insights/white-papers-guides/whitepaper/15738538/datia-k12-nurture-or-sell-finding-the-perfect-balance-to-convert-leads-without-scaring-them-off",
   },
+]
+
+const footerMarkets = [
+  "Education",
+  "Government",
+  "HR",
+  "Financial Services",
+  "Retail",
+  "Healthcare",
+  "Technology",
+  "Cybersecurity/Identity",
 ]
 
 function SiteHeader() {
@@ -70,18 +98,73 @@ function SiteHeader() {
     <header className="site-header home-header">
       <div className="site-header-inner home-header-inner">
         <Link className="brand-logo" href="/" aria-label="DATIA home">
-          <Image src={`/images/datia-ai-logo.png`} alt="DATIA AI" width={176} height={40} unoptimized />
+          <Image src="/images/datia-ai-logo.png" alt="DATIA AI" width={176} height={40} priority unoptimized />
         </Link>
-        <nav className="main-nav" aria-label="Main navigation">
+        <nav className="main-nav home-desktop-nav" aria-label="Main navigation">
           <Link href="/about/decidedly-different">Our Story</Link>
           <Link href="/services">Services</Link>
           <Link href="/about/our-team">Meet the Team</Link>
           <Link href="/about/our-advisors">Advisory Board</Link>
           <Link href="/trusted-by">Trusted By</Link>
         </nav>
-        <Link className="button button-red header-cta" href="/get-started">Partner with Us</Link>
+        <Link className="button button-red header-cta" href="/get-started">
+          Partner with Us
+        </Link>
+        <details className="home-mobile-menu">
+          <summary aria-label="Open navigation menu"><span /></summary>
+          <nav className="home-mobile-menu-panel" aria-label="Mobile navigation">
+            <Link href="/about/decidedly-different">Our Story</Link>
+            <Link href="/services">Services</Link>
+            <Link href="/about/our-team">Meet the Team</Link>
+            <Link href="/about/our-advisors">Advisory Board</Link>
+            <Link href="/trusted-by">Trusted By</Link>
+            <Link className="button button-red" href="/get-started">Partner with Us</Link>
+          </nav>
+        </details>
       </div>
     </header>
+  )
+}
+
+function HomeFooter() {
+  return (
+    <>
+      <section className="home-cta">
+        <h2>Gain a Competitive Edge in Every Conversation.</h2>
+        <Link className="button button-red" href="/get-started">
+          Partner with Us <ArrowRight aria-hidden="true" size={20} />
+        </Link>
+      </section>
+      <footer className="site-footer home-footer">
+        <div className="home-footer-inner">
+          <div className="home-footer-brand">
+            <Link className="brand-logo" href="/" aria-label="DATIA home">
+              <Image src="/images/datia-ai-logo-white.png" alt="DATIA AI" width={176} height={40} unoptimized />
+            </Link>
+            <p>
+              A sales and marketing intelligence company offering enhanced lead generation and media services that
+              integrate intent data and AI-driven insights.
+            </p>
+          </div>
+          <div className="home-footer-markets">
+            <h2>Markets Served</h2>
+            <ul>
+              {footerMarkets.map((market) => (
+                <li key={market}>{market}</li>
+              ))}
+            </ul>
+          </div>
+          <nav className="home-footer-links" aria-label="Footer navigation">
+            <Link href="/about/decidedly-different">Our Story</Link>
+            <Link href="/about/our-team">Meet the Team</Link>
+            <Link href="/about/our-advisors">Advisory Board</Link>
+            <Link href="/trusted-by">Trusted By</Link>
+            <Link href="/privacy-policy">Privacy Policy</Link>
+          </nav>
+        </div>
+        <div className="home-footer-bottom">© 2025. All rights reserved.</div>
+      </footer>
+    </>
   )
 }
 
@@ -100,30 +183,43 @@ export default function HomePage() {
           <p>Comprehensive, AI-enabled B2B marketing solutions designed to drive growth.</p>
         </div>
         <div className="service-grid">
-          {services.map((service) => (
-            <article className="service-card" key={service.name}>
-              <span className="target-icon" aria-hidden="true" />
-              <h3>{service.name}</h3>
-              <p className="service-subtitle">{service.subtitle}</p>
-              <p className="service-description">{service.description}</p>
+          {services.map(({ name, subtitle, description, Icon }) => (
+            <article className="service-card" key={name}>
+              <div className="service-icon" aria-hidden="true">
+                <Icon className="service-icon-glyph" />
+              </div>
+              <h3>{name}</h3>
+              <p className="service-subtitle">{subtitle}</p>
+              <p className="service-description">{description}</p>
             </article>
           ))}
         </div>
         <p className="services-count">Showing 5 of our core services</p>
-        <Link className="button button-red learn-services" href="/services">Learn More About Our Services</Link>
+        <Link className="button button-red learn-services" href="/services">
+          Learn More About Our Services <ArrowRight aria-hidden="true" size={20} />
+        </Link>
       </section>
 
       <section className="markets-section" id="markets">
         <div className="section-heading">
           <h2>Markets Served</h2>
-          <p>We deliver specialized B2B marketing solutions across diverse industries, understanding the unique challenges and opportunities in each market.</p>
+          <p>
+            We deliver specialized B2B marketing solutions across diverse industries, understanding the unique
+            challenges and opportunities in each market.
+          </p>
         </div>
         <div className="market-grid">
-          {markets.map((market) => (
-            <article className="market-card" key={market.name}>
-              <Image src={`${site}/images/${market.icon}-icon.png`} alt="" width={48} height={48} unoptimized />
-              <h3>{market.name}</h3>
-              <ul>{market.groups.map((group) => <li key={group}>{group}</li>)}</ul>
+          {markets.map(({ name, groups, image }) => (
+            <article className="market-card" key={name}>
+              <div className="market-icon" aria-hidden="true">
+                <Image src={`/images/${image}`} alt="" width={24} height={24} unoptimized />
+              </div>
+              <h3>{name}</h3>
+              <ul>
+                {groups.map((group) => (
+                  <li key={group}>{group}</li>
+                ))}
+              </ul>
             </article>
           ))}
         </div>
@@ -135,39 +231,37 @@ export default function HomePage() {
           <p>Stay ahead of the curve with our latest insights, strategies, and industry trends.</p>
         </div>
         <div className="article-grid">
-          {articles.map((article) => (
+          {articles.map((article, index) => (
             <article className="article-card" key={article.title}>
-              <a href={article.href} className="article-image">
-                <Image src={`${site}/images/${article.image}`} alt={article.title.replace("&apos;", "'")} width={800} height={450} unoptimized />
+              <a
+                href={article.href}
+                className={`article-image${index === 1 ? " article-image-contain" : ""}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Read ${article.title}`}
+              >
+                <Image src={`/images/${article.image}`} alt={article.title} width={800} height={450} unoptimized />
               </a>
               <div className="article-content">
                 <p className="article-category">{article.category}</p>
-                <h3><a href={article.href}>{article.title.replace("&apos;", "'")}</a></h3>
+                <h3>
+                  <a href={article.href} target="_blank" rel="noopener noreferrer">
+                    {article.title}
+                  </a>
+                </h3>
                 <p className="article-description">{article.description}</p>
-                <div className="article-footer"><span>{article.read}</span><a href={article.href}>Read More <span aria-hidden="true">→</span></a></div>
+                <div className="article-footer">
+                  <span>{article.read}</span>
+                  <a href={article.href} target="_blank" rel="noopener noreferrer">
+                    Read More <ArrowRight aria-hidden="true" size={16} />
+                  </a>
+                </div>
               </div>
             </article>
           ))}
         </div>
       </section>
-
-      <section className="home-cta">
-        <p>DATIA AI</p>
-        <h2>Gain a Competitive Edge in Every Conversation.</h2>
-        <Link className="button button-red" href="/get-started">Partner with Us</Link>
-      </section>
-
-      <footer className="site-footer home-footer">
-        <Link className="brand-logo" href="/" aria-label="DATIA home"><Image src={`/images/datia-ai-logo-white.png`} alt="DATIA AI" width={176} height={40} unoptimized /></Link>
-        <p>The AI-enabled fusion of data and media</p>
-        <nav aria-label="Footer navigation">
-          <Link href="/about/decidedly-different">Our Story</Link>
-          <Link href="/about/our-team">Meet the Team</Link>
-          <Link href="/about/our-advisors">Advisory Board</Link>
-          <a href={`${site}/partner`}>Partner with Us</a>
-        </nav>
-        <small>© {new Date().getFullYear()} DATIA. All rights reserved.</small>
-      </footer>
+      <HomeFooter />
     </main>
   )
 }

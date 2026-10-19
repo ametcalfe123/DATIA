@@ -6,7 +6,6 @@ import TeamDirectory from "../team-directory"
 import AdvisorDirectory from "../advisor-directory"
 import TrustedByPage from "../trusted-by-page"
 
-const site = "https://www.datia.io"
 const image = (path: string) => `/images/${path}`
 
 type PageKind = "story" | "services" | "team" | "advisors" | "trusted" | "contact"
@@ -117,7 +116,7 @@ function SiteFooter() {
     ["Meet the Team", "/about/our-team"],
     ["Advisory Board", "/about/our-advisors"],
     ["Trusted By", "/trusted-by"],
-    ["Privacy Policy", `${site}/privacy-policy`],
+    ["Privacy Policy", "/privacy-policy"],
   ] as const
   const markets = ["Education", "Government", "HR", "Financial Services", "Retail", "Healthcare", "Technology", "Cybersecurity/Identity"]
 
