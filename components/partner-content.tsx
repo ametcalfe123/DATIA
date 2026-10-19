@@ -207,9 +207,8 @@ export function AbmSection() {
       <div className="section-heading partner-section-heading">
         <p className="eyebrow">Flagship offering</p>
         <h2 id="abm-title">ABMxi — Account-Based Marketing Intelligence</h2>
-        <p className="partner-section-lede">A content journey from insight to impact. Not simply an intent-driven lead program.</p>
         <p>Lead intelligence drives performance, and most marketers rely on four separate providers to get the full picture.</p>
-        <p>Buyer intelligence sharpens targeting. Your exact personas are warmed across LinkedIn, Facebook, and brand-safe websites, then your thought leadership goes out by targeted email — because decision-makers engage with content several times before they&apos;re ready to talk to Sales.</p>
+        <p>Buyer intelligence sharpens targeting. Your exact personas are warmed across LinkedIn, Facebook, and brand-safe websites, then your thought leadership goes out by targeted email, because decision-makers engage with content several times before they&apos;re ready to talk to Sales.</p>
       </div>
       <div className="abm-visual">
         <Image
