@@ -777,8 +777,19 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 /* Partner landing page parity */
 .partner-page .partner-header-inner { min-height: 64px; }
-.partner-page .abm-section { padding-bottom: 54px; }
-.partner-page .simplify-heading { margin: 26px 0 0; color: #1a1a1a; font-size: 18px; text-align: center; }
+  .partner-page .abm-section { padding-bottom: 68px; }
+  .partner-page .data-service-grid { width: min(100%, 1600px); gap: 36px; margin-top: 28px; }
+  .partner-page .data-service-card { min-height: 400px; padding: 32px; }
+  .partner-page .data-service-number { margin-bottom: 24px; font-size: 13px; }
+  .partner-page .data-service-card h3 { margin-bottom: 16px; font-size: 22px; }
+  .partner-page .data-service-card p { font-size: 17px; line-height: 1.6; }
+  .partner-page .simplify-banner { width: min(100%, 1600px); min-height: 250px; margin: 36px auto 0; padding: 56px 64px; border-radius: 18px; box-shadow: 0 3px 5px rgb(0 0 0 / 12%); }
+  .partner-page .simplify-banner h3 { margin: 0 0 24px; font-size: 22px; }
+  .partner-page .simplify-banner p { max-width: 1120px; margin: 0; font-size: 17px; line-height: 1.6; }
+  .partner-page .abmxi-more-link-panel { width: min(100%, 1600px); min-height: 180px; margin: 68px auto 0; padding: 56px 64px; display: flex; align-items: flex-start; border: 1px solid #e4e4e7; border-radius: 18px; background: #fff; box-shadow: 0 2px 5px rgb(0 0 0 / 12%); }
+  .partner-page .abmxi-more-link { width: auto; min-height: 0; margin: 0; padding: 16px 32px; gap: 14px; border: 1px solid #d4d4d8; border-radius: 999px; box-shadow: 0 2px 4px rgb(0 0 0 / 12%); color: #18181b; font-size: 16px; font-weight: 600; text-decoration: none; }
+  .partner-page .abmxi-more-link span { color: inherit; }
+  .partner-page .abmxi-more-link:hover { border-color: #a1a1aa; }
 .partner-page .partner-services-section { padding: 68px 24px 74px; background: #f5f5f5; color: #171717; }
 .partner-page .partner-services-section .section-heading { max-width: 720px; }
 .partner-page .partner-services-section .section-heading h2 { color: #171717; font-size: 30px; }
@@ -826,6 +837,16 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 @media (max-width: 760px) {
   .partner-page .partner-services-section { padding: 52px 18px; }
+  .partner-page .data-service-grid { gap: 12px; }
+  .partner-page .data-service-card { min-height: 280px; padding: 22px 18px; }
+  .partner-page .data-service-number { margin-bottom: 16px; }
+  .partner-page .data-service-card h3 { font-size: 18px; }
+  .partner-page .data-service-card p { font-size: 14px; }
+  .partner-page .simplify-banner { min-height: 0; margin-top: 24px; padding: 28px 24px; border-radius: 14px; }
+  .partner-page .simplify-banner h3 { margin-bottom: 14px; font-size: 20px; }
+  .partner-page .simplify-banner p { font-size: 14px; }
+  .partner-page .abmxi-more-link-panel { min-height: 130px; margin-top: 32px; padding: 28px 24px; border-radius: 14px; }
+  .partner-page .abmxi-more-link { padding: 14px 22px; font-size: 14px; }
   .partner-page .partner-services-section .section-heading h2,
   .partner-page .trusted-section .section-heading h2 { font-size: 26px; }
   .partner-page .offerings-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }

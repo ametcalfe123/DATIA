@@ -172,10 +172,18 @@ export default function PartnerPage() {
             </article>
           ))}
         </div>
-        <h3 className="simplify-heading">Simplify and Consolidate</h3>
+        <div className="simplify-banner">
+          <h3>Simplify and Consolidate</h3>
+          <p>These platforms show you the signals. DATIA puts them to work by unifying intent, audience data, media, and lead generation in one sales-ready intelligence dashboard.</p>
+        </div>
+        <div className="abmxi-more-link-panel">
+          <a className="abmxi-more-link" href="#growth">
+            How ABMxi works <ArrowRight aria-hidden="true" size={18} />
+          </a>
+        </div>
       </section>
 
-      <section className="growth-section">
+      <section className="growth-section" id="growth">
         <div className="section-heading">
           <p className="eyebrow">A connected buyer journey</p>
           <h2>How We Fuel Growth</h2>
