@@ -376,7 +376,7 @@ export function TrustedSection() {
         </div>
       </div>
       <div className="partner-video-wrap">
-        <p>Allison Danes — Right At School</p>
+        <p><strong>Allison Danes — Right At School</strong></p>
         <div className="partner-video-frame">
           <iframe
             src="https://fast.wistia.net/embed/iframe/pghthuyp7z?seo=false&videoFoam=true"
