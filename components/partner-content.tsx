@@ -139,7 +139,7 @@ const services = [
   {
     name: "BDR SERVICES",
     category: "Business Development Representative",
-    title: "We help create opportunities for your sales team",
+    title: "Opportunities created for your sales team",
     description: "Turning marketing-generated interest into qualified sales conversations.",
     action: "See our service",
     Icon: PhoneCall,
