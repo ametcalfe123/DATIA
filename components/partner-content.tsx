@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { ServiceCard } from "@/components/service-card"
 import {
   ArrowRight,
   ChevronDown,
@@ -103,6 +104,9 @@ const services = [
     description: "Prospect identification and intent analysis for fueling the sales pipeline with high-converting, top-of-funnel leads.",
     action: "See TGL in action",
     Icon: Users,
+    whatYouGet: ["Targeted audience by title, geo, and size", "Thought-leadership content", "Two-click access to gated content", "Easy-to-upload leads"],
+    howItWorks: ["Define audience", "Set lead goal", "Approve email", "Get weekly leads"],
+    whyItMatters: ["Guaranteed leads", "Boost brand authority", "Improve pipeline", "Lead insights"],
   },
   {
     name: "PUSH",
@@ -111,6 +115,9 @@ const services = [
     description: "Strategic advertising campaigns tailored to your ideal buyers for maximum engagement and conversion across the open web.",
     action: "Explore PUSH targeting",
     Icon: Zap,
+    whatYouGet: ["Persona development", "Cross-platform ad management", "Dynamic creative optimization", "Advanced audience segmentation"],
+    howItWorks: ["Define audience", "Creative assets", "Launch and optimize", "Analyze and scale"],
+    whyItMatters: ["Engage ideal prospects", "Scalable and cost-effective", "Cookieless targeting", "Drive traffic to your site"],
   },
   {
     name: "CONTENT STUDIO",
@@ -119,6 +126,9 @@ const services = [
     description: "Custom content creation, tailored to specific goals and objectives. From whitepapers to interactive media that drives action.",
     action: "Inside Content Studio",
     Icon: FileText,
+    whatYouGet: ["Content review and strategy development", "Tailored content creation", "Multi-format content production", "Brand voice and messaging alignment"],
+    howItWorks: ["Content audit and strategy development", "Content creation and optimization", "Publishing and distribution", "Editorial performance monitoring and refinement"],
+    whyItMatters: ["Higher engagement rates", "Improved brand consistency", "Enhanced thought leadership positioning", "Development of case studies and thought leadership Q&As"],
   },
   {
     name: "RESEARCH",
@@ -127,6 +137,9 @@ const services = [
     description: "Showcase industry expertise and product innovation with proprietary research that positions your brand as a thought leader.",
     action: "Our research process",
     Icon: Search,
+    whatYouGet: ["Market landscape analysis", "Competitive intelligence gathering", "Customer persona development", "Industry trend identification"],
+    howItWorks: ["Research objectives definition", "Data collection methodology design", "Primary and secondary research execution", "Analysis and insight generation", "Research report development"],
+    whyItMatters: ["Data-driven decision making", "Competitive advantage insights", "Improved market positioning", "Enhanced customer understanding", "Showcase industry expertise"],
   },
   {
     name: "WEB SEMINARS",
@@ -135,6 +148,9 @@ const services = [
     description: "A high-value video asset that builds credibility, reaches targeted decision-makers, and generates leads.",
     action: "Why Web Seminars",
     Icon: Video,
+    whatYouGet: ["Strategy and format development", "Editorial review of content and speakers", "Turnkey panel or presentation-style production", "TGL promotion for guaranteed leads"],
+    howItWorks: ["Speaker and content review", "Web seminar recording and production", "Marketing content creation and promotion", "Weekly lead generation (See TGL)"],
+    whyItMatters: ["Extend the life of your content", "Build thought leadership and credibility", "Ongoing engagement", "Lead generation"],
   },
   {
     name: "BDR SERVICES",
@@ -143,6 +159,9 @@ const services = [
     description: "Turning marketing-generated interest into qualified sales conversations.",
     action: "See our service",
     Icon: PhoneCall,
+    whatYouGet: ["Personalized prospect outreach", "Lead engagement", "Lead qualification", "Buying-signal identification", "Consistent follow-up"],
+    howItWorks: ["Goals and campaign discovery", "Script and messaging creation", "Coordinated phone and email outreach", "Prospect engagement and follow-up", "MQL nurture and qualification"],
+    whyItMatters: ["Turn MQLs into meaningful conversations", "Increase engagement with high-value prospects", "Extend the value of your lead-generation campaigns", "Keep prospects moving toward sales readiness", "Give your sales team more qualified opportunities"],
   },
 ]
 
@@ -253,7 +272,7 @@ export function AbmSection() {
         </div>
         <div className="abm-visual">
           <Image
-            src="/partner/images/section-1a-transparent.png"
+            src="/partner/images/section-1a-transparent.png?v=2"
             alt="DATIA unifies audience data, intent, media, and lead generation"
             width={1600}
             height={820}
@@ -339,16 +358,13 @@ export function ServicesSection() {
         <p>Flexible solutions to fuel your buyer engagement strategy.</p>
       </div>
       <div className="offerings-grid">
-        {services.map(({ name, category, title, description, action, Icon }) => (
-          <article className="offering-card" key={name}>
-            <div className="offering-icon"><Icon aria-hidden="true" size={21} strokeWidth={1.7} /></div>
-            <p className="offering-name">{name}</p>
-            <h3>{title}</h3>
-            <p className="offering-label">{category}</p>
-            <p className="offering-description">{description}</p>
-            <a className="offering-link" href="#contact">{action} <ArrowRight aria-hidden="true" size={15} /></a>
-          </article>
-        ))}
+          {services.map(({ Icon, ...service }) => (
+            <ServiceCard
+              key={service.name}
+              {...service}
+              icon={<Icon aria-hidden="true" size={21} strokeWidth={1.7} />}
+            />
+          ))}
       </div>
     </section>
   )

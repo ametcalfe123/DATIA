@@ -1,8 +1,11 @@
 "use client"
 
 import Image from "next/image"
-import { useRef, useState } from "react"
+import { useRef, useState, type FormEvent } from "react"
 import { X } from "lucide-react"
+
+const PRIMARY_RECIPIENT = "ametcalfe@datia.io"
+const CC_RECIPIENTS = ["rdavis@datia.io", "sbevilacqua@datia.io"]
 
 type TeamMember = {
   name: string
@@ -78,6 +81,45 @@ export function PartnerContact() {
 
   const closeBio = () => dialogRef.current?.close()
 
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle")
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    const form = event.currentTarget
+    const data = new FormData(form)
+    const field = (key: string) => String(data.get(key) ?? "").trim()
+    const selectedSolutions = data.getAll("solutions").map(String)
+
+    setStatus("sending")
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${PRIMARY_RECIPIENT}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          _subject: `New DATIA inquiry from ${field("firstName")} ${field("lastName")}`,
+          _cc: CC_RECIPIENTS.join(","),
+          _replyto: field("email"),
+          _template: "table",
+          _captcha: "false",
+          "First name": field("firstName"),
+          "Last name": field("lastName"),
+          Email: field("email"),
+          Phone: field("phone") || "-",
+          Company: field("company"),
+          Website: field("website") || "-",
+          "Solutions of interest": selectedSolutions.length ? selectedSolutions.join(", ") : "-",
+          Message: field("message") || "-",
+        }),
+      })
+      const result = await response.json().catch(() => null)
+      if (!response.ok || result?.success === "false" || result?.success === false) throw new Error("Send failed")
+      form.reset()
+      setStatus("sent")
+    } catch {
+      setStatus("error")
+    }
+  }
+
   return (
     <section className="partner-contact-section" id="contact" aria-labelledby="contact-title">
       <div className="partner-contact-content">
@@ -114,7 +156,7 @@ export function PartnerContact() {
           </div>
         </div>
         <div className="partner-contact-main">
-        <form className="partner-contact-form" onSubmit={(event) => event.preventDefault()}>
+        <form className="partner-contact-form" onSubmit={handleSubmit}>
           <div className="partner-form-grid">
             <label>First name<input name="firstName" type="text" autoComplete="given-name" required /></label>
             <label>Last name<input name="lastName" type="text" autoComplete="family-name" required /></label>
@@ -132,6 +174,15 @@ export function PartnerContact() {
             </div>
           </fieldset>
           <label className="partner-message">Message<textarea name="message" rows={4} /></label>
+          <div className="partner-form-actions">
+            <button type="submit" className="partner-send-button" disabled={status === "sending"}>
+              {status === "sending" ? "Sending..." : "Send"}
+            </button>
+            <p className="partner-form-status" role="status" aria-live="polite">
+              {status === "sent" && "Thanks! Your message has been sent. We'll be in touch soon."}
+              {status === "error" && "Something went wrong. Please try again or email ametcalfe@datia.io."}
+            </p>
+          </div>
         </form>
         </div>
         </div>
