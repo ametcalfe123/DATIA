@@ -28,7 +28,6 @@ export function PartnerContact() {
       <div className="partner-contact-content">
         <div className="partner-contact-heading">
           <h2 id="contact-title">The People Behind the Platform</h2>
-          <p>Tell us what you&apos;re working on and which services you&apos;re interested in.</p>
         </div>
         <div className="partner-team">
           <div className="partner-team-grid">
@@ -41,6 +40,7 @@ export function PartnerContact() {
             ))}
           </div>
         </div>
+        <p className="partner-contact-intro">Tell us what you&apos;re working on and which services you&apos;re interested in.</p>
         <form className="partner-contact-form" onSubmit={(event) => event.preventDefault()}>
           <div className="partner-form-grid">
             <label>First name<input name="firstName" type="text" autoComplete="given-name" required /></label>
