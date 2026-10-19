@@ -285,7 +285,15 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .partner-solution-row label { display: flex; align-items: flex-start; gap: 8px; }
 .partner-solution-row input { width: 16px; height: 16px; flex: 0 0 auto; margin: 1px 0 0; accent-color: var(--datia-red); }
 .partner-message { display: block; margin-bottom: 20px; }
-.partner-message textarea { display: block; margin-top: 8px; }
+  .partner-message textarea { display: block; margin-top: 8px; }
+  .partner-form-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+  .partner-send-button { min-height: 46px; padding: 0 36px; border: 0; border-radius: 25px; background: #ed1c24; color: #fff; font-size: 14px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; transition: background-color 0.2s ease; }
+  .partner-send-button:hover { background: #c4141b; }
+  .partner-send-button:focus-visible { outline: 2px solid #ed1c24; outline-offset: 3px; }
+  .partner-send-button:disabled { opacity: 0.7; cursor: wait; }
+  .partner-form-status { margin: 0; color: #333; font-size: 14px; line-height: 1.5; }
+  .partner-form-status:empty { display: none; }
+
 .partner-contact-form > .button { min-height: 46px; padding-inline: 20px; border: 0; border-radius: 25px; cursor: pointer; font-size: 13px; }
 .partner-footer { padding: 54px 32px 20px; border-top: 5px solid #ed1c24; background: #111; color: #fff; }
 .partner-footer-main { width: min(100%, 1250px); margin: 0 auto; display: grid; grid-template-columns: repeat(3, max-content); justify-content: center; gap: 110px; }
