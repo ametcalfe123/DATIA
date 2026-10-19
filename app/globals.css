@@ -121,19 +121,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .partner-nav a { color: #333; font-size: 12px; font-weight: var(--font-weight-semibold); }
 .partner-header .header-cta { min-height: 42px; padding-inline: 20px; border-radius: 24px; }
 .partner-mobile-menu { display: none; }
-.partner-hero { position: relative; min-height: 570px; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; padding: 88px 24px 70px; border-bottom: 5px solid var(--datia-red); background: radial-gradient(ellipse at 50% 115%, #3a1619 0%, #1b1214 31%, transparent 60%), linear-gradient(120deg, #101010, #202020 55%, #111); color: #fff; text-align: center; }
-.partner-hero::before { position: absolute; inset: 0; background-image: linear-gradient(rgb(255 255 255 / 3%) 1px, transparent 1px), linear-gradient(90deg, rgb(255 255 255 / 3%) 1px, transparent 1px); background-size: 72px 72px; content: ""; mask-image: linear-gradient(to bottom, transparent 5%, #000 100%); pointer-events: none; }
-.partner-hero-content { position: relative; z-index: 1; width: min(100%, 1000px); }
-.partner-hero-kicker { margin: 0 0 20px; color: #ef8185; font-size: 11px; font-weight: var(--font-weight-bold); letter-spacing: .2em; text-transform: uppercase; }
-.partner-hero h1 { max-width: 1200px; margin: 0 auto; font-size: clamp(40px, 4.8vw, 64px); font-weight: var(--font-weight-bold); line-height: 1.08; letter-spacing: -.055em; text-wrap: balance; }
-.partner-hero h1 span { display: block; margin-top: 9px; color: #f4f4f4; font-size: .78em; font-weight: var(--font-weight-regular); letter-spacing: -.035em; }
+.partner-hero { position: relative; min-height: 700px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 100px 24px 90px; border-bottom: 5px solid #ed1c24; background: #141414; color: #fff; text-align: center; }
+.partner-hero-content { width: min(100%, 1480px); }
+.partner-hero h1 { max-width: 1480px; margin: 0 auto; font-size: clamp(42px, 4.5vw, 80px); font-weight: var(--font-weight-bold); line-height: 1.1; letter-spacing: -.04em; text-wrap: balance; }
+.partner-hero h1 span { display: block; margin-top: 0; color: #fff; font-size: 1em; font-weight: var(--font-weight-bold); letter-spacing: inherit; }
 .partner-hero h1 .partner-hero-mainline { white-space: nowrap; }
-.partner-hero-copy { max-width: 720px; margin: 24px auto 0; color: #d0d0d0; font-size: 17px; line-height: 1.6; text-wrap: pretty; }
-.partner-hero-button { min-width: 210px; min-height: 50px; margin-top: 32px; border-radius: 28px; }
-.partner-hero-proof { position: relative; z-index: 1; display: flex; align-items: center; justify-content: center; gap: 22px; margin-top: 65px; color: #dedede; font-size: 11px; font-weight: var(--font-weight-semibold); letter-spacing: .1em; text-transform: uppercase; }
-.partner-hero-proof span { display: inline-flex; align-items: center; gap: 9px; }
-.partner-hero-proof svg { width: 17px; height: 17px; color: #f0787d; }
-.partner-hero-proof i { width: 38px; height: 1px; background: #5f5f5f; }
+.partner-hero-copy { max-width: 1280px; margin: 27px auto 0; color: #d4d4d4; font-size: 21px; line-height: 1.8; text-wrap: pretty; }
+.partner-hero-button { min-width: 410px; min-height: 72px; margin-top: 64px; border-radius: 999px; box-shadow: 0 10px 20px rgb(237 28 36 / 28%); font-size: 20px; }
+.partner-hero-button svg { width: 22px; height: 22px; }
 .abm-section { padding: 90px 32px 86px; background: #f5f5f5; scroll-margin-top: 88px; }
 .partner-section-heading { max-width: 900px; }
 .partner-section-heading h2 { color: #171717; font-size: clamp(32px, 3.2vw, 44px); line-height: 1.14; }
@@ -342,17 +337,12 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .partner-mobile-menu nav { position: absolute; top: calc(100% + 9px); right: 0; z-index: 5; width: min(300px, calc(100vw - 32px)); display: flex; flex-direction: column; gap: 0; padding: 9px; border: 1px solid #e2e2e2; border-radius: 8px; background: #fff; box-shadow: 0 14px 35px rgb(0 0 0 / 14%); }
   .partner-mobile-menu nav > a:not(.button) { padding: 13px 11px; color: #333; font-size: 14px; }
   .partner-mobile-menu nav .button { margin-top: 6px; }
-  .partner-hero { min-height: 510px; padding: 72px 20px 54px; }
-  .partner-hero-kicker { font-size: 9px; }
-  .partner-hero h1 { font-size: clamp(37px, 9vw, 52px); }
+  .partner-hero { min-height: 560px; padding: 88px 20px 68px; }
+  .partner-hero h1 { font-size: clamp(36px, 9vw, 48px); line-height: 1.12; }
   .partner-hero h1 .partner-hero-mainline { white-space: normal; }
-  .partner-hero h1 span { margin-top: 8px; font-size: .76em; }
-  .partner-hero-copy { margin-top: 20px; font-size: 15px; }
-  .partner-hero-button { min-width: 195px; margin-top: 24px; }
-  .partner-hero-proof { gap: 12px; margin-top: 42px; font-size: 9px; letter-spacing: .07em; }
-  .partner-hero-proof i { width: 20px; }
-  .partner-hero-proof span { gap: 5px; }
-  .partner-hero-proof svg { width: 14px; height: 14px; }
+  .partner-hero h1 span { margin-top: 4px; }
+  .partner-hero-copy { margin-top: 22px; font-size: 16px; }
+  .partner-hero-button { width: min(100%, 320px); min-width: 0; min-height: 60px; margin-top: 34px; font-size: 17px; }
   .abm-section { padding: 58px 18px; }
   .partner-section-heading h2 { font-size: 29px; }
   .partner-section-heading > p { font-size: 14px; }

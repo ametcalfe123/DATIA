@@ -3,12 +3,10 @@ import {
   ArrowRight,
   Database,
   FileText,
-  Globe2,
   Mail,
   Megaphone,
   PhoneCall,
   Search,
-  Target,
   TrendingUp,
   Users,
   Video,
@@ -188,7 +186,6 @@ export function PartnerHero() {
   return (
     <section className="partner-hero" aria-labelledby="partner-hero-title">
       <div className="partner-hero-content">
-        <p className="partner-hero-kicker">AI-enabled fusion of data and media</p>
         <h1 id="partner-hero-title">
           <span className="partner-hero-mainline">From Impression to Appointment.</span>
           <span>A Content-Driven, Intent Strategy</span>
@@ -197,15 +194,8 @@ export function PartnerHero() {
           DATIA brings buyer identification, cross-channel engagement, and intent intelligence together in one place, turning insights into action and action into qualified leads.
         </p>
         <a className="button button-red partner-hero-button" href="#contact">
-          Partner with Us <ArrowRight aria-hidden="true" size={17} />
+          Partner with Us <ArrowRight aria-hidden="true" size={22} />
         </a>
-      </div>
-      <div className="partner-hero-proof" aria-label="DATIA connects audience, media, and intent">
-        <span><Target aria-hidden="true" />Audience</span>
-        <i aria-hidden="true" />
-        <span><Globe2 aria-hidden="true" />Media</span>
-        <i aria-hidden="true" />
-        <span><TrendingUp aria-hidden="true" />Intent</span>
       </div>
     </section>
   )
