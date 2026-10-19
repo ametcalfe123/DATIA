@@ -168,7 +168,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .growth-card h3 { margin: 0 0 6px; font-size: 22px; line-height: 1.25; }
 .growth-subtitle { min-height: 43px; margin: 0 0 12px; color: var(--datia-red); font-size: 13px; font-weight: var(--font-weight-semibold); line-height: 1.5; }
 .growth-description { margin: 0; color: #626262; font-size: 14px; line-height: 1.65; }
-.growth-closing { max-width: 800px; margin: 30px auto 0; color: var(--datia-red); font-size: 21px; line-height: 1.8; text-align: center; }
+.growth-closing { max-width: 1280px; margin: 30px auto 0; color: var(--datia-red); font-family: inherit; font-size: 21px; font-weight: var(--font-weight-bold); line-height: 1.8; text-align: center; }
 .partner-services-section { padding: 76px 32px 56px; background: #111; color: #fff; scroll-margin-top: 88px; }
 .partner-services-section .section-heading { max-width: 890px; }
 .partner-services-section .section-heading h2 { color: #fff; font-size: 32px; line-height: 1.2; }
