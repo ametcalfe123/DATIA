@@ -208,7 +208,6 @@ export function AbmSection() {
         <p className="eyebrow">Flagship offering</p>
         <h2 id="abm-title">ABMxi — Account-Based Marketing Intelligence</h2>
         <p>The whole is greater than the sum of its parts, yet most marketers rely on <strong>four separate providers</strong> to get the full picture.</p>
-        <p>Buyer intelligence sharpens targeting. Your exact personas are warmed across LinkedIn, Facebook, and brand-safe websites, then your thought leadership goes out by targeted email, because decision-makers engage with content several times before they&apos;re ready to talk to Sales.</p>
       </div>
       <div className="abm-content-layout">
         <div className="data-service-grid">
