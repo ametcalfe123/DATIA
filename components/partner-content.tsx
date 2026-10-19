@@ -70,7 +70,7 @@ const services = [
     name: "TGL",
     category: "Targeted Guaranteed Leads",
     title: "Put qualified prospects into your pipeline",
-    description: "Prospect identification and intent analysis to fuel your sales pipeline with high-converting, top-of-funnel leads.",
+    description: "Prospect identification and intent analysis for fueling the sales pipeline with high-converting, top-of-funnel leads.",
     action: "See TGL in action",
     Icon: Users,
   },
@@ -78,7 +78,7 @@ const services = [
     name: "PUSH",
     category: "Persona-Based Ad Targeting",
     title: "Reach ideal buyers across the open web",
-    description: "Strategic advertising campaigns tailored to your ideal buyers for maximum engagement and conversion.",
+    description: "Strategic advertising campaigns tailored to your ideal buyers for maximum engagement and conversion across the open web.",
     action: "Explore PUSH targeting",
     Icon: Zap,
   },
@@ -86,7 +86,7 @@ const services = [
     name: "CONTENT STUDIO",
     category: "Content Creation & Strategy",
     title: "Give buyers content that moves them forward",
-    description: "Custom content tailored to your goals — from whitepapers to interactive media that drives action.",
+    description: "Custom content creation, tailored to specific goals and objectives. From whitepapers to interactive media that drives action.",
     action: "Inside Content Studio",
     Icon: FileText,
   },
@@ -110,7 +110,7 @@ const services = [
     name: "BDR SERVICES",
     category: "Business Development Representative",
     title: "We help create opportunities for your sales team",
-    description: "Turn marketing-generated interest into qualified sales conversations.",
+    description: "Turning marketing-generated interest into qualified sales conversations.",
     action: "See our service",
     Icon: PhoneCall,
   },
@@ -281,7 +281,6 @@ export function ServicesSection() {
   return (
     <section className="partner-services-section" id="services" aria-labelledby="services-title">
       <div className="section-heading">
-        <p className="eyebrow">Flexible solutions for your buyer journey</p>
         <h2 id="services-title">Demand Gen and Marketing Services</h2>
         <p>Flexible solutions to fuel your buyer engagement strategy.</p>
       </div>
@@ -298,12 +297,10 @@ export function ServicesSection() {
         ))}
       </div>
       <div className="markets-served" aria-labelledby="markets-title">
-        <p className="eyebrow">Industry experience</p>
-        <h3 id="markets-title">Markets We Serve</h3>
+        <h3 className="eyebrow" id="markets-title">Markets We Serve</h3>
         <div className="markets-served-grid">
           {markets.map((market) => (
             <article className="market-served-card" key={market.name}>
-              <Image src={`/images/${market.image}`} alt="" width={36} height={36} unoptimized />
               <h4>{market.name}</h4>
               <p>{market.detail}</p>
             </article>
