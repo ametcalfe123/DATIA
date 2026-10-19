@@ -158,9 +158,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .abmxi-dropdown-toggle:focus-visible { outline: 3px solid var(--datia-black); outline-offset: 3px; }
 .abmxi-dropdown-chevron { transition: transform .2s ease; }
 .abmxi-dropdown[open] .abmxi-dropdown-chevron { transform: rotate(180deg); }
+.abmxi-dropdown::details-content { width: 100%; }
 .abmxi-dropdown-panel { width: 100%; margin-top: 28px; padding: 36px; border: 1px solid var(--datia-line); border-radius: 16px; background: #fff; text-align: left; }
 .abmxi-dropdown-panel h3 { margin: 0 0 32px; color: var(--datia-black); font-size: 24px; }
-.abmxi-dropdown-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.abmxi-dropdown-grid { display: grid; grid-template-columns: repeat(3, auto); justify-content: space-between; gap: 32px; }
 .abmxi-dropdown-grid h4 { margin: 0 0 20px; color: #333; font-size: 15px; font-weight: var(--font-weight-semibold); letter-spacing: .12em; text-transform: uppercase; }
 .abmxi-dropdown-grid ul { margin: 0; padding: 0; display: flex; flex-direction: column; gap: 18px; list-style: none; }
 .abmxi-dropdown-grid li { display: flex; align-items: flex-start; gap: 12px; color: var(--datia-text); font-size: 18px; line-height: 1.5; }
