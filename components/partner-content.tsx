@@ -416,7 +416,7 @@ export function AboutSection() {
         </div>
       </div>
       <div className="markets-served" aria-labelledby="markets-title">
-        <h3 className="eyebrow" id="markets-title">Markets we serve</h3>
+        <h3 className="eyebrow" id="markets-title">Markets We Serve</h3>
         <div className="markets-served-grid">
           {markets.map((market) => (
             <article className="market-served-card" key={market.name}>
