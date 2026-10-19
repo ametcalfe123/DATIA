@@ -145,17 +145,17 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .eyebrow { margin: 0 0 12px; color: var(--datia-red); font-size: 10px; font-weight: var(--font-weight-bold); letter-spacing: .16em; line-height: 1.5; text-transform: uppercase; }
 .abm-visual { width: min(100%, 1040px); margin: 35px auto 32px; text-align: center; }
 .abm-visual img { width: 100%; height: auto; max-height: 620px; object-fit: contain; }
-.data-service-grid { width: min(100%, 1250px); margin: 0 auto; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
-.data-service-card { min-height: 210px; padding: 26px 25px; border: 1px solid #e0e0e0; border-radius: 9px; background: #fff; }
-.data-service-number { display: block; margin: 0 0 20px; color: var(--datia-red); font-size: 11px; font-weight: var(--font-weight-bold); letter-spacing: .14em; }
-.data-service-card h3 { margin: 0 0 11px; font-size: 19px; line-height: 1.3; }
-.data-service-card p { margin: 0; color: #5d5d5d; font-size: 14px; line-height: 1.6; }
-.simplify-banner { width: min(100%, 1250px); margin: 18px auto 0; padding: 24px 28px; display: flex; align-items: center; justify-content: space-between; gap: 32px; border-radius: 8px; background: #181818; color: #fff; }
-.simplify-banner .eyebrow { color: #e8878a; }
-.simplify-banner h3 { margin: 0; font-size: 22px; }
-.simplify-banner p:not(.eyebrow) { max-width: 770px; margin: 8px 0 0; color: #d0d0d0; font-size: 14px; line-height: 1.6; }
-.abmxi-more-link { flex: 0 0 auto; min-height: 44px; padding: 0 15px; display: inline-flex; align-items: center; gap: 9px; border: 1px solid #5e5e5e; border-radius: 24px; color: #fff; font-size: 12px; font-weight: var(--font-weight-semibold); }
-.abmxi-more-link:hover { border-color: #fff; }
+.data-service-grid { width: min(92.5%, 1816px); margin: 0 auto; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px; }
+.data-service-card { min-height: 478px; padding: 56px 40px 56px 56px; border: 1px solid #e2e2e2; border-radius: 24px; background: #fff; box-shadow: 0 14px 30px rgb(0 0 0 / 9%); }
+.data-service-number { display: block; margin: 0 0 34px; color: #333; font-size: clamp(16px, .95vw, 20px); font-weight: var(--font-weight-semibold); }
+.data-service-card h3 { margin: 0 0 30px; font-size: clamp(24px, 1.72vw, 36px); line-height: 1.25; letter-spacing: -.035em; }
+.data-service-card p { margin: 0; color: #5d5d5d; font-size: clamp(18px, 1.34vw, 28px); line-height: 1.65; }
+.simplify-banner { width: min(92.5%, 1816px); min-height: 309px; margin: 42px auto 0; padding: 70px; border-radius: 24px; background: #ff0000; color: #fff; box-shadow: 0 3px 5px rgb(0 0 0 / 12%); }
+.simplify-banner h3 { margin: 0; font-size: clamp(26px, 1.72vw, 36px); line-height: 1.3; letter-spacing: -.03em; }
+.simplify-banner > p { max-width: 1500px; margin: 30px 0 0; color: #fff; font-size: clamp(18px, 1.34vw, 28px); line-height: 1.65; }
+.abmxi-cta-panel { width: min(92.5%, 1816px); min-height: 222px; margin: 82px auto 0; padding: 70px; border: 1px solid #e2e2e2; border-radius: 24px; background: #fff; box-shadow: 0 2px 5px rgb(0 0 0 / 12%); }
+.abmxi-more-link { min-width: 354px; min-height: 80px; padding: 0 38px; display: inline-flex; align-items: center; justify-content: center; gap: 16px; border: 1px solid #d5d5d5; border-radius: 999px; background: #fff; color: #1d1d1d; box-shadow: 0 2px 5px rgb(0 0 0 / 12%); font-size: clamp(19px, 1.25vw, 26px); font-weight: var(--font-weight-semibold); }
+.abmxi-more-link:hover { border-color: #888; }
 .growth-section { padding: 88px 32px 92px; background: #fff; }
 .growth-section .section-heading h2, .partner-services-section .section-heading h2, .trusted-section .section-heading h2 { color: #171717; font-size: clamp(32px, 3.2vw, 42px); line-height: 1.15; }
 .growth-section .section-heading > p:not(.eyebrow), .partner-services-section .section-heading > p:not(.eyebrow), .trusted-section .section-heading > p:not(.eyebrow) { max-width: 760px; font-size: 16px; line-height: 1.6; }
@@ -358,14 +358,16 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .partner-section-heading > p { font-size: 14px; }
   .partner-section-heading .partner-section-lede { font-size: 17px; }
   .abm-visual { margin: 25px auto 22px; }
-  .data-service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-  .data-service-card { min-height: 0; padding: 17px 14px; }
-  .data-service-number { margin-bottom: 14px; }
-  .data-service-card h3 { margin-bottom: 8px; font-size: 15px; }
-  .data-service-card p { font-size: 12px; }
-  .simplify-banner { align-items: flex-start; flex-direction: column; gap: 17px; padding: 21px; }
-  .simplify-banner h3 { font-size: 20px; }
-  .simplify-banner p:not(.eyebrow) { font-size: 13px; }
+  .data-service-grid { width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .data-service-card { min-height: 0; padding: 20px 15px; border-radius: 16px; }
+  .data-service-number { margin-bottom: 14px; font-size: 14px; }
+  .data-service-card h3 { margin-bottom: 10px; font-size: 17px; }
+  .data-service-card p { font-size: 13px; }
+  .simplify-banner { width: 100%; min-height: 0; margin-top: 20px; padding: 25px 21px; border-radius: 16px; }
+  .simplify-banner h3 { font-size: 22px; }
+  .simplify-banner > p { margin-top: 16px; font-size: 15px; }
+  .abmxi-cta-panel { width: 100%; min-height: 0; margin-top: 28px; padding: 24px 20px; border-radius: 16px; }
+  .abmxi-more-link { min-width: 0; min-height: 58px; padding-inline: 20px; gap: 12px; font-size: 17px; }
   .growth-section, .partner-services-section, .trusted-section { padding: 58px 18px; }
   .growth-section .section-heading h2, .partner-services-section .section-heading h2, .trusted-section .section-heading h2 { font-size: 29px; }
   .growth-section .section-heading > p:not(.eyebrow), .partner-services-section .section-heading > p:not(.eyebrow), .trusted-section .section-heading > p:not(.eyebrow) { font-size: 14px; }
@@ -423,6 +425,19 @@ button, a { -webkit-tap-highlight-color: transparent; }
 @media (min-width: 768px) { .market-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (min-width: 1024px) { .market-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 @media (min-width: 1280px) { .market-grid { grid-template-columns: repeat(7, minmax(0, 1fr)); } }
+@media (min-width: 768px) and (max-width: 1100px) {
+  .data-service-grid { width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .data-service-card { min-height: 330px; padding: 34px; }
+  .data-service-number { margin-bottom: 24px; }
+  .data-service-card h3 { margin-bottom: 18px; font-size: 28px; }
+  .data-service-card p { font-size: 19px; }
+  .simplify-banner, .abmxi-cta-panel { width: 100%; }
+  .simplify-banner { min-height: 0; padding: 42px; }
+  .simplify-banner h3 { font-size: 30px; }
+  .simplify-banner > p { font-size: 20px; }
+  .abmxi-cta-panel { min-height: 180px; padding: 42px; }
+  .abmxi-more-link { min-width: 300px; min-height: 68px; font-size: 22px; }
+}
 .datia-inner-page { min-height: 100vh; background: #fff; }
 .page-hero { min-height: 244px; padding: 48px 24px 54px; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #f4f5f7; text-align: center; }
 .page-hero h1 { margin: 0; font-size: clamp(38px, 5vw, 60px); font-weight: var(--font-weight-bold); line-height: 1.12; letter-spacing: -.025em; }

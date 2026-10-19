@@ -18,11 +18,11 @@ import {
 const alternatives = [
   {
     title: "Public-record data",
-    description: "Additional paid tools that surface institutional procurement, budget, and activity signals — with no contactable leads.",
+    description: "Additional paid tools that surface institutional, procurement, budget, and activity signals, no contactable leads.",
   },
   {
     title: "Intent data",
-    description: "Paid tools identify accounts showing buying signals, but offer no way to engage them.",
+    description: "Paid tools identifying accounts showing buying signals only, no engagement options.",
   },
   {
     title: "Traditional media",
@@ -30,7 +30,7 @@ const alternatives = [
   },
   {
     title: "Creative agency",
-    description: "Social, programmatic, content, research, and ad production on a separate retainer.",
+    description: "Social, programmatic, content, research and ad production, on a separate retainer.",
   },
 ]
 
@@ -234,19 +234,18 @@ export function AbmSection() {
       <div className="data-service-grid">
         {alternatives.map((service, index) => (
           <article className="data-service-card" key={service.title}>
-            <span className="data-service-number">0{index + 1}</span>
+            <span className="data-service-number">{index + 1}</span>
             <h3>{service.title}</h3>
             <p>{service.description}</p>
           </article>
         ))}
       </div>
       <div className="simplify-banner">
-        <div>
-          <p className="eyebrow">One connected platform</p>
-          <h3>Simplify and Consolidate</h3>
-          <p>These platforms show you the signals. DATIA puts them to work by unifying intent, audience data, media, and lead generation in one sales-ready intelligence dashboard.</p>
-        </div>
-        <a className="abmxi-more-link" href="#growth">How ABMxi works <ArrowRight aria-hidden="true" size={17} /></a>
+        <h3>Simplify and Consolidate</h3>
+        <p>These platforms show you the signals. DATIA puts them to work by unifying intent, audience data, media, and lead generation in one sales-ready intelligence dashboard.</p>
+      </div>
+      <div className="abmxi-cta-panel">
+        <a className="abmxi-more-link" href="#growth">How ABMxi works <ArrowRight aria-hidden="true" size={22} /></a>
       </div>
     </section>
   )
