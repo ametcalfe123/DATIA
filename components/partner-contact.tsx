@@ -27,7 +27,7 @@ export function PartnerContact() {
       <div className="partner-contact-content">
         <div className="partner-contact-heading">
           <h2 id="contact-title">The People Behind the Platform</h2>
-          <p className="partner-contact-intro">Tell us what you&apos;re working on and which services you&apos;re interested in.</p>
+          <p className="partner-contact-intro">Meet the team and get in touch to explore your goals and strategy.</p>
         </div>
         <div className="partner-contact-layout">
         <div className="partner-team">
