@@ -16,6 +16,26 @@ const advisors: PartnerAdvisor[] = [
 export function PartnerFooter() {
   return (
     <footer className="site-footer partner-footer">
+      <div className="partner-advisors">
+        <p>Advisory Board</p>
+        <div className="partner-advisor-grid">
+          {advisors.map((advisor) => (
+            <div className="partner-advisor" key={advisor.name}>
+              {advisor.image ? advisor.crop ? (
+                <span className="partner-advisor-crop">
+                  <Image src={advisor.image} alt="" width={746} height={610} className="partner-advisor-crop-image" unoptimized loading="lazy" />
+                </span>
+              ) : (
+                <Image src={`/images/${advisor.image}`} alt="" width={52} height={52} unoptimized loading="lazy" />
+              ) : (
+                <span className="partner-advisor-initials" aria-hidden="true">RA</span>
+              )}
+              <strong>{advisor.name}</strong>
+              <span>{advisor.role}</span>
+            </div>
+          ))}
+        </div>
+      </div>
       <div className="partner-footer-main">
         <div className="partner-footer-brand">
           <Link className="brand-logo" href="/" aria-label="DATIA home">
@@ -44,26 +64,6 @@ export function PartnerFooter() {
           <a href="https://www.linkedin.com/company/datia-ai/" target="_blank" rel="noreferrer">
             LinkedIn <ArrowUpRight aria-hidden="true" size={13} />
           </a>
-        </div>
-      </div>
-      <div className="partner-advisors">
-        <p>Advised by</p>
-        <div className="partner-advisor-grid">
-          {advisors.map((advisor) => (
-            <div className="partner-advisor" key={advisor.name}>
-              {advisor.image ? advisor.crop ? (
-                <span className="partner-advisor-crop">
-                  <Image src={advisor.image} alt="" width={746} height={610} className="partner-advisor-crop-image" unoptimized loading="lazy" />
-                </span>
-              ) : (
-                <Image src={`/images/${advisor.image}`} alt="" width={52} height={52} unoptimized loading="lazy" />
-              ) : (
-                <span className="partner-advisor-initials" aria-hidden="true">RA</span>
-              )}
-              <strong>{advisor.name}</strong>
-              <span>{advisor.role}</span>
-            </div>
-          ))}
         </div>
       </div>
       <div className="partner-footer-bottom">
