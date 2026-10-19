@@ -295,10 +295,10 @@ export function GrowthSection() {
       <p className="growth-closing">Engagement and intelligence then help Sales know who to prioritize, why now, and what to discuss.</p>
       <details className="abmxi-dropdown">
         <summary className="button button-red abmxi-dropdown-toggle">
-          How ABMxi works <ChevronDown className="abmxi-dropdown-chevron" aria-hidden="true" size={20} />
+          ABMxi Fast Facts <ChevronDown className="abmxi-dropdown-chevron" aria-hidden="true" size={20} />
         </summary>
         <div className="abmxi-dropdown-panel">
-          <h3>How ABMxi works</h3>
+          <h3>ABMxi Fast Facts</h3>
           <div className="abmxi-dropdown-grid">
             <div>
               <h4>What you get</h4>
