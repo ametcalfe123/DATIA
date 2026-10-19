@@ -248,7 +248,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .partner-team-person img { width: 120px; height: 120px; border-radius: 8px; object-fit: cover; }
 .partner-team-person strong { margin-top: 2px; font-size: 14px; line-height: 1.35; }
 .partner-team-person span { max-width: 160px; color: var(--datia-text); font-size: 12px; line-height: 1.5; }
-.partner-contact-heading .partner-contact-intro, .partner-contact-intro { width: min(100%, 650px); margin: 16px auto 0; color: var(--datia-text); font-size: 21px; line-height: 1.8; text-align: center; text-wrap: pretty; }
+.partner-contact-heading .partner-contact-intro, .partner-contact-intro { width: auto; max-width: 100%; margin: 16px auto 0; color: var(--datia-text); font-size: 21px; line-height: 1.8; text-align: center; white-space: nowrap; }
 .partner-contact-form { width: min(100%, 650px); margin: 0 auto; padding: 30px; border: 1px solid var(--datia-line); border-radius: 12px; background: #fff; }
 .partner-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 17px 18px; }
 .partner-contact-form label, .partner-solutions legend { color: #333; font-size: 13px; line-height: 1.4; }
@@ -414,7 +414,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .partner-about-signature { min-width: 0; align-items: flex-start; }
   .partner-contact-section { padding: 58px 18px; }
   .partner-contact-heading h2 { font-size: 30px; }
-  .partner-contact-heading .partner-contact-intro { font-size: 16px; line-height: 1.7; }
+  .partner-contact-heading .partner-contact-intro { font-size: 16px; line-height: 1.7; white-space: normal; text-wrap: pretty; }
   .partner-contact-layout { flex-direction: column; align-items: stretch; gap: 32px; margin-top: 28px; }
   .partner-contact-main { flex: none; }
   .partner-team { flex: none; margin: 0; }
