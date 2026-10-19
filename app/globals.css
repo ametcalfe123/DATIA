@@ -166,7 +166,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .abmxi-dropdown-grid li { display: flex; align-items: flex-start; gap: 12px; color: var(--datia-text); font-size: 18px; line-height: 1.5; }
 .abmxi-dropdown-grid li svg { flex: 0 0 auto; margin-top: 3px; color: var(--datia-red); }
 .abmxi-dot-list li::before { flex: 0 0 auto; width: 8px; height: 8px; margin: 10px 6px 0; border-radius: 50%; background: var(--datia-red); content: ""; }
-.growth-section { padding: 88px 32px 92px; background: #fff; }
+.growth-section { padding: 88px 32px 92px; background: #f5f5f5; }
 .growth-section .section-heading h2, .partner-services-section .section-heading h2, .trusted-section .section-heading h2 { color: #171717; font-size: clamp(32px, 3.2vw, 42px); line-height: 1.15; }
 .growth-section .section-heading > p:not(.eyebrow), .partner-services-section .section-heading > p:not(.eyebrow), .trusted-section .section-heading > p:not(.eyebrow) { max-width: 760px; font-size: 16px; line-height: 1.6; }
 .growth-grid { position: relative; width: min(100%, 1250px); margin: 46px auto 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
