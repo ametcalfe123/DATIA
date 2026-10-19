@@ -1,7 +1,7 @@
 "use client"
 
-import { useId, useState, type ReactNode } from "react"
-import { ArrowRight, ArrowUp, CircleCheck, Star } from "lucide-react"
+import { useId, useRef, useState, type ReactNode } from "react"
+import { ArrowRight, ArrowUp, CircleCheck, Star, X } from "lucide-react"
 
 export type ServiceCardProps = {
   name: string
@@ -13,6 +13,7 @@ export type ServiceCardProps = {
   whatYouGet: string[]
   howItWorks: string[]
   whyItMatters: string[]
+  popup?: boolean
 }
 
 export function ServiceCard({
@@ -25,9 +26,51 @@ export function ServiceCard({
   whatYouGet,
   howItWorks,
   whyItMatters,
+  popup = false,
 }: ServiceCardProps) {
   const [open, setOpen] = useState(false)
   const panelId = useId()
+  const dialogRef = useRef<HTMLDialogElement>(null)
+
+  const details = (
+    <>
+      <h4 className="offering-details-title" id={`${panelId}-title`}>{action}</h4>
+      <div className="offering-details-grid">
+        <div>
+          <h5>What you get</h5>
+          <ul>
+            {whatYouGet.map((item) => (
+              <li key={item}><CircleCheck aria-hidden="true" size={15} />{item}</li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h5>How it works</h5>
+          <ul className="offering-dot-list">
+            {howItWorks.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h5>Why it matters</h5>
+          <ul>
+            {whyItMatters.map((item) => (
+              <li key={item}><Star aria-hidden="true" size={15} />{item}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <button
+        type="button"
+        className="offering-link"
+        aria-controls={panelId}
+        onClick={() => popup ? dialogRef.current?.close() : setOpen(false)}
+      >
+        {popup ? "Close" : "Hide details"} {popup ? <X aria-hidden="true" size={15} /> : <ArrowUp aria-hidden="true" size={15} />}
+      </button>
+    </>
+  )
 
   return (
     <article className="offering-card" data-open={open}>
@@ -41,52 +84,37 @@ export function ServiceCard({
         <button
           type="button"
           className="offering-link"
-          aria-expanded={false}
+          aria-haspopup={popup ? "dialog" : undefined}
+          aria-expanded={popup ? undefined : false}
           aria-controls={panelId}
-          onClick={() => setOpen(true)}
+          onClick={() => {
+            if (popup) {
+              dialogRef.current?.showModal()
+              setOpen(true)
+            } else {
+              setOpen(true)
+            }
+          }}
         >
           {action} <ArrowRight aria-hidden="true" size={15} />
         </button>
       )}
 
-      <div id={panelId} className="offering-details" hidden={!open}>
-        <h4 className="offering-details-title">{action}</h4>
-        <div className="offering-details-grid">
-          <div>
-            <h5>What you get</h5>
-            <ul>
-              {whatYouGet.map((item) => (
-                <li key={item}><CircleCheck aria-hidden="true" size={15} />{item}</li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h5>How it works</h5>
-            <ul className="offering-dot-list">
-              {howItWorks.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h5>Why it matters</h5>
-            <ul>
-              {whyItMatters.map((item) => (
-                <li key={item}><Star aria-hidden="true" size={15} />{item}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-        <button
-          type="button"
-          className="offering-link"
-          aria-expanded={true}
-          aria-controls={panelId}
-          onClick={() => setOpen(false)}
+      {popup ? (
+        <dialog
+          ref={dialogRef}
+          id={panelId}
+          className="offering-dialog"
+          aria-labelledby={`${panelId}-title`}
+          onClose={() => setOpen(false)}
         >
-          Hide details <ArrowUp aria-hidden="true" size={15} />
-        </button>
-      </div>
+          <div className="offering-details offering-dialog-details">{details}</div>
+        </dialog>
+      ) : (
+        <div id={panelId} className="offering-details" hidden={!open}>
+          {details}
+        </div>
+      )}
     </article>
   )
 }

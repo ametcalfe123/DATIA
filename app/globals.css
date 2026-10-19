@@ -205,6 +205,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .offering-details { width: 100%; margin-top: 18px; padding-top: 18px; border-top: 1px solid #e4e4e7; animation: offering-details-in .25s ease-out; }
   .offering-details .offering-link:hover svg { transform: translateY(-3px); }
   .offering-details-title { margin: 0 0 14px; font-size: 14px; font-weight: var(--font-weight-semibold); }
+  .offering-dialog { width: min(780px, calc(100vw - 32px)); max-height: min(86dvh, 760px); overflow-y: auto; margin: auto; padding: 26px; border: 1px solid #dedede; border-radius: 18px; background: #fff; color: #191919; box-shadow: 0 24px 80px rgb(0 0 0 / 30%); }
+  .offering-dialog::backdrop { background: rgb(0 0 0 / 68%); }
+  .offering-dialog-details { margin: 0; padding: 0; border: 0; }
+  .offering-dialog-details .offering-details-title { margin-bottom: 20px; font-size: 21px; }
+  .offering-dialog-details .offering-link { margin-top: 24px; }
   .offering-details-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
   .offering-details-grid h5 { margin: 0 0 10px; color: #414149; font-size: 9px; font-weight: var(--font-weight-semibold); letter-spacing: .12em; text-transform: uppercase; }
   .offering-details-grid ul { margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; list-style: none; }
