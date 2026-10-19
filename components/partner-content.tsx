@@ -356,15 +356,10 @@ export function AboutSection() {
     <section className="partner-about-section" id="about" aria-labelledby="about-title">
       <div className="partner-about-content">
         <div className="partner-about-copy">
-          <p className="eyebrow">A different kind of growth partner</p>
           <h2 id="about-title">Decidedly Different</h2>
           <p>Buyers now do most of their research independently, often narrowing their shortlist long before they ever speak with a salesperson.</p>
           <p>DATIA combines industry-specialized targeting, thought leadership activation, and buyer intelligence to help partners build familiarity with decision-makers before Sales outreach, and prioritize accounts based on cumulative engagement and buying signals.</p>
           <p>DATIA keeps your brand in front of the 95% of target prospects who aren&apos;t ready to buy today, but will be tomorrow, next month, or next year.</p>
-        </div>
-        <div className="partner-about-signature">
-          <Image src="/images/datia-ai-logo-white.png" alt="DATIA AI" width={206} height={54} unoptimized />
-          <span>Insights born from data.</span>
         </div>
       </div>
     </section>
