@@ -233,7 +233,8 @@ export function AbmSection() {
       </div>
       <div className="simplify-banner">
         <h3>Simplify and Consolidate</h3>
-        <p>These platforms show you the signals. DATIA puts them to work by unifying intent, audience data, media, and lead generation in one sales-ready intelligence dashboard.</p>
+        <p>DATIA brings all of these capabilities together in one connected intelligence platform, where each component strengthens the others.</p>
+        <p>By unifying buyer intent, audience data, cross-channel media, and lead generation, DATIA transforms disconnected insights into coordinated action, delivering a more complete view of the buyer and a more direct path from initial interest to qualified sales opportunities.</p>
       </div>
       <div className="abmxi-cta-panel">
         <a className="abmxi-more-link" href="#growth">How ABMxi works <ArrowRight aria-hidden="true" size={22} /></a>
