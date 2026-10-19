@@ -230,12 +230,13 @@ export function AbmSection() {
           />
         </div>
       </div>
-      <div className="simplify-banner">
-        <h3>Simplify and Consolidate</h3>
-        <p>DATIA brings all of these capabilities together in one connected intelligence platform, where each component strengthens the others.</p>
-        <p>By unifying buyer intent, audience data, cross-channel media, and lead generation, DATIA transforms disconnected insights into coordinated action, delivering a more complete view of the buyer and a more direct path from initial interest to qualified sales opportunities.</p>
-      </div>
-      <div className="abmxi-cta-panel">
+  <div className="simplify-banner">
+  <h3>Simplify and Consolidate</h3>
+  <p>DATIA brings all of these capabilities together in one connected intelligence platform, where each component strengthens the others.</p>
+  <p>By unifying buyer intent, audience data, cross-channel media, and lead generation, DATIA transforms disconnected insights into coordinated action, delivering a more complete view of the buyer and a more direct path from initial interest to qualified sales opportunities.</p>
+  </div>
+  <GrowthSection />
+  <div className="abmxi-cta-panel">
         <a className="abmxi-more-link" href="#growth">How ABMxi works <ArrowRight aria-hidden="true" size={22} /></a>
       </div>
     </section>
@@ -248,8 +249,7 @@ export function GrowthSection() {
       <div className="section-heading">
         <p className="eyebrow">A connected buyer journey</p>
         <h2 id="growth-title">How We Fuel Growth</h2>
-        <p>A turnkey, multi-touch ABM experience, not simply an intent-driven lead program.</p>
-      </div>
+            </div>
       <div className="growth-grid">
         {growthStages.map(({ number, title, subtitle, description, Icon }) => (
           <article className="growth-card" key={title}>

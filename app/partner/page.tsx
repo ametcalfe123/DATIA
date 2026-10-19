@@ -4,7 +4,6 @@ import { PartnerHeader } from "@/components/partner-header"
 import {
   AbmSection,
   AboutSection,
-  GrowthSection,
   PartnerHero,
   ServicesSection,
   TrustedSection,
@@ -22,7 +21,6 @@ export default function PartnerPage() {
       <PartnerHeader />
       <PartnerHero />
       <AbmSection />
-      <GrowthSection />
       <ServicesSection />
       <TrustedSection />
       <AboutSection />
