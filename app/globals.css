@@ -193,9 +193,17 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .market-served-card p { margin: 0; color: #bdbdbd; font-size: 11px; line-height: 1.45; }
 .trusted-section { padding: 88px 32px 94px; background: #f5f5f5; scroll-margin-top: 88px; }
 .trusted-section .section-heading { max-width: 850px; margin-bottom: 30px; }
-.partner-logo-grid { width: min(100%, 1250px); margin: 0 auto; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px 16px; }
-.partner-logo-cell { height: 76px; display: flex; align-items: center; justify-content: center; padding: 12px; }
-.partner-logo-cell img { max-width: 100%; max-height: 44px; object-fit: contain; }
+.partner-logo-marquee { width: calc(100% + 64px); margin: 0 -32px; overflow: hidden; }
+.partner-logo-track { width: max-content; display: flex; animation: partner-logo-scroll 100s linear infinite; will-change: transform; }
+.partner-logo-group { display: flex; flex: 0 0 auto; align-items: center; gap: 56px; padding-right: 56px; }
+.partner-logo-cell { width: 190px; height: 90px; flex: 0 0 190px; display: flex; align-items: center; justify-content: center; }
+.partner-logo-cell img { width: 100%; max-width: 190px; height: 64px; object-fit: contain; }
+.partner-logo-marquee:hover .partner-logo-track { animation-play-state: paused; }
+@keyframes partner-logo-scroll { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) {
+  .partner-logo-track { animation: none; }
+  .partner-logo-marquee { overflow-x: auto; scrollbar-width: thin; }
+}
 .partner-video-wrap { width: min(100%, 820px); margin: 36px auto 0; }
 .partner-video-wrap > p { margin: 0 0 11px; color: #535353; font-size: 13px; }
 .partner-video-frame { overflow: hidden; aspect-ratio: 16 / 9; border-radius: 9px; background: #111; box-shadow: 0 10px 34px rgb(0 0 0 / 12%); }
@@ -280,7 +288,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .service-grid { gap: 20px; }
   .service-card { width: calc((100% - 40px) / 3); }
   .market-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .partner-logo-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 }
 @media (max-width: 760px) {
   .site-header-inner { min-height: 76px; width: calc(100% - 32px); gap: 12px; }
@@ -375,9 +382,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .markets-served-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
   .market-served-card { min-height: 122px; padding: 14px 9px; }
   .market-served-card p { font-size: 10px; }
-  .partner-logo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px 8px; }
-  .partner-logo-cell { height: 58px; padding: 7px; }
-  .partner-logo-cell img { max-height: 35px; }
+  .partner-logo-marquee { width: calc(100% + 36px); margin-inline: -18px; }
+  .partner-logo-group { gap: 32px; padding-right: 32px; }
+  .partner-logo-cell { width: 150px; height: 72px; flex-basis: 150px; }
+  .partner-logo-cell img { max-width: 150px; height: 48px; }
   .partner-video-wrap { margin-top: 24px; }
   .partner-testimonial-grid { grid-template-columns: 1fr; gap: 11px; }
   .partner-testimonial-card { min-height: 0; padding: 20px; }

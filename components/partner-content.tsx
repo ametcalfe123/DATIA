@@ -323,12 +323,18 @@ export function TrustedSection() {
         <h2 id="trusted-title">Trusted by Leading Brands</h2>
         <p>DATIA believes in the power of collaboration. Here are some of the organizations we&apos;ve worked with to drive meaningful outcomes.</p>
       </div>
-      <div className="partner-logo-grid" aria-label="Organizations DATIA has worked with">
-        {clientLogos.map(({ name, image }) => (
-          <div className="partner-logo-cell" key={name}>
-            <Image src={`/logos/${image}`} alt={name} width={190} height={64} unoptimized loading="lazy" />
-          </div>
-        ))}
+      <div className="partner-logo-marquee" aria-label="Organizations DATIA has worked with">
+        <div className="partner-logo-track">
+          {[0, 1].map((copy) => (
+            <div className="partner-logo-group" key={copy} aria-hidden={copy === 1}>
+              {clientLogos.map(({ name, image }) => (
+                <div className="partner-logo-cell" key={name}>
+                  <Image src={`/logos/${image}`} alt={copy === 0 ? name : ""} width={190} height={64} unoptimized loading="lazy" />
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
       <div className="partner-video-wrap">
         <p>Allison Danes — Right At School</p>
