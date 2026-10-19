@@ -191,7 +191,7 @@ export function PartnerHero() {
           <span className="partner-hero-subline">A Content-Driven Approach to a Stronger Pipeline.</span>
         </h1>
         <p className="partner-hero-copy">
-          DATIA brings buyer identification, cross-channel engagement, and intent intelligence together in one place, turning insights into action and action into qualified leads.
+          DATIA unifies buyer identification, cross-channel engagement, and intent intelligence in one powerful platform, helping you turn actionable insights into meaningful engagement and engagement into qualified leads.
         </p>
         <a className="button button-red partner-hero-button" href="#contact">
           Partner with Us <ArrowRight aria-hidden="true" size={22} />
