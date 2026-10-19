@@ -229,10 +229,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .partner-testimonial-card footer small { color: #777; font-size: 10px; font-weight: var(--font-weight-bold); letter-spacing: .1em; text-transform: uppercase; }
 .partner-about-section { position: relative; isolation: isolate; overflow: hidden; padding: 86px 24px 82px; background: #111; color: #fff; scroll-margin-top: 88px; }
 .partner-about-section::after { position: absolute; inset: 0 0 0 auto; z-index: -1; width: min(20%, 360px); background: rgb(237 28 36 / 5%); clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%); content: ""; pointer-events: none; }
-.partner-about-content { width: min(100%, 700px); margin: 0 auto; }
+.partner-about-content { width: min(100%, 1280px); margin: 0 auto; }
 .partner-about-copy { max-width: none; text-align: center; }
 .partner-about-copy h2 { margin: 0 0 15px; color: #fff; font-size: clamp(30px, 2.5vw, 36px); letter-spacing: -.04em; line-height: 1.15; }
-.partner-about-copy > p { margin: 16px 0 0; color: #d3d3d3; font-size: 15px; line-height: 1.55; }
+.partner-about-copy > p { margin: 16px 0 0; color: #d3d3d3; font-size: 21px; line-height: 1.8; }
 .partner-contact-section { position: relative; isolation: isolate; overflow: hidden; padding: 88px 32px 90px; background: linear-gradient(rgb(12 12 12 / 52%), rgb(12 12 12 / 64%)), url('/partner/images/partner-architectural-bg.jpg') center 38% / cover no-repeat; color: #fff; scroll-margin-top: 88px; }
 .partner-contact-content { width: min(100%, 1250px); margin: 0 auto; }
 .partner-contact-heading { text-align: center; }
@@ -406,7 +406,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .partner-testimonial-card blockquote { margin: 12px 0 20px; font-size: 13px; }
   .partner-about-section { padding: 58px 20px; }
   .partner-about-copy h2 { font-size: 33px; }
-  .partner-about-copy > p:not(.eyebrow) { font-size: 14px; }
+  .partner-about-copy > p:not(.eyebrow) { font-size: 16px; line-height: 1.7; }
   .partner-about-signature { min-width: 0; align-items: flex-start; }
   .partner-contact-section { padding: 58px 18px; }
   .partner-contact-heading h2 { font-size: 30px; }
