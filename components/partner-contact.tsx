@@ -1,13 +1,12 @@
 "use client"
 
 import Image from "next/image"
-import { ArrowRight } from "lucide-react"
 
 const team = [
   { name: "Jim Callan", role: "Founder/CEO", image: "partner-jim-callan.jpg" },
+  { name: "Kurt Dyrli", role: "Editorial Director", image: "partner-kurt-dyrli.jpg" },
   { name: "Steve Bevilacqua", role: "Vice President of Sales", image: "partner-steve-bevilacqua.jpg" },
   { name: "Rachel Davis", role: "Vice President of Sales", image: "partner-rachel-davis.jpg" },
-  { name: "Kurt Dyrli", role: "Editorial Director", image: "partner-kurt-dyrli.jpg" },
   { name: "Dana Jackson", role: "Fractional Head of Research", image: "partner-dana-jackson.jpg" },
   { name: "Amy Metcalfe", role: "Senior Director, Marketing & Operations", image: "partner-amy-metcalfe.jpg" },
 ]
@@ -27,12 +26,11 @@ export function PartnerContact() {
     <section className="partner-contact-section" id="contact" aria-labelledby="contact-title">
       <div className="partner-contact-content">
         <div className="partner-contact-heading">
-          <h2 id="contact-title">Talk to the DATIA team</h2>
-          <p>Tell us what you&apos;re working on and which services you&apos;re interested in.</p>
+          <h2 id="contact-title">The People Behind the Platform</h2>
+          <p className="partner-contact-intro">Meet the team and get in touch to explore your goals and strategy.</p>
         </div>
+        <div className="partner-contact-layout">
         <div className="partner-team">
-          <p className="eyebrow">The people behind the platform</p>
-          <h3>Meet the team</h3>
           <div className="partner-team-grid">
             {team.map((person) => (
               <article className="partner-team-person" key={person.name}>
@@ -43,6 +41,7 @@ export function PartnerContact() {
             ))}
           </div>
         </div>
+        <div className="partner-contact-main">
         <form className="partner-contact-form" onSubmit={(event) => event.preventDefault()}>
           <div className="partner-form-grid">
             <label>First name<input name="firstName" type="text" autoComplete="given-name" required /></label>
@@ -61,8 +60,9 @@ export function PartnerContact() {
             </div>
           </fieldset>
           <label className="partner-message">Message<textarea name="message" rows={4} /></label>
-          <button className="button button-red" type="submit">Partner with Us <ArrowRight aria-hidden="true" size={17} /></button>
         </form>
+        </div>
+        </div>
       </div>
     </section>
   )
