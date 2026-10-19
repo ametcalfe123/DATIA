@@ -7,8 +7,8 @@ const team = [
   { name: "Kurt Dyrli", role: "Editorial Director", image: "partner-kurt-dyrli.jpg" },
   { name: "Steve Bevilacqua", role: "Vice President of Sales", image: "partner-steve-bevilacqua.jpg" },
   { name: "Rachel Davis", role: "Vice President of Sales", image: "partner-rachel-davis.jpg" },
-  { name: "Dana Jackson", role: "Fractional Head of Research", image: "partner-dana-jackson.jpg" },
   { name: "Amy Metcalfe", role: "Senior Director, Marketing & Operations", image: "partner-amy-metcalfe.jpg" },
+  { name: "Sharon Nelson", role: "Title TBD", image: null },
 ]
 
 const solutions = [
@@ -34,7 +34,13 @@ export function PartnerContact() {
           <div className="partner-team-grid">
             {team.map((person) => (
               <article className="partner-team-person" key={person.name}>
-                <Image src={`/images/${person.image}`} alt={person.name} width={140} height={140} unoptimized loading="lazy" />
+                {person.image ? (
+                  <Image src={`/images/${person.image}`} alt={person.name} width={140} height={140} unoptimized loading="lazy" />
+                ) : (
+                  <div className="partner-team-placeholder" role="img" aria-label={`${person.name} headshot coming soon`}>
+                    Coming soon
+                  </div>
+                )}
                 <strong>{person.name}</strong>
                 <span>{person.role}</span>
               </article>
