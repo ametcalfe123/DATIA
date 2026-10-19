@@ -210,24 +210,26 @@ export function AbmSection() {
         <p>Lead intelligence drives performance, and most marketers rely on four separate providers to get the full picture.</p>
         <p>Buyer intelligence sharpens targeting. Your exact personas are warmed across LinkedIn, Facebook, and brand-safe websites, then your thought leadership goes out by targeted email, because decision-makers engage with content several times before they&apos;re ready to talk to Sales.</p>
       </div>
-      <div className="abm-visual">
-        <Image
-          src="/partner/images/section-1a-transparent.png"
-          alt="DATIA unifies audience data, intent, media, and lead generation"
-          width={1600}
-          height={820}
-          unoptimized
-          priority
-        />
-      </div>
-      <div className="data-service-grid">
-        {alternatives.map((service, index) => (
-          <article className="data-service-card" key={service.title}>
-            <span className="data-service-number">{index + 1}</span>
-            <h3>{service.title}</h3>
-            <p>{service.description}</p>
-          </article>
-        ))}
+      <div className="abm-content-layout">
+        <div className="data-service-grid">
+          {alternatives.map((service, index) => (
+            <article className="data-service-card" key={service.title}>
+              <span className="data-service-number">{index + 1}</span>
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
+            </article>
+          ))}
+        </div>
+        <div className="abm-visual">
+          <Image
+            src="/partner/images/section-1a-transparent.png"
+            alt="DATIA unifies audience data, intent, media, and lead generation"
+            width={1600}
+            height={820}
+            unoptimized
+            priority
+          />
+        </div>
       </div>
       <div className="simplify-banner">
         <h3>Simplify and Consolidate</h3>
