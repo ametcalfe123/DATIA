@@ -10,13 +10,13 @@ const homeLinks = [
   ["Services", "#services"],
   ["Meet the Team", "#team"],
   ["Advisory Board", "#advisory-board"],
-  ["Trusted By", "#trusted-by"],
+  ["Client Success", "#trusted-by"],
 ] as const
 
 const partnerLinks = [
   ["Flagship Offering", "#flagship"],
   ["Marketing Services", "#marketing-services"],
-  ["Testimonials", "#testimonials"],
+  ["Client Success", "#testimonials"],
   ["About", "#about"],
 ] as const
 
@@ -69,7 +69,7 @@ export function SiteFooter() {
           <Link href="#our-story">Our Story</Link>
           <Link href="#team">Meet the Team</Link>
           <Link href="#advisory-board">Advisory Board</Link>
-          <Link href="#trusted-by">Trusted By</Link>
+          <Link href="#trusted-by">Client Success</Link>
           <Link href="/privacy-policy">Privacy Policy</Link>
         </nav>
       </div>
