@@ -51,6 +51,12 @@ const clients = [
   { name: "Jar Systems", image: "jar-systems.png", url: "https://www.jarsystems.com/" },
   { name: "Instructure", image: "instructure.png", url: "https://www.instructure.com/" },
   { name: "Great Minds", image: "great-minds.png", url: "https://greatminds.org/" },
+  { name: "MIND Education", image: "mind-education.png", url: "https://www.mindeducation.org/" },
+  { name: "LG", image: "lg.png", url: "https://www.lg.com/us" },
+  { name: "Learning Without Tears", image: "learning-without-tears.png", url: "https://www.lwtears.com/" },
+  { name: "Lincoln Learning", image: "lincoln-learning.png", url: "https://www.lincolnlearningsolutions.org/" },
+  { name: "Lightspeed Technologies", image: "lightspeed.png", url: "https://www.lightspeed-tek.com/" },
+  { name: "Magma Math", image: "magma-math.png", url: "https://www.magmamath.com/" },
 ]
 
 const testimonials = [
