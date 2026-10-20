@@ -42,7 +42,7 @@ const growthStages = [
     number: "01",
     title: "Establish",
     subtitle: "Intelligence + ABM foundation",
-    description: "Buyer intelligence sharpens the target list: exact personas, districts, and geographies, with the signals behind each one.",
+    description: "Buyer intelligence sharpens the target list: exact personas and geographies, with the signals behind each one.",
     Icon: Database,
   },
   {
