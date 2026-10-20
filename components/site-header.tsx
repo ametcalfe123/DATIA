@@ -16,7 +16,7 @@ const homeLinks = [
 const partnerLinks = [
   ["Flagship Offering", "#flagship"],
   ["Marketing Services", "#marketing-services"],
-  ["Testimonials", "#testimonials"],
+  ["Trusted By", "#testimonials"],
   ["About", "#about"],
 ] as const
 

@@ -18,7 +18,7 @@ export function PartnerFooter() {
           <h3>Company</h3>
           <a href="#abmxi">Flagship Offering</a>
           <a href="#services">Marketing Services</a>
-          <a href="#testimonials">Testimonials</a>
+          <a href="#testimonials">Trusted By</a>
           <a href="#about">About</a>
           <Link className="partner-footer-privacy" href="/privacy-policy">Privacy Policy</Link>
         </div>
