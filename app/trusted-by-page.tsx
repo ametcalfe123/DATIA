@@ -62,6 +62,9 @@ const clients = [
   { name: "Savvas Learning Company", image: "savvas.png", url: "https://www.savvas.com/" },
   { name: "Pearson", image: "pearson.png", url: "https://www.pearson.com/" },
   { name: "Quest Technology Management", image: "quest.png", url: "https://www.questsys.com/" },
+  { name: "The Stepping Stones Group", image: "stepping-stones-group.png", url: "https://www.thesteppingstonesgroup.com/" },
+  { name: "SpringMath Accelerate", image: "springmath.png", url: "https://www.springmath.org/" },
+  { name: "Scholastic", image: "scholastic.png", url: "https://www.scholastic.com/" },
 ]
 
 const testimonials = [
