@@ -32,7 +32,6 @@ const clients = [
   { name: "Allegion", image: "allegion.png", url: "https://www.allegion.com/" },
   { name: "Pathwise", image: "pathwise.png", url: "https://pathwise.com/" },
   { name: "ParentSquare", image: "parentsquare.png", url: "https://www.parentsquare.com/" },
-  { name: "Scanmarker", image: "scanmarker.png", url: "https://scanmarker.com/" },
   { name: "Communities In Schools", image: "communities-in-schools.png", url: "https://www.communitiesinschools.org/" },
   { name: "Chartwells K12", image: "chartwells.jpg", url: "https://www.chartwells.com/" },
   { name: "Lebra", image: "lebra.png", url: "https://lebra.com/" },

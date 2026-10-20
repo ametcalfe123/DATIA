@@ -203,7 +203,6 @@ const clientLogos = [
   { name: "Right at School", image: "right-at-school.png", aspect: 2.21 },
   { name: "Ruckus", image: "ruckus-commscope.png", aspect: 2.66 },
   { name: "Sandy Hook Promise", image: "sandy-hook-promise.jpg", aspect: 2.63 },
-  { name: "Scanmarker", image: "scanmarker.png", aspect: 5.37 },
   { name: "Schneider Electric", image: "schneider-electric-new.jpeg", aspect: 4.94 },
   { name: "Stryker", image: "stryker.png", aspect: 4 },
   { name: "Studient", image: "studient.png", aspect: 4.65 },
