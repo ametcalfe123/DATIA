@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
+const hiddenPages = ["/partner", "/services", "/trusted-by", "/get-started", "/about", "/about/:path*"]
+
 const nextConfig = {
+  async redirects() {
+    return hiddenPages.map((source) => ({ source, destination: "/", permanent: false }))
+  },
   async headers() {
     return [
       {

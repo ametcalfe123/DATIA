@@ -42,7 +42,7 @@ export function SiteHeader({ variant = "home" }: SiteHeaderProps) {
           {links.map(([label, href]) => (
             <Link href={href} key={label}>{label}</Link>
           ))}
-          <Link className="site-nav-cta" href={isPartner ? "#contact" : "/partner"}>Partner with Us</Link>
+          <Link className="site-nav-cta" href={isPartner ? "#contact" : "/#contact"}>Partner with Us</Link>
         </nav>
       </div>
     </header>
