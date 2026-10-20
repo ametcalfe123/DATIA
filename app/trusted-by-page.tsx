@@ -41,6 +41,11 @@ const clients = [
   { name: "Committee for Children", image: "committee-for-children.png", url: "https://www.cfchildren.org/" },
   { name: "Coursemojo", image: "coursemojo.png", url: "https://www.coursemojo.com/" },
   { name: "Lebra", image: "lebra.png", url: "https://lebra.com/" },
+  { name: "Energy Systems Group", image: "energy-systems-group.png", url: "https://www.esg.com/" },
+  { name: "First Student", image: "first-student.png", url: "https://www.firststudentinc.com/" },
+  { name: "Fishtank Learning", image: "fishtank-learning.png", url: "https://www.fishtanklearning.org/" },
+  { name: "Frontline Education", image: "frontline-education.png", url: "https://www.frontlineeducation.com/" },
+  { name: "Full Compass", image: "full-compass.png", url: "https://www.fullcompass.com/" },
 ]
 
 const testimonials = [
