@@ -19,7 +19,7 @@ export function PartnerHeader() {
         <nav className="partner-nav" aria-label="Partner page navigation">
           <a href="#abmxi">Flagship Offering</a>
           <a href="#services">Marketing Services</a>
-          <a href="#testimonials">Trusted By</a>
+          <a href="#testimonials">Client Success</a>
           <a href="#about">About</a>
         </nav>
         <a className="button button-red header-cta" href="#contact">Partner with Us</a>
@@ -28,7 +28,7 @@ export function PartnerHeader() {
           <nav aria-label="Mobile navigation">
             <a href="#abmxi" onClick={closeMobileMenu}>Flagship Offering</a>
             <a href="#services" onClick={closeMobileMenu}>Marketing Services</a>
-            <a href="#testimonials" onClick={closeMobileMenu}>Trusted By</a>
+            <a href="#testimonials" onClick={closeMobileMenu}>Client Success</a>
             <a href="#about" onClick={closeMobileMenu}>About</a>
             <a className="button button-red" href="#contact" onClick={closeMobileMenu}>Partner with Us</a>
           </nav>
