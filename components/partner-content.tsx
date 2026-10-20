@@ -273,7 +273,7 @@ export function AbmSection() {
         </div>
         <div className="abm-visual">
           <Image
-            src="/partner/images/section-1a-transparent.png?v=2"
+            src="/partner/images/section-1a-transparent.png?v=3"
             alt="DATIA unifies audience data, intent, media, and lead generation"
             width={1600}
             height={820}
