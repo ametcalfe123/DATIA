@@ -188,7 +188,7 @@ const clientLogos = [
   { name: "Genetec", image: "genetec.png", aspect: 5.46 },
   { name: "Lebra", image: "lebra.png", aspect: 3.82 },
   { name: "Microsoft", image: "microsoft.png", aspect: 4.69 },
-  { name: "Otus", image: "otus.png", aspect: 2.12 },
+  { name: "Otus", image: "otus.png?v=2", aspect: 2.09, href: "https://otus.com/" },
   { name: "Palo Alto Networks", image: "palo-alto-networks.jpg", aspect: 5.41 },
   { name: "ParentSquare", image: "parentsquare.png", aspect: 7.43 },
   { name: "Participate Learning", image: "participate-learning.png", aspect: 3.77 },
@@ -384,9 +384,9 @@ export function TrustedSection() {
         <div className="partner-logo-track">
           {[0, 1].map((copy) => (
             <div className="partner-logo-group" key={copy} aria-hidden={copy === 1}>
-              {clientLogos.map(({ name, image, aspect }) => (
-                <div className="partner-logo-cell" key={name}>
-                  {/* Equalize visual weight: height scales with 1/sqrt(aspect) so every logo covers a similar area */}
+              {clientLogos.map(({ name, image, aspect, href }: { name: string; image: string; aspect: number; href?: string }) => {
+                // Equalize visual weight: height scales with 1/sqrt(aspect) so every logo covers a similar area
+                const logo = (
                   <Image
                     src={`/logos/${image}`}
                     alt={copy === 0 ? name : ""}
@@ -396,8 +396,25 @@ export function TrustedSection() {
                     loading="lazy"
                     style={{ "--logo-scale": (1 / Math.sqrt(aspect)).toFixed(3) } as CSSProperties}
                   />
-                </div>
-              ))}
+                )
+                return href ? (
+                  <a
+                    className="partner-logo-cell"
+                    key={name}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    tabIndex={copy === 1 ? -1 : undefined}
+                  >
+                    {logo}
+                    {copy === 0 && <span className="sr-only"> (opens in a new tab)</span>}
+                  </a>
+                ) : (
+                  <div className="partner-logo-cell" key={name}>
+                    {logo}
+                  </div>
+                )
+              })}
             </div>
           ))}
         </div>
