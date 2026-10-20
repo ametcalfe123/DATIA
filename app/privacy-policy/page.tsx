@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { SiteFooter, SiteHeader } from "@/components/site-header"
+import { PartnerHeader } from "@/components/partner-header"
 
 export const metadata: Metadata = {
   title: "Privacy Policy - DATIA",
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <main className="datia-inner-page privacy-page">
-      <SiteHeader />
+      <PartnerHeader anchorBase="/" />
       <section className="page-hero privacy-page-hero">
         <h1>Privacy Policy</h1>
         <p>How DATIA collects, uses, and protects personal information.</p>
@@ -297,7 +297,6 @@ export default function PrivacyPolicyPage() {
           </section>
         </div>
       </section>
-      <SiteFooter />
     </main>
   )
 }
