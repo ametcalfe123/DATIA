@@ -10,7 +10,7 @@ const clients = [
   { name: "Right at School", image: "right-at-school.png", url: "https://rightatschool.com/" },
   { name: "Transfinder", image: "transfinder.png", url: "https://www.transfinder.com/" },
   { name: "VOLT AI", image: "volt.png", url: "https://www.volt.ai/" },
-  { name: "Schneider Electric", image: "schneider-electric-new.jpeg", url: "https://www.se.com/" },
+  { name: "Schneider Electric", image: "schneider-electric-green.png", url: "https://www.se.com/" },
   { name: "Participate Learning", image: "participate-learning-transparent.png", url: "https://www.participatelearning.com/" },
   { name: "College Board", image: "collegeboard.png", url: "https://www.collegeboard.org/" },
   { name: "CrowdStrike", image: "crowdstrike.png", url: "https://www.crowdstrike.com/" },
