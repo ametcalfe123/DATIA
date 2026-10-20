@@ -26,6 +26,7 @@ const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0
 type PartnerContactPayload = {
   firstName: string
   lastName: string
+  title: string
   email: string
   phone: string
   company: string
@@ -58,6 +59,7 @@ function parsePayload(value: unknown): PartnerContactPayload | null {
   const body = value as Record<string, unknown>
   const firstName = cleanField(body.firstName, 100)
   const lastName = cleanField(body.lastName, 100)
+  const title = cleanField(body.title, 150)
   const email = cleanField(body.email, 254).toLowerCase()
   const company = cleanField(body.company, 200)
   const phone = cleanField(body.phone, 80)
@@ -72,6 +74,7 @@ function parsePayload(value: unknown): PartnerContactPayload | null {
   return {
     firstName,
     lastName,
+    title,
     email,
     company,
     phone,
@@ -115,6 +118,7 @@ export async function POST(request: Request) {
   const fullName = `${submission.firstName} ${submission.lastName}`
   const rows = [
     ["Name", fullName],
+    ["Title", submission.title || "-"],
     ["Email", submission.email],
     ["Phone", submission.phone || "-"],
     ["Company", submission.company],

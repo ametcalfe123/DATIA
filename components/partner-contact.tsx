@@ -98,6 +98,7 @@ export function PartnerContact() {
         body: JSON.stringify({
           firstName: field("firstName"),
           lastName: field("lastName"),
+          title: field("title"),
           email: field("email"),
           phone: field("phone"),
           company: field("company"),
@@ -154,10 +155,11 @@ export function PartnerContact() {
           <div className="partner-form-grid">
             <label>First name<input name="firstName" type="text" autoComplete="given-name" required /></label>
             <label>Last name<input name="lastName" type="text" autoComplete="family-name" required /></label>
+            <label>Title<input name="title" type="text" autoComplete="organization-title" maxLength={150} /></label>
             <label>Email<input name="email" type="email" autoComplete="email" required /></label>
             <label>Phone<input name="phone" type="tel" autoComplete="tel" /></label>
             <label>Company name<input name="company" type="text" autoComplete="organization" required /></label>
-            <label>Website<input name="website" type="text" inputMode="url" autoComplete="url" maxLength={500} placeholder="www.example.com" /></label>
+            <label className="partner-form-full">Website<input name="website" type="text" inputMode="url" autoComplete="url" maxLength={500} placeholder="www.example.com" /></label>
           </div>
           <fieldset className="partner-solutions">
             <legend>Solutions of Interest</legend>
