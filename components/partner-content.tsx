@@ -49,7 +49,7 @@ const growthStages = [
     number: "02",
     title: "Warm",
     subtitle: "Build familiarity through content",
-    description: "Your personas see your brand on LinkedIn, Facebook, and brand-safe websites because decision-makers engage with content several times before they're ready to talk to sales.",
+    description: "Your personas see your brand on LinkedIn, Facebook, and brand-safe websites because decision-makers engage with content several times before they are ready to talk to sales.",
     Icon: Megaphone,
   },
   {
