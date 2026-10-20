@@ -230,7 +230,7 @@ const clientLogos = [
   { name: "Ruckus", image: "ruckus-commscope.png", aspect: 2.66 },
   { name: "Sandy Hook Promise", image: "sandy-hook-promise-transparent.png", aspect: 2.63 },
   { name: "Savvas Learning Company", image: "savvas.png", aspect: 3.71, href: "https://www.savvas.com/" },
-  { name: "Schneider Electric", image: "schneider-electric-new.jpeg", aspect: 4.94 },
+  { name: "Schneider Electric", image: "schneider-electric-green.png", aspect: 3.36 },
   { name: "Scholastic", image: "scholastic.png", aspect: 15.41, href: "https://www.scholastic.com/" },
   { name: "SpringMath Accelerate", image: "springmath.png", aspect: 3.45, href: "https://www.springmath.org/" },
   { name: "Stryker", image: "stryker-transparent.png", aspect: 4 },
