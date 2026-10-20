@@ -180,6 +180,8 @@ const markets = [
 const clientLogos = [
   { name: "Allegion", image: "allegion.png", aspect: 5.4 },
   { name: "AlphaBEST Education", image: "alphabest-education-transparent.png", aspect: 4.67 },
+  { name: "ASSA ABLOY", image: "assa-abloy.png", aspect: 7.11, href: "https://www.assaabloy.com/" },
+  { name: "Brivo", image: "brivo.png", aspect: 3.19, href: "https://www.brivo.com/" },
   { name: "Chartwells", image: "chartwells-transparent.png", aspect: 5.38 },
   { name: "College Board", image: "collegeboard.png", aspect: 5.77 },
   { name: "Communities in Schools", image: "communities-in-schools.png", aspect: 3.22 },
