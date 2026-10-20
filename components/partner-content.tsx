@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react"
 import Image from "next/image"
 import { ServiceCard } from "@/components/service-card"
 import {
@@ -48,7 +49,7 @@ const growthStages = [
     number: "02",
     title: "Warm",
     subtitle: "Build familiarity through content",
-    description: "Your personas see your brand on LinkedIn, Facebook, and brand-safe websites because decision-makers engage with content several times before they're ready to talk to sales.",
+    description: "Your personas see your brand on LinkedIn, Facebook, and brand-safe websites because decision-makers engage with content several times before they are ready to talk to sales.",
     Icon: Megaphone,
   },
   {
@@ -177,40 +178,40 @@ const markets = [
 ]
 
 const clientLogos = [
-  { name: "Allegion", image: "allegion.png" },
-  { name: "AlphaBEST Education", image: "alphabest-education.png" },
-  { name: "Chartwells", image: "chartwells.jpg" },
-  { name: "College Board", image: "collegeboard.png" },
-  { name: "Communities in Schools", image: "communities-in-schools.png" },
-  { name: "CrowdStrike", image: "crowdstrike.png" },
-  { name: "Extron", image: "extron.png" },
-  { name: "Genetec", image: "genetec.png" },
-  { name: "Lebra", image: "lebra.png" },
-  { name: "Microsoft", image: "microsoft.png" },
-  { name: "Otus", image: "otus.png" },
-  { name: "Palo Alto Networks", image: "palo-alto-networks.jpg" },
-  { name: "ParentSquare", image: "parentsquare.png" },
-  { name: "Participate Learning", image: "participate-learning.png" },
-  { name: "Pathwise", image: "pathwise.png" },
-  { name: "PMX Sync", image: "primex-sync.png" },
-  { name: "PowerSchool", image: "powerschool.jpg" },
-  { name: "Prodigy", image: "prodigy.png" },
-  { name: "Qualcomm Snapdragon", image: "qualcomm-snapdragon.webp" },
-  { name: "Raptor Technologies", image: "raptor.webp" },
-  { name: "Renaissance", image: "renaissance.png" },
-  { name: "RethinkFirst", image: "rethinkfirst.jpg" },
-  { name: "Right at School", image: "right-at-school.png" },
-  { name: "Ruckus", image: "ruckus-commscope.png" },
-  { name: "Sandy Hook Promise", image: "sandy-hook-promise.jpg" },
-  { name: "Scanmarker", image: "scanmarker.png" },
-  { name: "Schneider Electric", image: "schneider-electric-new.jpeg" },
-  { name: "Stryker", image: "stryker.png" },
-  { name: "Studient", image: "studient.png" },
-  { name: "Symetrix", image: "symetrix.png" },
-  { name: "Transfinder", image: "transfinder.png" },
-  { name: "TriVigil", image: "trivigil.png" },
-  { name: "Valcom", image: "valcom.png" },
-  { name: "VOLT", image: "volt.png" },
+  { name: "Allegion", image: "allegion.png", aspect: 5.4 },
+  { name: "AlphaBEST Education", image: "alphabest-education.png", aspect: 4.67 },
+  { name: "Chartwells", image: "chartwells.jpg", aspect: 5.38 },
+  { name: "College Board", image: "collegeboard.png", aspect: 5.77 },
+  { name: "Communities in Schools", image: "communities-in-schools.png", aspect: 3.22 },
+  { name: "CrowdStrike", image: "crowdstrike.png", aspect: 5.81 },
+  { name: "Extron", image: "extron.png", aspect: 4.55 },
+  { name: "Genetec", image: "genetec.png", aspect: 5.46 },
+  { name: "Lebra", image: "lebra.png", aspect: 3.82 },
+  { name: "Microsoft", image: "microsoft.png", aspect: 4.69 },
+  { name: "Otus", image: "otus.png", aspect: 2.12 },
+  { name: "Palo Alto Networks", image: "palo-alto-networks.jpg", aspect: 5.41 },
+  { name: "ParentSquare", image: "parentsquare.png", aspect: 7.43 },
+  { name: "Participate Learning", image: "participate-learning.png", aspect: 3.77 },
+  { name: "Pathwise", image: "pathwise.png", aspect: 4.24 },
+  { name: "PMX Sync", image: "primex-sync.png", aspect: 2.6 },
+  { name: "PowerSchool", image: "powerschool.jpg", aspect: 4.6 },
+  { name: "Prodigy", image: "prodigy.png", aspect: 3.03 },
+  { name: "Qualcomm Snapdragon", image: "qualcomm-snapdragon.webp", aspect: 0.98 },
+  { name: "Raptor Technologies", image: "raptor.webp", aspect: 3.99 },
+  { name: "Renaissance", image: "renaissance.png", aspect: 7.65 },
+  { name: "RethinkFirst", image: "rethinkfirst.jpg", aspect: 4.35 },
+  { name: "Right at School", image: "right-at-school.png", aspect: 2.21 },
+  { name: "Ruckus", image: "ruckus-commscope.png", aspect: 2.66 },
+  { name: "Sandy Hook Promise", image: "sandy-hook-promise.jpg", aspect: 2.63 },
+  { name: "Scanmarker", image: "scanmarker.png", aspect: 5.37 },
+  { name: "Schneider Electric", image: "schneider-electric-new.jpeg", aspect: 4.94 },
+  { name: "Stryker", image: "stryker.png", aspect: 4 },
+  { name: "Studient", image: "studient.png", aspect: 4.65 },
+  { name: "Symetrix", image: "symetrix.png", aspect: 5.74 },
+  { name: "Transfinder", image: "transfinder.png", aspect: 2.95 },
+  { name: "TriVigil", image: "trivigil.png", aspect: 1.27 },
+  { name: "Valcom", image: "valcom.png", aspect: 4.29 },
+  { name: "VOLT", image: "volt.png", aspect: 2.6 },
 ]
 
 const testimonials = [
@@ -273,7 +274,7 @@ export function AbmSection() {
         </div>
         <div className="abm-visual">
           <Image
-            src="/partner/images/section-1a-transparent.png?v=2"
+            src="/partner/images/section-1a-transparent.png?v=3"
             alt="DATIA unifies audience data, intent, media, and lead generation"
             width={1600}
             height={820}
@@ -383,9 +384,18 @@ export function TrustedSection() {
         <div className="partner-logo-track">
           {[0, 1].map((copy) => (
             <div className="partner-logo-group" key={copy} aria-hidden={copy === 1}>
-              {clientLogos.map(({ name, image }) => (
+              {clientLogos.map(({ name, image, aspect }) => (
                 <div className="partner-logo-cell" key={name}>
-                  <Image src={`/logos/${image}`} alt={copy === 0 ? name : ""} width={190} height={64} unoptimized loading="lazy" />
+                  {/* Equalize visual weight: height scales with 1/sqrt(aspect) so every logo covers a similar area */}
+                  <Image
+                    src={`/logos/${image}`}
+                    alt={copy === 0 ? name : ""}
+                    width={190}
+                    height={64}
+                    unoptimized
+                    loading="lazy"
+                    style={{ "--logo-scale": (1 / Math.sqrt(aspect)).toFixed(3) } as CSSProperties}
+                  />
                 </div>
               ))}
             </div>
