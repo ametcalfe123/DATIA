@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
-import Image from "next/image"
-import Link from "next/link"
+import { PartnerHeader } from "@/components/partner-header"
 
 export const metadata: Metadata = {
   title: "Privacy Policy - DATIA",
@@ -10,21 +9,7 @@ export const metadata: Metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <main className="datia-inner-page privacy-page">
-      <header className="border-b border-gray-200 bg-white">
-        <div className="mx-auto flex max-w-6xl items-center px-6 py-4">
-          <Link href="/" aria-label="DATIA AI home" className="inline-flex">
-            <Image
-              src="/datia-ai-logo.png"
-              alt="DATIA AI"
-              width={1701}
-              height={447}
-              priority
-              sizes="(min-width: 768px) 140px, 120px"
-              className="h-auto w-[120px] md:w-[140px]"
-            />
-          </Link>
-        </div>
-      </header>
+      <PartnerHeader anchorBase="/" />
       <section className="page-hero privacy-page-hero">
         <h1>Privacy Policy</h1>
         <p>How DATIA collects, uses, and protects personal information.</p>
@@ -312,7 +297,6 @@ export default function PrivacyPolicyPage() {
           </section>
         </div>
       </section>
-      <SiteFooter />
     </main>
   )
 }
