@@ -57,6 +57,14 @@ const clients = [
   { name: "Lincoln Learning", image: "lincoln-learning.png", url: "https://www.lincolnlearningsolutions.org/" },
   { name: "Lightspeed Technologies", image: "lightspeed.png", url: "https://www.lightspeed-tek.com/" },
   { name: "Magma Math", image: "magma-math.png", url: "https://www.magmamath.com/" },
+  { name: "Proximity Learning", image: "proximity-learning.png", url: "https://www.proxlearn.com/" },
+  { name: "RefynED", image: "refyned.png", url: "https://www.refyned.com/" },
+  { name: "Savvas Learning Company", image: "savvas.png", url: "https://www.savvas.com/" },
+  { name: "Pearson", image: "pearson.png", url: "https://www.pearson.com/" },
+  { name: "Quest Technology Management", image: "quest.png", url: "https://www.questsys.com/" },
+  { name: "The Stepping Stones Group", image: "stepping-stones-group.png", url: "https://www.thesteppingstonesgroup.com/" },
+  { name: "SpringMath Accelerate", image: "springmath.png", url: "https://www.springmath.org/" },
+  { name: "Scholastic", image: "scholastic.png", url: "https://www.scholastic.com/" },
 ]
 
 const testimonials = [
