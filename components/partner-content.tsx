@@ -179,8 +179,8 @@ const markets = [
 
 const clientLogos = [
   { name: "Allegion", image: "allegion.png", aspect: 5.4 },
-  { name: "AlphaBEST Education", image: "alphabest-education.png", aspect: 4.67 },
-  { name: "Chartwells", image: "chartwells.jpg", aspect: 5.38 },
+  { name: "AlphaBEST Education", image: "alphabest-education-transparent.png", aspect: 4.67 },
+  { name: "Chartwells", image: "chartwells-transparent.png", aspect: 5.38 },
   { name: "College Board", image: "collegeboard.png", aspect: 5.77 },
   { name: "Communities in Schools", image: "communities-in-schools.png", aspect: 3.22 },
   { name: "CrowdStrike", image: "crowdstrike.png", aspect: 5.81 },
@@ -188,24 +188,23 @@ const clientLogos = [
   { name: "Genetec", image: "genetec.png", aspect: 5.46 },
   { name: "Lebra", image: "lebra.png", aspect: 3.82 },
   { name: "Microsoft", image: "microsoft.png", aspect: 4.69 },
-  { name: "Otus", image: "otus.png", aspect: 2.12 },
-  { name: "Palo Alto Networks", image: "palo-alto-networks.jpg", aspect: 5.41 },
-  { name: "ParentSquare", image: "parentsquare.png", aspect: 7.43 },
-  { name: "Participate Learning", image: "participate-learning.png", aspect: 3.77 },
+  { name: "Otus", image: "otus.png?v=2", aspect: 2.09, href: "https://otus.com/" },
+  { name: "Palo Alto Networks", image: "palo-alto-networks-transparent.png", aspect: 5.41 },
+  { name: "ParentSquare", image: "parentsquare-transparent.png", aspect: 7.43 },
+  { name: "Participate Learning", image: "participate-learning-transparent.png", aspect: 3.77 },
   { name: "Pathwise", image: "pathwise.png", aspect: 4.24 },
   { name: "PMX Sync", image: "primex-sync.png", aspect: 2.6 },
-  { name: "PowerSchool", image: "powerschool.jpg", aspect: 4.6 },
+  { name: "PowerSchool", image: "powerschool-transparent.png", aspect: 4.6 },
   { name: "Prodigy", image: "prodigy.png", aspect: 3.03 },
-  { name: "Qualcomm Snapdragon", image: "qualcomm-snapdragon.webp", aspect: 0.98 },
+  { name: "Qualcomm Snapdragon", image: "qualcomm-snapdragon-transparent.png", aspect: 0.98 },
   { name: "Raptor Technologies", image: "raptor.webp", aspect: 3.99 },
   { name: "Renaissance", image: "renaissance.png", aspect: 7.65 },
-  { name: "RethinkFirst", image: "rethinkfirst.jpg", aspect: 4.35 },
+  { name: "RethinkFirst", image: "rethinkfirst-transparent.png", aspect: 4.35 },
   { name: "Right at School", image: "right-at-school.png", aspect: 2.21 },
   { name: "Ruckus", image: "ruckus-commscope.png", aspect: 2.66 },
-  { name: "Sandy Hook Promise", image: "sandy-hook-promise.jpg", aspect: 2.63 },
-  { name: "Scanmarker", image: "scanmarker.png", aspect: 5.37 },
+  { name: "Sandy Hook Promise", image: "sandy-hook-promise-transparent.png", aspect: 2.63 },
   { name: "Schneider Electric", image: "schneider-electric-new.jpeg", aspect: 4.94 },
-  { name: "Stryker", image: "stryker.png", aspect: 4 },
+  { name: "Stryker", image: "stryker-transparent.png", aspect: 4 },
   { name: "Studient", image: "studient.png", aspect: 4.65 },
   { name: "Symetrix", image: "symetrix.png", aspect: 5.74 },
   { name: "Transfinder", image: "transfinder.png", aspect: 2.95 },
@@ -384,9 +383,9 @@ export function TrustedSection() {
         <div className="partner-logo-track">
           {[0, 1].map((copy) => (
             <div className="partner-logo-group" key={copy} aria-hidden={copy === 1}>
-              {clientLogos.map(({ name, image, aspect }) => (
-                <div className="partner-logo-cell" key={name}>
-                  {/* Equalize visual weight: height scales with 1/sqrt(aspect) so every logo covers a similar area */}
+              {clientLogos.map(({ name, image, aspect, href }: { name: string; image: string; aspect: number; href?: string }) => {
+                // Equalize visual weight: height scales with 1/sqrt(aspect) so every logo covers a similar area
+                const logo = (
                   <Image
                     src={`/logos/${image}`}
                     alt={copy === 0 ? name : ""}
@@ -396,8 +395,25 @@ export function TrustedSection() {
                     loading="lazy"
                     style={{ "--logo-scale": (1 / Math.sqrt(aspect)).toFixed(3) } as CSSProperties}
                   />
-                </div>
-              ))}
+                )
+                return href ? (
+                  <a
+                    className="partner-logo-cell"
+                    key={name}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    tabIndex={copy === 1 ? -1 : undefined}
+                  >
+                    {logo}
+                    {copy === 0 && <span className="sr-only"> (opens in a new tab)</span>}
+                  </a>
+                ) : (
+                  <div className="partner-logo-cell" key={name}>
+                    {logo}
+                  </div>
+                )
+              })}
             </div>
           ))}
         </div>
