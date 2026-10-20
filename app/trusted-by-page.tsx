@@ -46,6 +46,11 @@ const clients = [
   { name: "Fishtank Learning", image: "fishtank-learning.png", url: "https://www.fishtanklearning.org/" },
   { name: "Frontline Education", image: "frontline-education.png", url: "https://www.frontlineeducation.com/" },
   { name: "Full Compass", image: "full-compass.png", url: "https://www.fullcompass.com/" },
+  { name: "Kelly Education", image: "kelly-education.png", url: "https://www.kellyeducation.com/" },
+  { name: "Beanstack", image: "beanstack.png", url: "https://www.beanstack.com/" },
+  { name: "Jar Systems", image: "jar-systems.png", url: "https://www.jarsystems.com/" },
+  { name: "Instructure", image: "instructure.png", url: "https://www.instructure.com/" },
+  { name: "Great Minds", image: "great-minds.png", url: "https://greatminds.org/" },
 ]
 
 const testimonials = [
