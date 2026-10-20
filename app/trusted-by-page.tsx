@@ -30,10 +30,16 @@ const clients = [
   { name: "Palo Alto Networks", image: "palo-alto-networks-transparent.png", url: "https://www.paloaltonetworks.com/" },
   { name: "RethinkFirst", image: "rethinkfirst-transparent.png", url: "https://www.rethinkfirst.com/" },
   { name: "Allegion", image: "allegion.png", url: "https://www.allegion.com/" },
+  { name: "ASSA ABLOY", image: "assa-abloy.png", url: "https://www.assaabloy.com/" },
+  { name: "Brivo", image: "brivo.png", url: "https://www.brivo.com/" },
   { name: "Pathwise", image: "pathwise.png", url: "https://pathwise.com/" },
   { name: "ParentSquare", image: "parentsquare-transparent.png", url: "https://www.parentsquare.com/" },
   { name: "Communities In Schools", image: "communities-in-schools.png", url: "https://www.communitiesinschools.org/" },
   { name: "Chartwells K12", image: "chartwells-transparent.png", url: "https://www.chartwells.com/" },
+  { name: "Cengage", image: "cengage.png", url: "https://www.cengage.com/" },
+  { name: "Classroom Mosaic", image: "classroom-mosaic.png", url: "https://classroommosaic.com/" },
+  { name: "Committee for Children", image: "committee-for-children.png", url: "https://www.cfchildren.org/" },
+  { name: "Coursemojo", image: "coursemojo.png", url: "https://www.coursemojo.com/" },
   { name: "Lebra", image: "lebra.png", url: "https://lebra.com/" },
 ]
 
