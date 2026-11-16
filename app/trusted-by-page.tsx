@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const clients = [
   { name: "Microsoft", image: "microsoft.png", url: "https://www.microsoft.com/" },
-  { name: "Qualcomm Snapdragon", image: "qualcomm-snapdragon-transparent.png", url: "https://www.qualcomm.com/" },
+  { name: "Qualcomm Snapdragon", image: "snapdragon-red.png", url: "https://www.qualcomm.com/" },
   { name: "AlphaBEST Education", image: "alphabest-education-transparent.png", url: "https://www.alphabest.org/" },
   { name: "Extron", image: "extron.png", url: "https://www.extron.com/" },
   { name: "Genetec", image: "genetec.png", url: "https://www.genetec.com/" },
@@ -17,7 +17,7 @@ const clients = [
   { name: "TriVigil", image: "trivigil.png", url: "https://trivigil.com/" },
   { name: "Sandy Hook Promise", image: "sandy-hook-promise-transparent.png", url: "https://www.sandyhookpromise.org/" },
   { name: "Stryker", image: "stryker-transparent.png", url: "https://www.stryker.com/" },
-  { name: "Ruckus CommScope", image: "ruckus-commscope.png", url: "https://www.ruckusnetworks.com/" },
+  { name: "Ruckus CommScope", image: "ruckus-belden.png", url: "https://www.ruckusnetworks.com/" },
   { name: "PowerSchool", image: "powerschool-transparent.png", url: "https://www.powerschool.com/" },
   { name: "Studient", image: "studient.png", url: "https://studient.com/" },
   { name: "Symetrix", image: "symetrix.png", url: "https://www.symetrix.co/" },
@@ -60,7 +60,7 @@ const clients = [
   { name: "Proximity Learning", image: "proximity-learning.png", url: "https://www.proxlearn.com/" },
   { name: "RefynED", image: "refyned.png", url: "https://www.refyned.com/" },
   { name: "Savvas Learning Company", image: "savvas.png", url: "https://www.savvas.com/" },
-  { name: "Pearson", image: "pearson.png", url: "https://www.pearson.com/" },
+  { name: "Pearson", image: "pearson-navy.png", url: "https://www.pearson.com/" },
   { name: "Quest Technology Management", image: "quest.png", url: "https://www.questsys.com/" },
   { name: "The Stepping Stones Group", image: "stepping-stones-group.png", url: "https://www.thesteppingstonesgroup.com/" },
   { name: "SpringMath Accelerate", image: "springmath.png", url: "https://www.springmath.org/" },
