@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const clients = [
   { name: "Microsoft", image: "microsoft.png", url: "https://www.microsoft.com/" },
-  { name: "Qualcomm Snapdragon", image: "snapdragon-red.png", url: "https://www.qualcomm.com/" },
+  { name: "Qualcomm Snapdragon", image: "snapdragon-red.png", url: "https://www.qualcomm.com/snapdragon/overview" },
   { name: "AlphaBEST Education", image: "alphabest-education-transparent.png", url: "https://www.alphabest.org/" },
   { name: "Extron", image: "extron.png", url: "https://www.extron.com/" },
   { name: "Genetec", image: "genetec.png", url: "https://www.genetec.com/" },
