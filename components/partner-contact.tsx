@@ -54,7 +54,13 @@ const team: TeamMember[] = [
     phone: "732.236.4215",
     bio: "Amy Metcalfe serves as Senior Director of Marketing & Operations at DATIA, where she oversees marketing strategy execution and operational excellence. With a strong background in marketing operations and process optimization, Amy ensures that DATIA's internal marketing efforts align with client best practices. Her expertise in marketing automation and campaign management helps both DATIA and its clients achieve greater efficiency and effectiveness in their marketing efforts.",
   },
-  { name: "Sharon Nelson", role: "Director, Digital Operations", image: null },
+  {
+    name: "Sharon Nelson",
+    role: "Director, Digital Operations",
+    image: "partner-sharon-nelson.jpg",
+    email: "snelson@datia.io",
+    phone: "917.208.4877",
+  },
 ]
 
 const solutions = [
@@ -127,12 +133,12 @@ export function PartnerContact() {
           <div className="partner-team-grid">
             {team.map((person) => (
               <article className="partner-team-person" key={person.name}>
-                {person.image && person.bio ? (
+                {person.image && (person.bio || person.email || person.phone) ? (
                   <button
                     type="button"
                     className="partner-team-photo-button"
                     onClick={() => openBio(person)}
-                    aria-label={`View bio for ${person.name}`}
+                    aria-label={person.bio ? `View bio for ${person.name}` : `View contact details for ${person.name}`}
                     aria-haspopup="dialog"
                   >
                     <Image src={`/images/${person.image}`} alt="" width={140} height={140} unoptimized loading="lazy" />
@@ -212,7 +218,7 @@ export function PartnerContact() {
               {activeMember.email && <a href={`mailto:${activeMember.email}`}>{activeMember.email}</a>}
               {activeMember.phone && <a href={`tel:${activeMember.phone.replace(/\./g, "")}`}>{activeMember.phone}</a>}
             </div>
-            <p className="partner-bio-text">{activeMember.bio}</p>
+            {activeMember.bio && <p className="partner-bio-text">{activeMember.bio}</p>}
           </div>
         )}
       </dialog>
